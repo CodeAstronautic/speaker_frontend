@@ -1,4 +1,3 @@
-import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Addeventpage from "./components/Addeventpage";
 import Navbar from "./components/Navbar";
