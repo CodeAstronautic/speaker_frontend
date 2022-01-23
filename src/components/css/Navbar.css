@@ -1,0 +1,46 @@
+.container{
+    position: absolute;
+width: 1366px;
+height: 56.78px;
+left: 0px;
+top: 0px;
+
+background-color: #F4F4F4;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+
+}
+.logo img{
+    display: inline;
+    position: absolute;
+    float: left;
+width: 114.82px;
+height: 71.66px;
+left: 87.49px;
+top: -7.44px;
+
+}
+ul{
+    /* position: absolute; */
+    list-style: none;
+    text-align: center;
+}
+
+li{
+
+    display: inline;
+}
+
+li a{
+    color: black;
+    text-decoration: none;
+    font-family: roboto;
+    font-size: 12px;
+    padding-left: 32.5px;
+    
+}
+.navright a{
+  float: right;
+   padding-right: 110px;
+    text-align: center;
+    /* padding-top: 22.39px; */
+}
