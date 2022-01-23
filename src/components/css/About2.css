@@ -89,6 +89,7 @@
   background: #fff;
   height: fit-content;
   border-radius: 10px;
+  padding-bottom: 2rem;
 }
 .eprcard {
   padding: 1rem;
@@ -172,6 +173,56 @@
 .btn-container{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* padding: 0 10rem; */
   margin: 0 30%;
+}
+.epl-team{
+  text-align: center;
+  font-weight: 500;
+  margin: 0.8rem 0;
+}
+.team-body{
+  width: 95%;
+  padding: 1.5rem 2.3rem;
+}
+.tupper{
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  padding: 0 1rem;
+  margin: 1.5rem 0;
+}
+.tprofilecard{
+  text-align: center;
+}
+.tpc-avatar{
+  border-radius: 50%;
+  background: rgba(196, 196, 196, 1);
+  width: 5rem;
+  height: 5rem;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+.tpc-name{
+  font-weight: 600;
+  font-size: medium;
+}
+.tpc-post{
+  font-weight: 200;
+  font-size: small;
+}
+.tutext{
+  background: #fff;
+  margin: 0 0.8rem;
+  border-radius: 10px;
+  text-align: center;
+  padding: 2.5rem 6.5rem;
+}
+.tlr1{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 1rem 0;
+
+}
+.tlower .tprofilecard .tpc-avatar{
+  width: 12rem;
+  height: 12rem;
 }

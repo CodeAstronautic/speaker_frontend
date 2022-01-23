@@ -2,9 +2,11 @@ import React from "react";
 import "./css/About2.css";
 import Culture from "./images/cul.png";
 import user from "./images/profile.png";
+import TeamMembers from './TeamMembers';
 
 const About2 = () => {
   return (
+      <>
     <div className="ep-parent">
       <div className="ep-left">
         <div className="epl-heading">
@@ -162,6 +164,8 @@ const About2 = () => {
         </div>
       </div>
     </div>
+    <TeamMembers/>
+    </>
   );
 };
 export default About2;
