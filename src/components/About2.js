@@ -34,12 +34,15 @@ const About2 = () => {
         <div className="auditoriumimg">
           <img src={Culture} alt="" />
         </div>
-        <h3 style={{
-            marginTop:'2rem',
-            textAlign:'center'
-        }}>Why SpeakerOre Exclusive?</h3>
+        <h3
+          style={{
+            marginTop: "2rem",
+            textAlign: "center",
+          }}
+        >
+          Why SpeakerOre Exclusive?
+        </h3>
         <div className="main-box">
-            
           <div className="box-one">
             <p>Get event details for FREE.</p>
           </div>
@@ -50,25 +53,44 @@ const About2 = () => {
             <p>Get event details for FREE.</p>
           </div>
         </div>
-        {/* <div className="main-class">
-            <div className="inner-class">
-                
-                
-                
-                
-                <p>Achievements so far in SpeakerOre community</p>
-                <div className="second-box">
-                    <div className="box-two"><p >400+</p><p>TOTAL EVENTS </p></div>
-                    <div className="box-two"><p >400+</p><p>TOTAL EVENTS </p></div>
-                    <div className="box-two"><p >400+</p><p>TOTAL EVENTS </p></div>
-                </div>
-                <p>Thousands of people have joined SpeakerOre and are creating better opportunities to grow. Are you?</p>
-            </div>
-            <div>
-                <button className="create-event-btn">Create Event</button>
-                <button className="create-event-btn">Search events</button>
-            </div>
-        </div> */}
+        <h4
+          style={{
+            textAlign: "center",
+          }}
+        >
+          Achievements so far in SpeakerOre community
+        </h4>
+
+        <div className="second-box">
+          <div className="box-two">
+            <p>400+</p>
+            <p>TOTAL EVENTS </p>
+          </div>
+          <div className="box-two">
+            <p>400+</p>
+            <p>TOTAL EVENTS </p>
+          </div>
+          <div className="box-two">
+            <p>400+</p>
+            <p>TOTAL EVENTS </p>
+          </div>
+          <div className="box-two">
+            <p>400+</p>
+            <p>TOTAL EVENTS </p>
+          </div>
+        </div>
+        <p className="eprtext1" style={{ textAlign: "center", fontSize:'smaller', paddingLeft: '3rem' }}>
+          Thousands of people have joined SpeakerOre and are creating better
+          opportunities to grow. Are you?
+        </p>
+        <div className="btn-container">
+          <button className="create-event-btn eprbtn2" style={{
+              margin:'1rem'
+          }}>Create an Event</button>
+          <button className="create-event-btn eprbtn1" style={{
+              margin:'1rem'
+          }}>Search events</button>
+        </div>
       </div>
       <div className="ep-right">
         <div className="eprcard">

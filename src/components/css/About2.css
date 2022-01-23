@@ -40,36 +40,40 @@
   padding: 2rem;
   text-align: center;
 }
+.second-box{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin:1rem 15%;
+  column-gap: 2rem;
+}
 .box-two {
-  
   background: #f4f4f4;
   border-radius: 5px;
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: center;
 }
 .box-two p {
-  position: absolute;
-  width: 54.11px;
-  height: 27.71px;
-  left: 259.03px;
-  top: 1072.87px;
-
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
   font-size: 18px;
   line-height: 21px;
-  text-align: center;
-
   color: #ffbf19;
+  margin-bottom: 1rem;
+}
+.box-two p:nth-child(2){
+  font-size: x-small;
+  color: #000;
+  padding: 0 2rem;
+  font-family: sans-serif;
+  font-weight: normal;
+  margin-bottom: 0;
 }
 .create-event-btn {
-  position: absolute;
-  width: 184.35px;
-  height: 35.06px;
-  left: 378.36px;
-  top: 1232.03px;
-
   border: 1px solid #ffbf19;
   box-sizing: border-box;
+  background: #fff;
   border-radius: 5px;
 }
 .ep-parent {
@@ -79,7 +83,7 @@
   margin: 2rem 3.5rem;
   background-color: rgba(244, 244, 244, 1);
   border-radius: 1rem;
-  padding: 10px;
+  padding: 1rem;
 }
 .ep-left {
   background: #fff;
@@ -149,7 +153,7 @@
 }
 .epl-heading {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.15fr;
   padding: 1rem 1.5rem;
 }
 .epl-heading p:nth-child(2) {
@@ -164,4 +168,10 @@
   width: 100%;
   margin-top: 10px;
   border-radius: 10px;
+}
+.btn-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* padding: 0 10rem; */
+  margin: 0 30%;
 }
