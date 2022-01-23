@@ -1,0 +1,96 @@
+.mp-parent {
+  display: grid;
+  grid-template-columns: 10fr 2fr;
+  column-gap: 1.5rem;
+  margin: 2rem 3.5rem;
+  background-color: rgba(244, 244, 244, 1);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.mp-left .mp-upper{
+  display: grid;
+  grid-template-columns: 3fr 10fr;
+  column-gap: 1.5rem;
+  margin: 2rem 1rem;
+}
+.mpl-left,
+.mpl-right {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem 0.5rem;
+  height: fit-content;
+}
+.mpl-right{
+    padding-bottom: 0.7rem;
+}
+.mp-parent .ep-right {
+  margin-top: 2rem;
+}
+.cdrow .cdr-box {
+  background: rgba(196, 196, 196, 1);
+  width: 18px;
+  height: 18px;
+  margin-top: auto;
+}
+.cdrow {
+  padding: 1rem 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  column-gap: 10px;
+}
+.mpl-heading {
+  display: flex;
+  flex-direction: row;
+  padding-left: 1.5rem;
+}
+.mpl-heading p {
+  margin-right: 20px;
+}
+.mpl-heading button {
+  background: none;
+  text-decoration: underline;
+  border: none;
+  outline: none;
+  margin-top: 3px;
+}
+.mpedit-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1.5rem 2rem;
+}
+.mpedit-section .mpes-form{
+    padding: 0 0.5rem;
+
+}
+.mpes-form p{
+    margin-bottom: 0.5rem;
+}
+.mpes-input {
+height: 2rem;
+line-height: 2rem;
+  background: #ffffff;
+  border: 1px solid #e4e4e4;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding:1.5rem 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.mpes-profilepic{
+    margin: auto;
+    position: relative;
+}
+.mpes-profilepic img{
+    width: 15rem;
+    border-radius: 50%;
+}
+.mpesdp-change{
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    top: 0;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    background: linear-gradient(360deg, rgba(219, 219, 219, 0.89) 27.57%, rgba(219, 219, 219, 0) 50%);
+}

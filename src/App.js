@@ -10,6 +10,7 @@ import Eventpage from "./components/Eventpage";
 import Plan from "./components/Plan";
 import About2 from "./components/About2";
 import SubPlan from "./components/Suscription/SubPlan";
+import ModeratorProfile from "./components/ModeratorProfile";
 const App = () => {
   return (
     <>
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/events" element={<Eventpage />} />
           <Route path="/plan" element={<Plan />} />
           <Route path="/sub-plan" element={<SubPlan />} />
+          <Route path="/moderator" element={<ModeratorProfile />} />
         </Routes>
       </BrowserRouter>
       <Footer />
