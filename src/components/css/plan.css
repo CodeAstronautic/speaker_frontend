@@ -1,0 +1,35 @@
+.main-bar {
+  position: absolute;
+  width: 1260px;
+  height: 730.81px;
+  left: 56.02px;
+  top: 86.25px;
+}
+.card-main {
+  position: absolute;
+  width: 217.17px;
+  height: 300px;
+  left: 78.74px;
+  top: 117.27px;
+
+  background: #ffffff;
+  border-radius: 10px;
+}
+.new-yellow {
+  position: absolute;
+  width: 217.11px;
+  height: 45.97px;
+  left: 78.74px;
+  top: 169.9px;
+
+  background: #ffbf19;
+}
+.box-new {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 98.85px;
+  top: 183.89px;
+
+  background: #000000;
+}
