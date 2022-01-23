@@ -6,7 +6,6 @@ import Footer from "./Footer";
 export default function Addeventpage() {
   return (
     <>
-      <Navbar />
       <div className="main">
         <div className="mainform">
           <p className="m1">Event Details </p>

@@ -120,7 +120,7 @@ const About2 = () => {
 
         <div className="eprcard">
           <p>
-            <b style={{ fontWeight: "500" }}>Reources</b>
+            <b style={{ fontWeight: "500" }}>Resources</b>
           </p>
           <span
             style={{

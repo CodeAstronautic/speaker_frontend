@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Eventpage from "./components/Eventpage";
 import Plan from "./components/Plan";
 import About2 from "./components/About2";
+import ModeratorProfile from "./components/ModeratorProfile";
 const App = () => {
   return (
     <>
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/addevent" element={<Addeventpage />} />
           <Route path="/events" element={<Eventpage />} />
           <Route path="/plan" element={<Plan />} />
+          <Route path="/moderator" element={<ModeratorProfile />} />
         </Routes>
       </BrowserRouter>
       <Footer />
