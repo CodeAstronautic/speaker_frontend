@@ -136,7 +136,7 @@
   color: rgb(140, 140, 140);
 }
 .confirmation{
-  padding: 2rem 0.5rem;
+  padding: 2rem 3rem;
 }
 .confirmation .con-upper{
   display: flex;
@@ -144,7 +144,17 @@
 .confirmation .con-upper .conu-text{
    margin-left: 1rem;
 }
-.confirmation .con-upper .conu-text p{
-  /* font-size: smaller;
-  font-weight: 100; */
+.confirmation .con-upper .conu-text span{
+  font-size: smaller;
+  font-weight: 100;
+}
+.con-lower{
+  text-align: center;
+
+}
+.con-lower-btn{
+  outline: none;
+  border: none;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
