@@ -1,46 +1,39 @@
 .speaker img {
-  width: 1902px;
-  height: 609.17px;
-  left: 0px;
-  top: 56.78px;
+  width: 100%;
   background: rgba(52, 52, 52, 0.65);
 }
-
+.speaker{
+  position: relative;
+}
 .speaker .btn {
-  position: absolute;
-  width: 229.04px;
-  height: 49px;
-  left: 568.48px;
-  top: 521.21px;
+  outline: none;
   border: none;
+  padding: 1rem 3.5rem;
   background: #ffbf19;
   border-radius: 10px;
   font-family: Roboto;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
+  margin-bottom: 1rem;
+}
+.fp-text{
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  text-align: center;
 }
 .one {
-  position: absolute;
-  width: 101px;
-  height: 21px;
-  left: 632.5px;
-  top: 587.03px;
-
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
   color: white;
+  margin-bottom: 1rem;
 }
 .two {
-  position: absolute;
-  width: 309px;
-  height: 21px;
-  left: 528.5px;
-  top: 616.06px;
-  color: white;
+  color: #fff;
   font-family: Roboto;
   font-style: normal;
   font-weight: 300;
