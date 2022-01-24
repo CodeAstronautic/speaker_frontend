@@ -1,409 +1,376 @@
-.head1{
-    position: absolute;
-width: 143px;
-height: 28px;
-left: 611.5px;
-top: 2329.59px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 24px;
-line-height: 28px;
-text-transform: uppercase;
-
-color: #000000;
-
+.head1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: xx-large;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 0.8rem;
 }
-.desc{
-    /* position: absolute;
-width: 493px;
-height: 21px;
-left: 456.5px;
-top: 2374.24px; */
-
-font-family: Roboto;
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-text-align: center;
-text-transform: uppercase;
-
-color: #000000;
-
+.desc {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+margin-bottom: 2rem;
+  color: #000000;
 }
-.imag1{
-    position: absolute;
-width: 400px;
-height: 400px;
-left: 33.51px;
-top: 2449.63px;
-
-background: #F4F4F4;
-border-radius: 10px;
+.catcards {
+  padding: 2rem;
 }
-.detail1{
-    
-position: absolute;
-width: 165px;
-height: 21px;
-left: 161.01px;
-top: 2875.28px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-text-transform: uppercase;
-
-color: #000000;
+.catcards-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2rem;
+  padding: 0 2rem;
+  margin-bottom: 3.5rem;
 }
-.imag2{
-    position: absolute;
-width: 400px;
-height: 400px;
-left: 483px;
-top: 2449.63px;
-
-background: #F4F4F4;
-border-radius: 10px;
+.catimgs {
+  width: 100%;
+  background: #f4f4f4;
+  border-radius: 10px;
 }
-.detail2{
-    position: absolute;
-width: 165px;
-height: 21px;
-left: 610.5px;
-top: 2875.28px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-text-transform: uppercase;
-
-color: #000000;
+.catsub {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+  margin-top: 1rem;  
 }
-.imag3{
-    position: absolute;
-width: 400px;
-height: 400px;
-left: 932.49px;
-top: 2449.63px;
+.imag2 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: 483px;
+  top: 2449.63px;
 
-background: #F4F4F4;
-border-radius: 10px;
+  background: #f4f4f4;
+  border-radius: 10px;
 }
-.detail3{
-    position: absolute;
-width: 165px;
-height: 21px;
-left: 1059.99px;
-top: 2875.28px;
+.detail2 {
+  position: absolute;
+  width: 165px;
+  height: 21px;
+  left: 610.5px;
+  top: 2875.28px;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
 
-text-transform: uppercase;
+  text-transform: uppercase;
 
-color: #000000;
+  color: #000000;
 }
-.imag4{
-    position: absolute;
-width: 400px;
-height: 400px;
-left: 33.51px;
-top: 2938.43px;
+.imag3 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: 932.49px;
+  top: 2449.63px;
 
-background: #F4F4F4;
-border-radius: 10px;
+  background: #f4f4f4;
+  border-radius: 10px;
 }
-.detail4{
-    position: absolute;
-width: 165px;
-height: 21px;
-left: 161.01px;
-top: 3364.08px;
+.detail3 {
+  position: absolute;
+  width: 165px;
+  height: 21px;
+  left: 1059.99px;
+  top: 2875.28px;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
 
-text-transform: uppercase;
+  text-transform: uppercase;
 
-color: #000000;
-
+  color: #000000;
 }
-.imag5{
-    position: absolute;
-width: 400px;
-height: 400px;
-left: 483px;
-top: 2938.43px;
+.imag4 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: 33.51px;
+  top: 2938.43px;
 
-background: #F4F4F4;
-border-radius: 10px;
+  background: #f4f4f4;
+  border-radius: 10px;
 }
-.detail5{
-    position: absolute;
-width: 165px;
-height: 21px;
-left: 610.5px;
-top: 3364.08px;
+.detail4 {
+  position: absolute;
+  width: 165px;
+  height: 21px;
+  left: 161.01px;
+  top: 3364.08px;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
 
-text-transform: uppercase;
+  text-transform: uppercase;
 
-color: #000000;
-
+  color: #000000;
 }
-.imag6{
-    position: absolute;
-width: 400px;
-height: 400px;
-left: 932.49px;
-top: 2938.43px;
+.imag5 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: 483px;
+  top: 2938.43px;
 
-background: #F4F4F4;
-border-radius: 10px;
+  background: #f4f4f4;
+  border-radius: 10px;
 }
-.detail6{
-    position: absolute;
-width: 165px;
-height: 21px;
-left: 1059.99px;
-top: 3364.08px;
+.detail5 {
+  position: absolute;
+  width: 165px;
+  height: 21px;
+  left: 610.5px;
+  top: 3364.08px;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
 
-text-transform: uppercase;
+  text-transform: uppercase;
 
-color: #000000;
-
+  color: #000000;
 }
-.head2{
-    position: absolute;
-width: 287px;
-height: 28px;
-left: 564.83px;
-top: 3465.69px;
+.imag6 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: 932.49px;
+  top: 2938.43px;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 24px;
-line-height: 28px;
-text-align: center;
-text-transform: uppercase;
-
-color: #000000;
-
+  background: #f4f4f4;
+  border-radius: 10px;
 }
-.sub1{
-    position: absolute;
-width: 104px;
-height: 28px;
-left: 313.83px;
-top: 3533.94px;
+.detail6 {
+  position: absolute;
+  width: 165px;
+  height: 21px;
+  left: 1059.99px;
+  top: 3364.08px;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 28px;
-text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
 
-color: #9A9696;
+  text-transform: uppercase;
 
+  color: #000000;
 }
-.subh1{
-    position: absolute;
-width: 326px;
-height: 21px;
-left: 202.83px;
-top: 3577.15px;
+.head2 {
+  position: absolute;
+  width: 287px;
+  height: 28px;
+  left: 564.83px;
+  top: 3465.69px;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
 
-text-align: center;
-
-color: #9A9696;
-
+  color: #000000;
 }
-.imag7{
-    position: absolute;
-width: 590.51px;
-height: 350px;
-left: 70.58px;
-top: 3622.23px;
+.sub1 {
+  position: absolute;
+  width: 104px;
+  height: 28px;
+  left: 313.83px;
+  top: 3533.94px;
 
-background: #F4F4F4;
-border-radius: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+
+  color: #9a9696;
 }
-.subh2{
-    position: absolute;
-width: 388px;
-height: 42px;
-left: 166.83px;
-top: 4004.44px;
+.subh1 {
+  position: absolute;
+  width: 326px;
+  height: 21px;
+  left: 202.83px;
+  top: 3577.15px;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 21px;
-text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
 
-color: #9A9696;
+  text-align: center;
+
+  color: #9a9696;
 }
-.check{
-    position: absolute;
-width: 109px;
-height: 14px;
-left: 311.33px;
-top: 4088.59px;
-text-transform: uppercase;
-font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 14px;
-/* identical to box height */
+.imag7 {
+  position: absolute;
+  width: 590.51px;
+  height: 350px;
+  left: 70.58px;
+  top: 3622.23px;
 
-text-align: center;
-
-color: #000000;
+  background: #f4f4f4;
+  border-radius: 10px;
 }
-.c7 button{
-    position: absolute;
-    width: 229.04px;
-    height: 49px;
-    left: 251.31px;
-    top: 4071.09px;
-    border: none;
-    background: #FFBF19;
-    border-radius: 10px;
+.subh2 {
+  position: absolute;
+  width: 388px;
+  height: 42px;
+  left: 166.83px;
+  top: 4004.44px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+
+  color: #9a9696;
 }
-.sub2{
-    position: absolute;
-width: 220px;
-height: 28px;
-left: 902.67px;
-top: 3533.94px;
+.check {
+  position: absolute;
+  width: 109px;
+  height: 14px;
+  left: 311.33px;
+  top: 4088.59px;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
 
-font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 28px;
-text-align: center;
+  text-align: center;
 
-color: #9A9696;
-
+  color: #000000;
 }
-.subh3{
-    position: absolute;
-width: 437px;
-height: 21px;
-left: 781.67px;
-top: 3577.15px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-text-align: center;
-
-color: #9A9696;
+.c7 button {
+  position: absolute;
+  width: 229.04px;
+  height: 49px;
+  left: 251.31px;
+  top: 4071.09px;
+  border: none;
+  background: #ffbf19;
+  border-radius: 10px;
 }
-.imag8{
-    position: absolute;
-width: 590.51px;
-height: 350px;
-left: 704.91px;
-top: 3622.23px;
+.sub2 {
+  position: absolute;
+  width: 220px;
+  height: 28px;
+  left: 902.67px;
+  top: 3533.94px;
 
-background: #F4F4F4;
-border-radius: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+
+  color: #9a9696;
 }
-.subh4{
-    position: absolute;
-width: 358px;
-height: 42px;
-left: 820.67px;
-top: 4004.44px;
+.subh3 {
+  position: absolute;
+  width: 437px;
+  height: 21px;
+  left: 781.67px;
+  top: 3577.15px;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 21px;
-text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
 
-color: #9A9696;
+  text-align: center;
 
+  color: #9a9696;
 }
-.check1{
-    position: absolute;
-    width: 103px;
-    height: 14px;
-    left: 948.67px;
-    top: 4088.59px;
-    text-transform: uppercase;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    /* identical to box height */
-    
-    text-align: center;
-    
-    color: #000000;
-    
-}
-.c8 button{
-    position: absolute;
-    width: 229.04px;
-    height: 49px;
-    left: 885.65px;
-    top: 4071.09px;
-    border: none;
-    background: #FFBF19;
-    border-radius: 10px;
+.imag8 {
+  position: absolute;
+  width: 590.51px;
+  height: 350px;
+  left: 704.91px;
+  top: 3622.23px;
 
+  background: #f4f4f4;
+  border-radius: 10px;
+}
+.subh4 {
+  position: absolute;
+  width: 358px;
+  height: 42px;
+  left: 820.67px;
+  top: 4004.44px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+
+  color: #9a9696;
+}
+.check1 {
+  position: absolute;
+  width: 103px;
+  height: 14px;
+  left: 948.67px;
+  top: 4088.59px;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #000000;
+}
+.c8 button {
+  position: absolute;
+  width: 229.04px;
+  height: 49px;
+  left: 885.65px;
+  top: 4071.09px;
+  border: none;
+  background: #ffbf19;
+  border-radius: 10px;
 }

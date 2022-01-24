@@ -14,7 +14,7 @@ export default function Firstpage() {
         </div>
       </div>
       <About /> 
-      {/* <Categories /> */}
+      <Categories />
       
     </>
   );
