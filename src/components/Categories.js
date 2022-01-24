@@ -60,39 +60,42 @@ export default function Categories() {
             </div>
           </div>
         </div>
-        {/* <p className="head2">which one are you?</p>
-        <div className="c7">
-          <p className="sub1">SPEAKER</p>
-          <p className="subh1">Get nearby event detail by SpeakerOre</p>
-          <img
-            className="imag7"
-            src={require("./images/category.jpg")}
-            alt={""}
-          />
-          <p className="subh2">
-            {" "}
-            I am willing to look for events to get an opportunity to speak in
-            one of the greatest events.
-          </p>
-          <button className="check"> checkout events</button>
+        <div className="fp-options">
+          <p className="head1">which one are you?</p>
+          <div className="fpo-card-parent">
+            <div className="fpo-card">
+              <p className="fpoc-head">SPEAKER</p>
+              <p className="fpoc-subhead">Get nearby event detail by SpeakerOre</p>
+              <img
+                className="fpoc-img"
+                src={require("./images/category.jpg")}
+                alt={""}
+              />
+              <p className="fpoc-text">
+                {" "}
+                I am willing to look for events to get an opportunity to speak
+                in one of the greatest events.
+              </p>
+              <button className="fpoc-btn"> checkout events</button>
+            </div>
+            <div className="fpo-card">
+              <p className="fpoc-head">SPEAKER</p>
+              <p className="fpoc-subhead">Get nearby event detail by SpeakerOre</p>
+              <img
+                className="fpoc-img"
+                src={require("./images/category.jpg")}
+                alt={""}
+              />
+              <p className="fpoc-text">
+                {" "}
+                I am willing to look for events to get an opportunity to speak
+                in one of the greatest events.
+              </p>
+              <button className="fpoc-btn"> checkout events</button>
+            </div>
+           
+          </div>
         </div>
-        <div className="c8">
-          <p className="sub2">EVENT MANAGER</p>
-          <p className="subh3">
-            Create events and search for fresh and best talent for it.
-          </p>
-          <img
-            className="imag8"
-            src={require("./images/category.jpg")}
-            alt={""}
-          />
-          <p className="subh4">
-            {" "}
-            Sign me up for the amazing journey of finding fresh and new talent
-            via SPEAKERORE.
-          </p>
-          <button className="check1"> CREATE AN EVENT</button>
-        </div> */}
       </div>
     </>
   );

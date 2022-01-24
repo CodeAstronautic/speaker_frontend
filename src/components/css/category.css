@@ -14,10 +14,10 @@
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;
-margin-bottom: 2rem;
+  margin-bottom: 2rem;
   color: #000000;
 }
-.catcards {
+.catcards, .fp-options {
   padding: 2rem;
 }
 .catcards-section {
@@ -39,338 +39,53 @@ margin-bottom: 2rem;
   text-transform: uppercase;
   text-align: center;
   color: #000000;
-  margin-top: 1rem;  
+  margin-top: 1rem;
 }
-.imag2 {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  left: 483px;
-  top: 2449.63px;
-
-  background: #f4f4f4;
-  border-radius: 10px;
+.fpo-card-parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-.detail2 {
-  position: absolute;
-  width: 165px;
-  height: 21px;
-  left: 610.5px;
-  top: 2875.28px;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height */
-
-  text-transform: uppercase;
-
-  color: #000000;
+.fpo-card{
+    text-align: center;
 }
-.imag3 {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  left: 932.49px;
-  top: 2449.63px;
-
-  background: #f4f4f4;
-  border-radius: 10px;
-}
-.detail3 {
-  position: absolute;
-  width: 165px;
-  height: 21px;
-  left: 1059.99px;
-  top: 2875.28px;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height */
-
-  text-transform: uppercase;
-
-  color: #000000;
-}
-.imag4 {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  left: 33.51px;
-  top: 2938.43px;
-
-  background: #f4f4f4;
-  border-radius: 10px;
-}
-.detail4 {
-  position: absolute;
-  width: 165px;
-  height: 21px;
-  left: 161.01px;
-  top: 3364.08px;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height */
-
-  text-transform: uppercase;
-
-  color: #000000;
-}
-.imag5 {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  left: 483px;
-  top: 2938.43px;
-
-  background: #f4f4f4;
-  border-radius: 10px;
-}
-.detail5 {
-  position: absolute;
-  width: 165px;
-  height: 21px;
-  left: 610.5px;
-  top: 3364.08px;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height */
-
-  text-transform: uppercase;
-
-  color: #000000;
-}
-.imag6 {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  left: 932.49px;
-  top: 2938.43px;
-
-  background: #f4f4f4;
-  border-radius: 10px;
-}
-.detail6 {
-  position: absolute;
-  width: 165px;
-  height: 21px;
-  left: 1059.99px;
-  top: 3364.08px;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height */
-
-  text-transform: uppercase;
-
-  color: #000000;
-}
-.head2 {
-  position: absolute;
-  width: 287px;
-  height: 28px;
-  left: 564.83px;
-  top: 3465.69px;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 28px;
-  text-align: center;
-  text-transform: uppercase;
-
-  color: #000000;
-}
-.sub1 {
-  position: absolute;
-  width: 104px;
-  height: 28px;
-  left: 313.83px;
-  top: 3533.94px;
-
+.fpoc-head {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: x-large;
   text-align: center;
-
   color: #9a9696;
+  margin-bottom: 0.5rem;
 }
-.subh1 {
-  position: absolute;
-  width: 326px;
-  height: 21px;
-  left: 202.83px;
-  top: 3577.15px;
-
+.fpoc-subhead {
   font-family: Roboto;
   font-style: normal;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height */
-
+  font-size: larger;
   text-align: center;
-
   color: #9a9696;
+margin-bottom: 1.2rem;
 }
-.imag7 {
-  position: absolute;
-  width: 590.51px;
-  height: 350px;
-  left: 70.58px;
-  top: 3622.23px;
-
-  background: #f4f4f4;
+.fpoc-img {
+width: 60%;
+    background: #f4f4f4;
   border-radius: 10px;
 }
-.subh2 {
-  position: absolute;
-  width: 388px;
-  height: 42px;
-  left: 166.83px;
-  top: 4004.44px;
-
-  font-family: Roboto;
+.fpoc-text {
+    font-family: Roboto;
   font-style: normal;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 21px;
+  /* font-size: large; */
   text-align: center;
-
+margin-top: 1rem;
+padding: 0 8rem;
   color: #9a9696;
 }
-.check {
-  position: absolute;
-  width: 109px;
-  height: 14px;
-  left: 311.33px;
-  top: 4088.59px;
-  text-transform: uppercase;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  /* identical to box height */
-
-  text-align: center;
-
-  color: #000000;
-}
-.c7 button {
-  position: absolute;
-  width: 229.04px;
-  height: 49px;
-  left: 251.31px;
-  top: 4071.09px;
+.fpoc-btn {
+    padding: 0.7rem 2rem;
   border: none;
   background: #ffbf19;
-  border-radius: 10px;
-}
-.sub2 {
-  position: absolute;
-  width: 220px;
-  height: 28px;
-  left: 902.67px;
-  top: 3533.94px;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
-  text-align: center;
-
-  color: #9a9696;
-}
-.subh3 {
-  position: absolute;
-  width: 437px;
-  height: 21px;
-  left: 781.67px;
-  top: 3577.15px;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height */
-
-  text-align: center;
-
-  color: #9a9696;
-}
-.imag8 {
-  position: absolute;
-  width: 590.51px;
-  height: 350px;
-  left: 704.91px;
-  top: 3622.23px;
-
-  background: #f4f4f4;
-  border-radius: 10px;
-}
-.subh4 {
-  position: absolute;
-  width: 358px;
-  height: 42px;
-  left: 820.67px;
-  top: 4004.44px;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-
-  color: #9a9696;
-}
-.check1 {
-  position: absolute;
-  width: 103px;
-  height: 14px;
-  left: 948.67px;
-  top: 4088.59px;
-  text-transform: uppercase;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  /* identical to box height */
-
-  text-align: center;
-
-  color: #000000;
-}
-.c8 button {
-  position: absolute;
-  width: 229.04px;
-  height: 49px;
-  left: 885.65px;
-  top: 4071.09px;
-  border: none;
-  background: #ffbf19;
-  border-radius: 10px;
+  border-radius: 5px;
+  margin-top: 0.8rem;
 }
