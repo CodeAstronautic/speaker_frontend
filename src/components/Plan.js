@@ -8,11 +8,11 @@ export default function Plan() {
             <div className="main-bar">
                 <div className="card-main">
                     <div>
-
                         <p>PROFILE DETAILS</p>
                     </div>
-
-                    <p className="new-yellow"><span className="box-new"></span>BASIC INFORMATION</p>
+                    <p className="new-yellow">
+                        <span className="box-new"></span>BASIC INFORMATION
+                    </p>
                     <p>ACCOUNT</p>
                     <p>BILLING INFORMATION</p>
                     <p>LOGOUT</p>

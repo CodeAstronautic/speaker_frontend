@@ -1,4 +1,6 @@
 import React from "react";
+import About from "./About";
+import Categories from "./Categories";
 import "./css/Firstpage.css";
 export default function Firstpage() {
   return (
@@ -9,6 +11,8 @@ export default function Firstpage() {
         <p className="one">SpeakerOre</p>
         <p className="two">One Liner from SpeakerOre to the users</p>
       </div>
+      <Categories />
+      <About />
     </>
   );
 }

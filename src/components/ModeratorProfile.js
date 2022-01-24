@@ -303,7 +303,7 @@ export default function ModeratorProfile() {
               className="eprtext1"
             >
               <div>About Us</div>
-              <div>></div>
+              <div></div>
             </span>
             <span
               style={{
@@ -314,7 +314,7 @@ export default function ModeratorProfile() {
               className="eprtext1"
             >
               <div>How it works</div>
-              <div>></div>
+              <div></div>
             </span>
             <span
               style={{
@@ -325,7 +325,7 @@ export default function ModeratorProfile() {
               className="eprtext1"
             >
               <div>Privacy Policy</div>
-              <div>></div>
+              <div></div>
             </span>
             <div
               style={{ marginTop: "10px", marginTop: "5rem" }}
