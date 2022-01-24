@@ -7,7 +7,7 @@
   border-radius: 1rem;
   padding: 1rem;
 }
-.mp-left .mp-upper{
+.mp-left .mp-upper {
   display: grid;
   grid-template-columns: 3fr 10fr;
   column-gap: 1.5rem;
@@ -20,8 +20,8 @@
   padding: 1rem 0.5rem;
   height: fit-content;
 }
-.mpl-right{
-    padding-bottom: 0.7rem;
+.mpl-right {
+  padding-bottom: 0.7rem;
 }
 .mp-parent .ep-right {
   margin-top: 2rem;
@@ -45,52 +45,106 @@
 }
 .mpl-heading p {
   margin-right: 20px;
+  border-bottom: 2px solid #ffbf19;
+  padding-bottom: 0.5rem;
 }
 .mpl-heading button {
   background: none;
   text-decoration: underline;
   border: none;
   outline: none;
-  margin-top: 3px;
+  margin-top: -3px;
 }
 .mpedit-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 2.5rem;
 }
-.mpedit-section .mpes-form{
-    padding: 0 0.5rem;
-
+.mpedit-section .mpes-form {
+  padding: 0 0.5rem;
 }
-.mpes-form p{
-    margin-bottom: 0.5rem;
+.mpes-form p {
+  margin-bottom: 0.5rem;
 }
 .mpes-input {
-height: 2rem;
-line-height: 2rem;
+  height: 2rem;
+  line-height: 2rem;
   background: #ffffff;
   border: 1px solid #e4e4e4;
   box-sizing: border-box;
   border-radius: 5px;
-  padding:1.5rem 0.5rem;
+  padding: 1.5rem 0.5rem;
   width: 100%;
   margin-bottom: 1rem;
 }
-.mpes-profilepic{
-    margin: auto;
-    position: relative;
+.mpes-profilepic {
+  margin: auto;
+  position: relative;
 }
-.mpes-profilepic img{
-    width: 15rem;
-    border-radius: 50%;
+.mpes-profilepic img {
+  width: 15rem;
+  border-radius: 50%;
 }
-.mpesdp-change{
-    width: 15rem;
-    height: 15rem;
-    position: absolute;
-    top: 0;
-    display: flex;
-    border-radius: 50%;
-    justify-content: center;
-    background: linear-gradient(360deg, rgba(219, 219, 219, 0.89) 27.57%, rgba(219, 219, 219, 0) 50%);
+.mpesdp-change {
+  width: 15rem;
+  height: 15rem;
+  position: absolute;
+  top: 0;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  background: linear-gradient(
+    360deg,
+    rgba(219, 219, 219, 0.89) 27.57%,
+    rgba(219, 219, 219, 0) 50%
+  );
+}
+.mp-lower {
+  padding: 1rem;
+}
+.mp-lower .mpl-right .mpedit-section .mpes-form .mpes-input {
+  width: 80%;
+}
+.mp-lower .mpl-right .mpedit-section {
+  column-gap: 3rem;
+}
+.tag-div {
+  display: flex;
+  position: relative;
+}
+.tag-div button {
+  position: absolute;
+  right: 6.5rem;
+  top: 1rem;
+  outline: none;
+  border: none;
+  background: none;
+  text-decoration: none;
+}
+.tag-div .mpes-input {
+  margin-bottom: 0;
+}
+.tags-parent {
+  position: relative;
+  list-style: none;
+  text-align: left;
+  line-height: initial;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  color: rgb(140, 140, 140);
+}
+.confirmation{
+  padding: 2rem 0.5rem;
+}
+.confirmation .con-upper{
+  display: flex;
+}
+.confirmation .con-upper .conu-text{
+   margin-left: 1rem;
+}
+.confirmation .con-upper .conu-text p{
+  /* font-size: smaller;
+  font-weight: 100; */
 }
