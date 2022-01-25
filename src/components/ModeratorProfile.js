@@ -2,6 +2,7 @@ import React from "react";
 import "./css/ModeratorProfile.css";
 import user from "./images/profile.png";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
+import { BsChevronRight } from "react-icons/bs";
 
 export default function ModeratorProfile() {
   return (
@@ -303,7 +304,7 @@ export default function ModeratorProfile() {
               className="eprtext1"
             >
               <div>About Us</div>
-              <div></div>
+              <div><BsChevronRight/></div>
             </span>
             <span
               style={{
@@ -314,7 +315,7 @@ export default function ModeratorProfile() {
               className="eprtext1"
             >
               <div>How it works</div>
-              <div></div>
+              <div><BsChevronRight/></div>
             </span>
             <span
               style={{
@@ -325,7 +326,7 @@ export default function ModeratorProfile() {
               className="eprtext1"
             >
               <div>Privacy Policy</div>
-              <div></div>
+              <div><BsChevronRight/></div>
             </span>
             <div
               style={{ marginTop: "10px", marginTop: "5rem" }}

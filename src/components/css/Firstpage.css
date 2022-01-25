@@ -41,3 +41,35 @@
   line-height: 21px;
   text-align: center;
 }
+.fp-addevent{
+  padding: 2rem 3rem;
+  position: relative;
+}
+.fp-addevent .desc{
+  text-transform: none;
+  color: grey;
+  margin-bottom: 0;
+}
+.fpae-heading{
+  font-size: 4rem;
+  font-weight: 100;
+  color: rgba(154, 150, 150, 1);
+
+}
+.fp-addevent .fp-text{
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(52, 52, 52, 0.65);
+  padding:30% 0;
+  text-align: center;
+}
+.fp-addevent .fpae-imgtext{
+  font-size: 7rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.fp-addevent .fp-text .two{
+  margin-bottom: 1rem;
+}

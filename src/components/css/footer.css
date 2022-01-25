@@ -1,202 +1,53 @@
-.fc1{
-    position: absolute;
-width: 49px;
-height: 14px;
-left: 172.72px;
-top: 6657.27px;
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 14px;
-/* identical to box height */
-
-
-color: #000000;
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    padding: 2rem 12.5rem;
+    column-gap: 6rem;
+}
+.footer ul{
+    display: block;
+    text-align: left;
+}
+.footer ul li{
+    display: block;
 
 }
-.fc2{
-    position: absolute;
-width: 59px;
-height: 14px;
-left: 172.72px;
-top: 6689.41px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 14px;
-/* identical to box height */
-
-
-color: #000000;
+.footer .thirdcolumn{
+    text-align: center;
 }
-.fc3{
-    position: absolute;
-width: 36px;
-height: 14px;
-left: 172.72px;
-top: 6721.56px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 14px;
-/* identical to box height */
-
-
-color: #000000;
-
+.copyright-line{
+    text-align: center;
+    margin: 1rem;   
 }
-.fc4{
-    position: absolute;
-width: 30px;
-height: 14px;
-left: 172.72px;
-top: 6753.7px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 14px;
-/* identical to box height */
-
-
-color: #000000;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-.fc5{
-    position: absolute;
-width: 72px;
-height: 14px;
-left: 382.52px;
-top: 6657.27px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 14px;
-/* identical to box height */
-
-
-color: #000000;
-
+.footer .thirdcolumn li:nth-child(1){
+    border-bottom: 2px solid rgba(196, 196, 196, 1);
+    text-align: end;
+    padding: 0 0.5rem;
 }
-.fc6{
-    position: absolute;
-width: 74px;
-height: 14px;
-left: 382.52px;
-top: 6689.41px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 14px;
-/* identical to box height */
-
-
-color: #000000;
-
+.footer .thirdcolumn li:nth-child(2){
+    font-weight: 500;
 }
-.fc7{
-    position: absolute;
-width: 103px;
-height: 14px;
-left: 835.24px;
-top: 6650.27px;
-border: none;
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 14px;
-/* identical to box height */
-
-outline: 0;
-color: #C4C4C4;
-
+.footer .thirdcolumn li:nth-child(3){
+    margin-top: 1rem;
+    font-size: x-large;
 }
-.fc8{
-    position: absolute;
-width: 73px;
-height: 14px;
-left: 1122.94px;
-top: 6647.27px;
-border: none;
-font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 14px;
-/* identical to box height */
-
-background: none;
-color: #000000;
-
+.footer .thirdcolumn li:nth-child(3) span{
+    margin: 0 0.8rem;
 }
-.fc9{
-    position: absolute;
-width: 283px;
-height: 14px;
-left: 869.65px;
-top: 6680.7px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 14px;
-/* identical to box height */
-
-
-color: #000000;
+.fp-footerinput{
+    outline: none;
+    border: none;
+    width: 85%;
+    padding: 0.5rem 0;
 }
-.fc10{
-    position: absolute;
-width: 126px;
-height: 14px;
-left: 939.88px;
-top: 6756.7px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 14px;
-/* identical to box height */
-
-
-color: #000000;
-}
-.fc11{
-    position: absolute;
-width: 164px;
-height: 14px;
-left: 601px;
-top: 6907.24px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 14px;
-/* identical to box height */
-
-text-align: center;
-
-color: #000000;
-}
-hr{
-    position: absolute;
-width: 364.26px;
-height: 0px;
-left: 829.02px;
-top: 6665.99px;
-
-border: 1px solid #C4C4C4;
+.fp-footerbtn{
+    outline: none;
+    border: none;
+    background: none;
+    font-weight: 700;
 }
