@@ -337,7 +337,6 @@ export default function ModeratorProfile() {
           </div>
         </div>
       </div>
-      <div className="disclaimer"></div>
     </>
   );
 }
