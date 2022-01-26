@@ -13,6 +13,7 @@ import SubPlan from "./components/Suscription/SubPlan";
 import ModeratorProfile from "./components/ModeratorProfile";
 import MyProfile from "./components/MyProfile";
 import BasicInfo from "./components/BasicInfo";
+import BillingInformation from "./components/BillingInformation";
 const App = () => {
   return (
     <>
@@ -25,11 +26,12 @@ const App = () => {
           {/* <Route path="/categories" element={<Categories />} /> */}
           {/* <Route path="/event" element={<Event />} /> */}
           <Route path="/addevent" element={<Addeventpage />} />
-          {/* <Route path="/events" element={<Eventpage />} /> */}
+          <Route path="/events" element={<Eventpage />} />
           {/* <Route path="/plan" element={<Plan />} /> */}
           {/* <Route path="/sub-plan" element={<SubPlan />} /> */}
           <Route path="/moderator" element={<ModeratorProfile />} />
           <Route path="/myprofile" element={<MyProfile />} />
+          <Route path="/bill" element={<BillingInformation />} />
           {/* <Route path="/basicinfo" element={<BasicInfo />} /> */} 
         </Routes>
       </BrowserRouter>

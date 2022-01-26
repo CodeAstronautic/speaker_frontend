@@ -244,7 +244,6 @@ export default function Addeventpage() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

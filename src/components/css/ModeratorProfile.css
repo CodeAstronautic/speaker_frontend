@@ -5,13 +5,14 @@
   margin: 2rem 3.5rem;
   background-color: rgba(244, 244, 244, 1);
   border-radius: 1rem;
-  padding: 1rem;
+  padding:3rem  1rem;
+
 }
 .mp-left .mp-upper {
   display: grid;
   grid-template-columns: 3fr 10fr;
   column-gap: 1.5rem;
-  margin: 2rem 1rem;
+  margin: 0 1rem;
 }
 .mpl-left,
 .mpl-right {
@@ -22,9 +23,6 @@
 }
 .mpl-right {
   padding-bottom: 0.7rem;
-}
-.mp-parent .ep-right {
-  margin-top: 2rem;
 }
 .cdrow .cdr-box {
   background: rgba(196, 196, 196, 1);
@@ -100,7 +98,7 @@
   );
 }
 .mp-lower {
-  padding: 1rem;
+  padding:0 1rem;
 }
 .mp-lower .mpl-right .mpedit-section .mpes-form .mpes-input {
   width: 80%;
