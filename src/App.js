@@ -14,6 +14,7 @@ import ModeratorProfile from "./components/ModeratorProfile";
 import MyProfile from "./components/MyProfile";
 import BasicInfo from "./components/BasicInfo";
 import BillingInformation from "./components/BillingInformation";
+import BookmarkedEvent from "./components/BookmarkedEvent";
 const App = () => {
   return (
     <>
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/moderator" element={<ModeratorProfile />} />
           <Route path="/myprofile" element={<MyProfile />} />
           <Route path="/bill" element={<BillingInformation />} />
+          <Route path="/bookmark" element={<BookmarkedEvent />} />
           {/* <Route path="/basicinfo" element={<BasicInfo />} /> */} 
         </Routes>
       </BrowserRouter>
