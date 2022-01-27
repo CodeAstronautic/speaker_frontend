@@ -59,3 +59,32 @@
   height: 35%;
   width: 35%;
 }
+.st-lower {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+.stl-child {
+  display: flex;
+  flex-direction: row;
+  margin-right: 1rem;
+}
+.stlc-text {
+  font-size: smaller;
+  line-height: 3rem;
+  margin-right: 1rem;
+}
+.stl-child .stlc-field {
+  height: 1.5rem;
+  padding: 0 auto;
+  color: grey;
+  height: 3rem;
+}
+.s13 {
+  font-size: x-small;
+  text-decoration: underline;
+  width: 5%;
+  position: relative;
+  top: 2.4rem;
+  font-weight: 500;
+}

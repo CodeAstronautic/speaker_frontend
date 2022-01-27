@@ -36,16 +36,82 @@ const Eventpage = () => {
           </div>
 
           <div className="st-lower">
-            <p className="s3">Location: </p>
-            <input type="text" className="s4" placeholder="New Delhi" />
-            <p className="s5">Categories:</p>
-            <input type="text" className="s6" placeholder="Film Industry" />
-            <p className="s7"> Sort:</p>
-            <input type="text" className="s8" placeholder="by date" />
-            <p className="s9">from</p>
-            <input type="text" className="s10" placeholder="dd/mm/yyyy" />
-            <p className="s11">to</p>
-            <input type="text" className="s12" placeholder="dd/mm/yyyy" />
+            <div className="stl-child">
+              <p className="stlc-text">Location: </p>
+              <select
+                className="stlc-field mpes-input"
+                style={{
+                  paddingTop: "0",
+                  paddingBottom: "0",
+                  color: "grey",
+                }}
+              >
+                <option value="Online" selected>
+                  Choose Mode
+                </option>
+                <option value="Online" selected>
+                  Conference
+                </option>
+                <option value="Offline">Offline</option>
+              </select>
+            </div>
+            <div className="stl-child">
+              <p className="stlc-text">Categories: </p>
+              <select
+                className="stlc-field mpes-input"
+                style={{
+                  paddingTop: "0",
+                  paddingBottom: "0",
+                  color: "grey",
+                }}
+              >
+                <option value="Online" selected>
+                  Choose Mode
+                </option>
+                <option value="Online" selected>
+                  Conference
+                </option>
+                <option value="Offline">Offline</option>
+              </select>
+            </div>
+            <div className="stl-child">
+              <p className="stlc-text">Sort: </p>
+              <select
+                className="stlc-field mpes-input"
+                style={{
+                  paddingTop: "0",
+                  paddingBottom: "0",
+                  color: "grey",
+                }}
+              >
+                <option value="Online" selected>
+                  Choose Mode
+                </option>
+                <option value="Online" selected>
+                  Conference
+                </option>
+                <option value="Offline">Offline</option>
+              </select>
+            </div>
+            <div className="stl-child">
+              <p className="stlc-text">from: </p>
+
+              <input
+                type="date"
+                className="mpes-input stlc-field"
+                placeholder="dd/mm/yyyy"
+              />
+            </div>
+            <div className="stl-child">
+              <p className="stlc-text">to: </p>
+
+              <input
+                type="date"
+                className="mpes-input stlc-field"
+                placeholder="dd/mm/yyyy"
+              />
+            </div>
+
             <p className="s13">Reset Filter</p>
           </div>
         </div>
