@@ -89,7 +89,7 @@ export default function ModeratorProfile() {
               </div>
             </div>
           </div>
-          <div style={{ marginLeft: "2rem", display: "flex" }}>
+          <div style={{ margin: "1rem 2rem", display: "flex" }}>
             <span style={{ fontSize: "2rem" }}>
               <AiOutlineSafetyCertificate />
             </span>

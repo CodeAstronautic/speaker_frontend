@@ -15,6 +15,8 @@ import MyProfile from "./components/MyProfile";
 import BasicInfo from "./components/BasicInfo";
 import BillingInformation from "./components/BillingInformation";
 import BookmarkedEvent from "./components/BookmarkedEvent";
+import SingleEventPage from "./components/SingleEventPage";
+import MyProfileEvent from "./components/MyProfileEvent";
 const App = () => {
   return (
     <>
@@ -34,7 +36,9 @@ const App = () => {
           <Route path="/myprofile" element={<MyProfile />} />
           <Route path="/bill" element={<BillingInformation />} />
           <Route path="/bookmark" element={<BookmarkedEvent />} />
-          {/* <Route path="/basicinfo" element={<BasicInfo />} /> */} 
+          <Route path="/basicinfo" element={<BasicInfo />} /> 
+          <Route path="/single-event" element={<SingleEventPage />} /> 
+          <Route path="/myproflie-event" element={<MyProfileEvent />} /> 
         </Routes>
       </BrowserRouter>
       <Footer />

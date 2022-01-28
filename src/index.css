@@ -16,3 +16,8 @@ code {
   padding: 0;
   box-sizing: border-box;
 }
+.bill-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

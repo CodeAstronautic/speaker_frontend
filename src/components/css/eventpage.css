@@ -75,7 +75,7 @@
   line-height: 3rem;
   margin-right: 1rem;
 }
-.stl-child .stlc-field {
+.stlc-field {
   height: 1.5rem;
   padding: 0 auto;
   color: #000;
@@ -93,33 +93,33 @@
 .view-event {
   margin-top: 1.5rem;
 }
-.view-event .vc-sec {
+.vc-sec {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 1rem;
   margin-bottom: 1rem;
 }
 
-.view-event .event-card {
+.event-card {
   background: #fff;
   padding: 1rem 0.5rem;
   border-radius: 8px;
 }
-.view-event .event-card .ec-section1 {
+.ec-section1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 0.8rem;
 }
-.view-event .event-card .ec-section1 .eds1-l .e1 {
+.ec-section1 .eds1-l .e1 {
   font-weight: 600;
   font-size: small;
 }
-.view-event .event-card .ec-section1 .eds1-l .e2 {
+.ec-section1 .eds1-l .e2 {
   font-weight: 300;
   font-size: smaller;
 }
-.view-event .event-card .ec-section1 .eds1-r {
+.ec-section1 .eds1-r {
   border-radius: 50%;
   background: #c4c4c4;
   height: 2rem;
@@ -128,14 +128,14 @@
   width: 2rem;
   color: #fff;
 }
-.view-event .event-card .ec-section2 {
+.ec-section2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 0.8rem;
   font-size: small;
 }
-.view-event .event-card .ec-section2 span {
+.ec-section2 span {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -143,45 +143,46 @@
   padding: 0.5rem 1rem;
   border-radius: 5px;
 }
-.view-event .event-card .ec-section2 .e8 {
+.ec-section2 .e8 {
   font-weight: 500;
   line-height: 2rem;
   color: rgb(66, 191, 12);
 }
-.view-event .event-card .ec-section3 {
+.ec-section3 {
   font-weight: 500;
   margin-bottom: 0.8rem;
   font-size: small;
   display: flex;
 }
-.view-event .event-card .ec-section3 .e4 {
+.ec-section3 .e4 {
   font-weight: 300;
   margin-left: 0.5rem;
 }
-.view-event .event-card .ec-section4 {
+.ec-section4 {
   font-weight: 300;
   margin-bottom: 0.8rem;
   font-size: small;
 }
-.view-event .event-card .ec-section5 {
+.ec-section5 {
   text-align: center;
 }
-.event-nav-bottom{
+.event-nav-bottom {
   display: flex;
   justify-content: space-between;
   width: 40%;
   margin-left: auto;
 }
-.enb-icon{
+.enb-icon {
   position: relative;
   top: 3px;
 }
-.enav-nums{
+.enav-nums {
   line-height: initial;
   width: 70%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 5fr 1fr;
 }
-.enav-nums li:nth-child(1), li:nth-child(6){
+.enav-nums li:nth-child(1),
+li:nth-child(6) {
   margin: 0 1rem;
 }

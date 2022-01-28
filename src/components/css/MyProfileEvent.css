@@ -1,0 +1,37 @@
+.mpe-right{
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    padding: 1rem;
+}
+.mper-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 4.5fr;
+}
+.mper-header p {
+  margin-right: 20px;
+  padding-bottom: 0.5rem;
+}
+.mper-header button {
+  background: none;
+  text-decoration: underline;
+  border: none;
+  outline: none;
+  margin-top: -3px;
+  text-align: left;
+}
+.mper-header p:nth-child(1){
+    border-bottom: 2px solid #ffbf19;
+}
+.mper-header p:nth-child(3){
+    text-align: end;
+}
+.mperb-section{
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+}
+.mper-body{
+    height: 38rem;
+    overflow-y: scroll;
+}
