@@ -97,9 +97,11 @@ export default function SingleEventPage() {
               </div>
             </div>
           </div>
-          <div className="sep-einfo-foot"></div>
+          <div className="sep-einfo-foot">
+          This is an event hosted by one of the event managers. Click on the link above to apply as a speaker.
+          </div>
         </div>
-        <div style={{ marginLeft: "2rem", display: "flex" }}>
+        <div style={{ margin: "1rem"}}>
           <span
             style={{
               fontSize: "medium",

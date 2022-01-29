@@ -1,0 +1,49 @@
+.siu-left {
+  background: rgba(244, 244, 244, 1);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem 1.5rem;
+  column-gap: 1.5rem;
+}
+.siu-left .siul-child {
+  background: #fff;
+  border-radius: 10px;
+}
+.siul-child {
+  padding: 1rem;
+}
+.siuinput-parent {
+  margin: 2rem;
+  padding: 0 2rem;
+}
+.siuinput-parent p {
+  font-weight: normal;
+  /* margin-bottom: 0.5rem; */
+  text-align: left;
+}
+.siuinput-parent .siu-input {
+  padding: 0.8rem 1rem;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+}
+.siubtn-parent{
+    margin-top: 4rem;
+    text-align: center;
+}
+.siubtn1 {
+  width: 40%;
+  padding: 0.8rem;
+  margin: auto;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.siu-left .siul-child:nth-child(1){
+    height: fit-content;
+}
+.siu-left .siul-child:nth-child(2){
+    padding:5rem;
+    text-align: center;
+}
