@@ -480,7 +480,7 @@ export default function ModeratorDummy2() {
               </div>
             </span>
             <div
-              style={{ marginTop: "10px", marginTop: "5rem" }}
+              style={{ marginTop: "10px",}}
               className="eprbtn1"
             >
               Contact Us

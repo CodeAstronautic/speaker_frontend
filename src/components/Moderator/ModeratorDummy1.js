@@ -664,7 +664,7 @@ export default function ModeratorDummy1() {
               </div>
             </span>
             <div
-              style={{ marginTop: "10px", marginTop: "5rem" }}
+              style={{ marginTop: "10px", }}
               className="eprbtn1"
             >
               Contact Us

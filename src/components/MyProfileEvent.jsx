@@ -384,7 +384,7 @@ export default function MyProfileEvent() {
               </div>
             </span>
             <div
-              style={{ marginTop: "10px", marginTop: "5rem" }}
+              style={{ marginTop: "10px" }}
               className="eprbtn1"
             >
               Contact Us

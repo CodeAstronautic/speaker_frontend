@@ -236,7 +236,7 @@ export default function Addeventpage() {
               <div><BsChevronRight/></div>
             </span>
             <div
-              style={{ marginTop: "10px", marginTop: "5rem" }}
+              style={{ marginTop: "10px", }}
               className="eprbtn1"
             >
               Contact Us
