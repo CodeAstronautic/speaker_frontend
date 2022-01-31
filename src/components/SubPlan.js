@@ -1,8 +1,6 @@
 import React from "react";
 import "./css/subPlan.css";
-import Culture from "./images/cul.png";
 import user from "./images/profile.png";
-import TeamMembers from './TeamMembers';
 
 const SubPlan = () => {
     return (
