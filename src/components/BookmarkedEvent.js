@@ -7,7 +7,6 @@ import {
   BsFillCalendarEventFill,
   BsChevronLeft,
 } from "react-icons/bs";
-import userblank from "./images/blank-profile-picture.png";
 
 const BookmarkedEvent = () => {
   return (

@@ -6,7 +6,6 @@ import { BsChevronRight } from "react-icons/bs";
 import {
   BsFillBookmarkFill,
   BsFillCalendarEventFill,
-  BsChevronLeft,
 } from "react-icons/bs";
 
 export default function MyProfileEvent() {

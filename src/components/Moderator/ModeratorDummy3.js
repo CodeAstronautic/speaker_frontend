@@ -10,7 +10,6 @@ import {
   BsFlag,
   BsBookmark,
   BsLink45Deg,
-  BsTrash,
   BsTrashFill,
 } from "react-icons/bs";
 import { BiMap } from "react-icons/bi";

@@ -1,7 +1,5 @@
 import React from "react";
 import "./css/addeventpage.css";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
 import user from "./images/profile.png";
 import { BsChevronRight } from "react-icons/bs";
 

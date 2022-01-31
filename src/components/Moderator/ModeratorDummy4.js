@@ -2,8 +2,7 @@ import React from "react";
 import "./ModeratorDummy.css";
 import user from "../images/profile.png";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
-import { BsChevronRight, BsChevronDown, BsCalendar3 } from "react-icons/bs";
-import { BiMap } from "react-icons/bi";
+import { BsChevronRight,  BsCalendar3 } from "react-icons/bs";
 
 export default function ModeratorDummy4() {
   return (

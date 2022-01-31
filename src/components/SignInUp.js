@@ -3,11 +3,7 @@ import "./css/SignInUp.css";
 import user from "./images/profile.png";
 import {
   BsChevronRight,
-  BsFillBookmarkFill,
-  BsFillCalendarEventFill,
-  BsChevronLeft,
 } from "react-icons/bs";
-import userblank from "./images/blank-profile-picture.png";
 
 const SignInUp = () => {
   return (
