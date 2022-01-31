@@ -44,12 +44,12 @@ const Eventpage = () => {
             <div className="stl-child">
               <p className="stlc-text">Location: </p>
               <select
-                className="stlc-field mpes-input"
-                style={{
-                  paddingTop: "0",
-                  paddingBottom: "0",
-                  color: "grey",
-                }}
+                className="stlc-field "
+                // style={{
+                //   paddingTop: "0",
+                //   paddingBottom: "0",
+                //   color: "grey",
+                // }}
               >
                 <option value="Online" selected>
                   Choose Mode
@@ -63,7 +63,7 @@ const Eventpage = () => {
             <div className="stl-child">
               <p className="stlc-text">Categories: </p>
               <select
-                className="stlc-field mpes-input"
+                className="stlc-field "
                 style={{
                   paddingTop: "0",
                   paddingBottom: "0",
@@ -82,7 +82,7 @@ const Eventpage = () => {
             <div className="stl-child">
               <p className="stlc-text">Sort: </p>
               <select
-                className="stlc-field mpes-input"
+                className="stlc-field "
                 style={{
                   paddingTop: "0",
                   paddingBottom: "0",
@@ -103,7 +103,7 @@ const Eventpage = () => {
 
               <input
                 type="date"
-                className="mpes-input stlc-field"
+                className=" stlc-field"
                 placeholder="dd/mm/yyyy"
               />
             </div>
@@ -112,7 +112,7 @@ const Eventpage = () => {
 
               <input
                 type="date"
-                className="mpes-input stlc-field"
+                className=" stlc-field"
                 placeholder="dd/mm/yyyy"
               />
             </div>

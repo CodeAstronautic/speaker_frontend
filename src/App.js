@@ -3,7 +3,7 @@ import Addeventpage from "./components/Addeventpage";
 import Navbar from "./components/Navbar";
 import Firstpage from "./components/Firstpage";
 import Categories from "./components/Categories";
-import Event from "./components/Event";
+// import Event from "./components/Event";
 import Footer from "./components/Footer";
 import Eventpage from "./components/Eventpage";
 import About2 from "./components/About2";
@@ -17,16 +17,20 @@ import MyProfileEvent from "./components/MyProfileEvent";
 import SingleEventPageExclusive from "./components/SingleEventPageExclusive";
 import SignInUp from "./components/SignInUp";
 import SubPlan from "./components/SubPlan";
+import ModeratorDummy1 from "./components/Moderator/ModeratorDummy1";
+import ModeratorDummy2 from "./components/Moderator/ModeratorDummy2";
+import ModeratorDummy3 from "./components/Moderator/ModeratorDummy3";
+import ModeratorDummy4 from "./components/Moderator/ModeratorDummy4";
 const App = () => {
   return (
-    <>
+    <>  
       <Navbar />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Firstpage />} />
           <Route path="/about2" element={<About2 />} />
           <Route path="/categories" element={<Categories />} />
-          <Route path="/event" element={<Event />} />
+          {/* <Route path="/event" element={<Event />} /> */}
           <Route path="/addevent" element={<Addeventpage />} />
           <Route path="/events" element={<Eventpage />} />
           <Route path="/moderator" element={<ModeratorProfile />} />
@@ -39,6 +43,10 @@ const App = () => {
           <Route path="/myprofile-event" element={<MyProfileEvent />} /> 
           <Route path="/login" element={<SignInUp />} /> 
           <Route path="/subplan" element={<SubPlan />} /> 
+          <Route path="/mod-dummy1" element={<ModeratorDummy1 />} /> 
+          <Route path="/mod-dummy2" element={<ModeratorDummy2 />} /> 
+          <Route path="/mod-dummy3" element={<ModeratorDummy3 />} /> 
+          <Route path="/mod-dummy4" element={<ModeratorDummy4 />} /> 
         </Routes>
       </BrowserRouter>
       <Footer />

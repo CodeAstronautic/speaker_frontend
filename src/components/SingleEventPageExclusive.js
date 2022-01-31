@@ -100,9 +100,8 @@ export default function SingleEventPageExclusive() {
               </div>
             </div>
           </div>
-          <div className="sep-einfo-foot">
-            This is an event hosted by one of the event managers. Click on the
-            link above to apply as a speaker.
+          <div className="sep-einfo-foot" style={{color:'rgba(40, 166, 20, 1)'}}>
+          This is speakerore exclusive event. You can apply via mailing to the organizer.
           </div>
         </div>
 
