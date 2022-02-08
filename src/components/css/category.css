@@ -89,3 +89,9 @@ padding: 0 8rem;
   border-radius: 5px;
   margin-top: 0.8rem;
 }
+.fpoc-btn:hover{
+  font-size: larger;
+  transition: ease-in-out 0.25s;
+  box-shadow: 0 0 20px rgba(255, 217, 0, 0.55);
+
+}

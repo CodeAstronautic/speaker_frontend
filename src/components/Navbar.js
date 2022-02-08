@@ -10,7 +10,7 @@ export default function Navbar() {
           <img src={require("./images/logo.jpg")} alt={""} />
         </div>
         <div>
-          <ul>
+          <ul className="nav-ul">
             <li>
               <a href="/events">Events</a>
             </li>

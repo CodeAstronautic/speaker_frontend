@@ -10,7 +10,12 @@
 }
 .footer ul li{
     display: block;
-
+    line-height: 40px;
+}
+.footer .firstcolumn li:hover, .secondcolumn li:hover{
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: ease-in-out 0.15s;
 }
 .footer .thirdcolumn{
     text-align: center;

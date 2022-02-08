@@ -30,8 +30,8 @@ export default function Footer() {
             </button>
           </li>
 
-          <li>
-            {" "}
+          <li >
+            
             Subscribing to SpeakerOre unlocks unlimited events.{" "}
           </li>
           <li className="fc10">

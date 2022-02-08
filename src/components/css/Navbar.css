@@ -1,47 +1,53 @@
-.container{
-    /* position: absolute; */
-width: 100%;
-height: 56.78px;
-left: 0px;
-top: 0px;
+.container {
+  /* position: absolute; */
+  width: 100%;
+  height: 56.78px;
+  left: 0px;
+  top: 0px;
 
-background-color: #F4F4F4;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-
+  background-color: #f4f4f4;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
-.logo img{
-    display: inline;
-    position: absolute;
-    float: left;
-width: 114.82px;
-height: 64.66px;
-left: 87.49px;
-top: -7.44px;
-
+.logo img {
+  display: inline;
+  position: absolute;
+  float: left;
+  width: 114.82px;
+  height: 64.66px;
+  left: 87.49px;
+  top: -7.44px;
 }
-ul{
-    /* position: absolute; */
-    list-style: none;
-    text-align: center;
-    line-height: 50px;
+.nav-ul {
+  list-style: none;
+  text-align: center;
+  line-height: 50px;
 }
 
-li{
-
-    display: inline;
+.nav-ul li {
+  display: inline;
 }
 
-li a{
-    color: black;
-    text-decoration: none;
-    font-family: roboto;
-    font-size: 14px;
-    padding-left: 32.5px;
-    
+.nav-ul li a {
+  color: black;
+  text-decoration: none;
+  font-family: roboto;
+  font-size: 14px;
+  padding-left: 32.5px;
 }
-.navright a{
+
+.nav-ul li:hover {
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    /* font-size: xx-large; */
+    transition: easeout 0.5s;
+    /* text-shadow: 0px 0px 2px #ffbf19; */
+}
+.nav-ul li a:hover {
+    font-size: 20px;
+    transition: ease-in-out 0.5s;
+}
+.navright a {
   float: right;
-   padding-right: 110px;
-    text-align: center;
-    /* padding-top: 22.39px; */
+  padding-right: 110px;
+  text-align: center;
 }
