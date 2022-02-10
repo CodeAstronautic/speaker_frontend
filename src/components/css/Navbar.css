@@ -38,16 +38,20 @@
 .nav-ul li:hover {
     font-weight: bold;
     letter-spacing: 0.1rem;
-    /* font-size: xx-large; */
     transition: easeout 0.5s;
     /* text-shadow: 0px 0px 2px #ffbf19; */
 }
 .nav-ul li a:hover {
-    font-size: 20px;
+    font-size: 15px;
     transition: ease-in-out 0.5s;
 }
 .navright a {
   float: right;
   padding-right: 110px;
   text-align: center;
+}
+.navright a:hover{
+  padding-left: 5px;
+  font-size: 15px;
+  transition: ease-in-out 0.5s;
 }

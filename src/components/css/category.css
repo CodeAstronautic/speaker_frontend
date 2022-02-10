@@ -17,7 +17,8 @@
   margin-bottom: 2rem;
   color: #000000;
 }
-.catcards, .fp-options {
+.catcards,
+.fp-options {
   padding: 2rem;
 }
 .catcards-section {
@@ -46,8 +47,8 @@
   flex-direction: row;
   justify-content: space-around;
 }
-.fpo-card{
-    text-align: center;
+.fpo-card {
+  text-align: center;
 }
 .fpoc-head {
   font-family: Roboto;
@@ -65,33 +66,34 @@
   font-size: larger;
   text-align: center;
   color: #9a9696;
-margin-bottom: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 .fpoc-img {
-width: 60%;
-    background: #f4f4f4;
+  width: 60%;
+  background: #f4f4f4;
   border-radius: 10px;
 }
 .fpoc-text {
-    font-family: Roboto;
+  font-family: Roboto;
   font-style: normal;
   font-weight: 300;
   /* font-size: large; */
   text-align: center;
-margin-top: 1rem;
-padding: 0 8rem;
+  margin-top: 1rem;
+  padding: 0 8rem;
   color: #9a9696;
 }
 .fpoc-btn {
-    padding: 0.7rem 2rem;
+  padding: 0.7rem 2rem;
   border: none;
   background: #ffbf19;
   border-radius: 5px;
   margin-top: 0.8rem;
+  font-size: medium;
 }
-.fpoc-btn:hover{
-  font-size: larger;
+.fpoc-btn:hover {
+  padding: 0.5rem 1rem;
   transition: ease-in-out 0.25s;
   box-shadow: 0 0 20px rgba(255, 217, 0, 0.55);
-
+  
 }
