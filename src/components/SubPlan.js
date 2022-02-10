@@ -31,32 +31,7 @@ const SubPlan = () => {
                             <div className="eprbtn1">BUY NOW</div>
                         </div>
                     </div>
-                    <h4
-                        style={{
-                            textAlign: "center",
-                        }}
-                    >
-                        Achievements so far in SpeakerOre community
-                    </h4>
-
-                    <div className="second-box">
-                        <div className="box-two">
-                            <p>400+</p>
-                            <p>TOTAL EVENTS </p>
-                        </div>
-                        <div className="box-two">
-                            <p>400+</p>
-                            <p>TOTAL EVENTS </p>
-                        </div>
-                        <div className="box-two">
-                            <p>400+</p>
-                            <p>TOTAL EVENTS </p>
-                        </div>
-                        <div className="box-two">
-                            <p>400+</p>
-                            <p>TOTAL EVENTS </p>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div className="ep-right">
                     <div className="eprcard">
@@ -82,50 +57,6 @@ const SubPlan = () => {
                         </div>
                     </div>
 
-                    <div className="eprcard">
-                        <p>
-                            <b style={{ fontWeight: "500" }}>Reources</b>
-                        </p>
-                        <span
-                            style={{
-                                display: "flex",
-                                justifyContent: "space-between",
-                                marginTop: "1.3rem",
-                            }}
-                            className="eprtext1"
-                        >
-                            <div>About Us</div>
-                            <div></div>
-                        </span>
-                        <span
-                            style={{
-                                display: "flex",
-                                justifyContent: "space-between",
-                                marginTop: "1.3rem",
-                            }}
-                            className="eprtext1"
-                        >
-                            <div>How it works</div>
-                            <div></div>
-                        </span>
-                        <span
-                            style={{
-                                display: "flex",
-                                justifyContent: "space-between",
-                                marginTop: "1.3rem",
-                            }}
-                            className="eprtext1"
-                        >
-                            <div>Privacy Policy</div>
-                            <div></div>
-                        </span>
-                        <div
-                            style={{ marginTop: "10px" }}
-                            className="eprbtn1"
-                        >
-                            Contact Us
-                        </div>
-                    </div>
                 </div>
             </div>
         </>
