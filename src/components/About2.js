@@ -10,13 +10,11 @@ const About2 = () => {
             <div className="ep-parent">
                 <div className="ep-left">
                     <div className="epl-heading" style={{
-                        fontWeight:'600',
+                        fontWeight:'600'
                     }}>
                         <p>About Us</p>
-                        <p>SpeakerOre</p>
                     </div>
                     <div className="col-first">
-                        <p>WE PROVIDE </p>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra
                             arcu leo cras pellentesque. Ut consequat, adipiscing orci, aliquet
@@ -40,49 +38,12 @@ const About2 = () => {
                     </div>
                     <h3
                         style={{
-                            marginTop: "2rem",
+                            margin: "2rem 0",
                             textAlign: "center",
                         }}
                     >
                         Why SpeakerOre Exclusive?
                     </h3>
-                    <div className="main-box">
-                        <div className="box-one">
-                            <p>Get event details for FREE.</p>
-                        </div>
-                        <div className="box-one">
-                            <p>Get event details for FREE.</p>
-                        </div>
-                        <div className="box-one">
-                            <p>Get event details for FREE.</p>
-                        </div>
-                    </div>
-                    <h4
-                        style={{
-                            textAlign: "center",
-                        }}
-                    >
-                        Achievements so far in SpeakerOre community
-                    </h4>
-
-                    <div className="second-box">
-                        <div className="box-two">
-                            <p>400+</p>
-                            <p>TOTAL EVENTS </p>
-                        </div>
-                        <div className="box-two">
-                            <p>400+</p>
-                            <p>TOTAL EVENTS </p>
-                        </div>
-                        <div className="box-two">
-                            <p>400+</p>
-                            <p>TOTAL EVENTS </p>
-                        </div>
-                        <div className="box-two">
-                            <p>400+</p>
-                            <p>TOTAL EVENTS </p>
-                        </div>
-                    </div>
                     <p className="eprtext1" style={{ textAlign: "center", fontSize: 'smaller', paddingLeft: '3rem' }}>
                         Thousands of people have joined SpeakerOre and are creating better
                         opportunities to grow. Are you?

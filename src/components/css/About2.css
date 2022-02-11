@@ -20,11 +20,11 @@
   padding: 1.5rem;
   border-radius: 10px;
 }
-.col-first p:nth-child(1) {
+/* .col-first p:nth-child(1) {
   text-align: center;
   margin-bottom: 0.5em;
-}
-.col-first p:nth-child(2) {
+} */
+.col-first p:nth-child(1) {
   color: rgba(154, 150, 150, 1);
 }
 .main-box{

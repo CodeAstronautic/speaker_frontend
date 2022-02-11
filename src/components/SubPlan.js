@@ -31,7 +31,7 @@ const SubPlan = () => {
                             <div className="eprbtn1">BUY NOW</div>
                         </div>
                     </div>
-                    
+                     
                 </div>
                 <div className="ep-right">
                     <div className="eprcard">
