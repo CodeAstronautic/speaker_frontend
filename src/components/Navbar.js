@@ -15,13 +15,13 @@ export default function Navbar() {
               <a href="/events">Events</a>
             </li>
             <li>
-              <a href="/">Plans</a>
+              <a href="/subplan">Plans</a>
             </li>
             <li>
               <a href="/about">About</a>
             </li>
             <li className="navright">
-              <a href="/">SignIn</a>
+              <a href="/login">SignIn</a>
             </li>
           </ul>
         </div>
