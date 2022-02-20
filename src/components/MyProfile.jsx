@@ -19,11 +19,12 @@ export default function MyProfile() {
         console.log(err);
       });
   }, []);
+  console.log(userData,"ldgjdlkfjg")
   return (
     <>
       <div className="mp-parent">
         <div className="mp-left">
-         <AccountSide />
+         <AccountSide userData={userData}/>
           <div style={{ marginLeft: "2rem", display: "flex" }}>
             <span style={{ fontSize: "2rem" }}>
               <AiOutlineSafetyCertificate />
@@ -45,9 +46,9 @@ export default function MyProfile() {
               <img src={user} alt="" />
             </div>
             <p>
-              Hi, <b style={{ fontWeight: "500" }}>Mohit Gopal!</b>
+              Hi, <b style={{ fontWeight: "500" }}>{userData?.name}!</b>
             </p>
-            <span className="eprtext1">Event Manager</span>
+            <span className="eprtext1">{userData?.role}</span>
             <div style={{ marginTop: "3rem" }} className="eprbtn2">
               Create a new event
             </div>

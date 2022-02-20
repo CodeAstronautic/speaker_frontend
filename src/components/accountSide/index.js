@@ -2,7 +2,7 @@ import React from 'react'
 import user from "../images/profile.png";
 import { useNavigate } from "react-router-dom";
 
-export default function index() {
+export default function index({userData}) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const navigate = useNavigate();
     const handleLogout = () => {
@@ -56,6 +56,7 @@ export default function index() {
                             type="text"
                             className="mpes-input"
                             placeholder="Write Here"
+                            value={userData?.name}
                         />
                         <p>Age</p>
                         <input
@@ -68,6 +69,8 @@ export default function index() {
                             type="text"
                             className="mpes-input"
                             placeholder="Write Here"
+                            value={userData?.phone}
+
                         />
                         <p>Occupation</p>
                         <input
