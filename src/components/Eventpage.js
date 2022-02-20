@@ -15,7 +15,7 @@ const Eventpage = () => {
   useEffect(() => {
     const userToken = localStorage.getItem('@userData')
     console.log(JSON.parse(userToken).token, "hjkhkjhkh")
-    axios.get('http://localhost:3000/api/events', {
+    axios.get(`${process.env.REACT_APP_URL}/events`, {
       headers: {
         Authorization: `Bearer ${JSON.parse(userToken).token}`
       }
@@ -160,18 +160,21 @@ const Eventpage = () => {
                     Tags: <p className="e4">Industry, Film, Acting, Speaking </p>
                   </div>
                   <div className="ec-section4">
-                   {data?.description}
+                    {data?.description}
                   </div>
                   <div className="ec-section5">
-                    <button
-                      className="eprbtn2"
-                      style={{
-                        background: "#ffbf19",
-                        padding: "0.5rem 2rem",
-                      }}
-                    >
-                      View Details
-                    </button>
+                    <a href={`/single-event/${data?.id}`}>
+
+                      <button
+                        className="eprbtn2"
+                        style={{
+                          background: "#ffbf19",
+                          padding: "0.5rem 2rem",
+                        }}
+                      >
+                        View Details
+                      </button>
+                    </a>
                   </div>
                 </div>
               )
@@ -180,28 +183,29 @@ const Eventpage = () => {
 
           </div>
 
-          <div className="event-nav-bottom">
-            <div className="enav-prev">
-              <span className="enb-icon">
-                <BsChevronLeft />
-              </span>
-              <span>Previous</span>
-            </div>
-            <ul className="enav-nums">
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>...</li>
-              <li>15</li>
-            </ul>
-            <div className="enav-next">
-              <span>Next</span>
-              <span className="enb-icon">
-                <BsChevronRight />
-              </span>
-            </div>
-          </div>
+          {eventData?.length > 9 &&
+            <div className="event-nav-bottom">
+              <div className="enav-prev">
+                <span className="enb-icon">
+                  <BsChevronLeft />
+                </span>
+                <span>Previous</span>
+              </div>
+              <ul className="enav-nums">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>...</li>
+                <li>15</li>
+              </ul>
+              <div className="enav-next">
+                <span>Next</span>
+                <span className="enb-icon">
+                  <BsChevronRight />
+                </span>
+              </div>
+            </div>}
         </div>
       </div>
       <div className="ep-right">

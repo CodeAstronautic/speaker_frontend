@@ -2,83 +2,12 @@ import React from "react";
 import user from "./images/profile.png";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { BsChevronRight } from "react-icons/bs";
-
+import AccountSide from "./accountSide"
 export default function BillingInformation() {
   return (
     <div className="mp-parent">
       <div className="mp-left">
-        <div className="mp-upper">
-          <div className="mpl-left">
-            <h5
-              style={{
-                margin: "0 auto 1rem auto",
-                borderBottom: "2px solid #ffbf19",
-                width: "fit-content",
-                paddingBottom: "0.5rem",
-              }}
-            >
-              PROFILE DETAILS
-            </h5>
-
-            <div className="cdrow">
-              <div className="cdr-box"></div>
-              <span>BASIC INFORMATION</span>
-            </div>
-            <div className="cdrow">
-              <div className="cdr-box"></div>
-              <span>ACCOUNT</span>
-            </div>
-            <div className="cdrow">
-              <div className="cdr-box"></div>
-              <span>EVENTS</span>
-            </div>
-            <div className="cdrow active-tab">
-              <div className="cdr-box"></div>
-              <span>BILLING INFORMATION</span>
-            </div>
-            <div className="cdrow">
-              <div className="cdr-box"></div>
-              <span>LOGOUT</span>
-            </div>
-          </div>
-          <div className="mpl-right">
-            <div className="mpl-heading">
-              <p>BILLING INFORMATION</p>
-            </div>
-            <div className="mpedit-section">
-              <div className="mpes-form">
-                <div className="bill-header">
-                  <span style={{ marginBottom: "1rem" }}>Bank Account</span>
-                  <button style={{
-                    background:' none',
-                    textDecoration:' underline',
-                    border:' none',
-                    outline:' none',
-                    marginTop: '-3px',
-                  }}>Change</button>
-                </div>
-                <p>IFSC</p>
-                <input
-                  type="text"
-                  className="mpes-input"
-                  placeholder="Write Here"
-                />
-                <p>Account Number</p>
-                <input
-                  type="text"
-                  className="mpes-input"
-                  placeholder="Write Here"
-                />
-                <p>Beneficiary</p>
-                <input
-                  type="text"
-                  className="mpes-input"
-                  placeholder="Write Here"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+      <AccountSide />
         <div style={{ marginLeft: "2rem", display: "flex" }}>
           <span style={{ fontSize: "2rem" }}>
             <AiOutlineSafetyCertificate />

@@ -9,7 +9,8 @@ export default function Firstpage() {
       <div className="speaker">
         <img src={require("./images/speaker.jpg")} alt={""} />
         <div className="fp-text">
-          <button className="btn">EXPLORE EVENTS</button>
+          <a href="/events">
+            <button className="btn">EXPLORE EVENTS</button></a>
           <p className="one">SpeakerOre</p>
           <p className="two">One Liner from SpeakerOre to the users</p>
         </div>
@@ -24,28 +25,31 @@ export default function Firstpage() {
         </p>
         <h1 className="fpae-heading">features</h1>
         <div className="speaker">
-          <img src={require("./images/MaskGroup.png")} style={{height:'100%'}} alt={""} />
+          <img src={require("./images/MaskGroup.png")} style={{ height: '100%' }} alt={""} />
           <div className="fp-text">
-            
+
             <p className="fpae-imgtext">CREATE NOW</p>
             <p className="two">You can fill out the form and create any event.</p>
-            <button className="btn">ADD AN EVENT</button>
+            <a href="/addevent">
+              <button className="btn">ADD AN EVENT</button>
+            </a>
           </div>
         </div>
       </div>
       <div className="fp-addevent">
         <p className="head1">EVENT SECTION</p>
         <p className="desc">
-        Subscribe to us and view unlimited number of events.
+          Subscribe to us and view unlimited number of events.
         </p>
         <h1 className="fpae-heading">features</h1>
         <div className="speaker">
-          <img src={require("./images/EventsPage2.png")} style={{height:'100%'}} alt={""} />
+          <img src={require("./images/EventsPage2.png")} style={{ height: '100%' }} alt={""} />
           <div className="fp-text">
-            
+
+
             <p className="fpae-imgtext">VIEW EVENTS</p>
             <p className="two">As a subscriber to SpeakerOre you can view unlimited details of the events.</p>
-            <button className="btn">SUBSCRIBE</button>
+            <a href="/events"><button className="btn">SUBSCRIBE</button></a>
           </div>
         </div>
       </div>

@@ -2,80 +2,28 @@ import React from "react";
 import user from "./images/profile.png";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { BsChevronRight } from "react-icons/bs";
-
+import { useEffect } from "react";
+import axios from "axios";
+import { useState } from "react";
+import AccountSide from "./accountSide"
 export default function MyProfile() {
+  const [userData, setUser] = useState("");
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_URL}/auth/get-loogedin/1`)
+      .then((data) => {
+        console.log(data?.data)
+        setUser(data?.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <>
       <div className="mp-parent">
         <div className="mp-left">
-          <div className="mp-upper">
-            <div className="mpl-left">
-              <h5 style={{margin: "0 auto 1rem auto", borderBottom: '2px solid #ffbf19', width:'fit-content', paddingBottom:'0.5rem'}}>
-                PROFILE DETAILS
-              </h5>
-
-              <div className="cdrow active-tab">
-                <div className="cdr-box"></div>
-                <span>BASIC INFORMATION</span>
-              </div>
-              <div className="cdrow">
-                <div className="cdr-box"></div>
-                <span>ACCOUNT</span>
-              </div>
-              <div className="cdrow">
-                <div className="cdr-box"></div>
-                <span>EVENTS</span>
-              </div>
-              <div className="cdrow">
-                <div className="cdr-box"></div>
-                <span>BILLING INFORMATION</span>
-              </div>
-              <div className="cdrow">
-                <div className="cdr-box"></div>
-                <span>LOGOUT</span>
-              </div>
-            </div>
-            <div className="mpl-right">
-              <div className="mpl-heading">
-                <p>BASIC INFORMATION</p>
-                <button>Edit</button>
-              </div>
-              <div className="mpedit-section">
-                <div className="mpes-form">
-                  <p>Full Name</p>
-                  <input
-                    type="text"
-                    className="mpes-input"
-                    placeholder="Write Here"
-                  />
-                  <p>Age</p>
-                  <input
-                    type="text"
-                    className="mpes-input"
-                    placeholder="Write Here"
-                  />
-                  <p>Phone Number</p>
-                  <input
-                    type="text"
-                    className="mpes-input"
-                    placeholder="Write Here"
-                  />
-                  <p>Occupation</p>
-                  <input
-                    type="text"
-                    className="mpes-input"
-                    placeholder="Write Here"
-                  />
-                </div>
-                <div className="mpes-profilepic">
-                  <img src={user} alt="" />
-                  <div className="mpesdp-change">
-                    <span style={{ marginTop: "12rem" }}>Change</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+         <AccountSide />
           <div style={{ marginLeft: "2rem", display: "flex" }}>
             <span style={{ fontSize: "2rem" }}>
               <AiOutlineSafetyCertificate />
@@ -158,10 +106,7 @@ export default function MyProfile() {
                 <BsChevronRight />
               </div>
             </span>
-            <div
-              style={{ marginTop: "10px",}}
-              className="eprbtn1"
-            >
+            <div style={{ marginTop: "10px" }} className="eprbtn1">
               Contact Us
             </div>
           </div>

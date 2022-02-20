@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./css/Navbar.css";
 //import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function Navbar() {
+  const token = JSON.parse(localStorage.getItem('@userData'))?.token
   return (
     <>
       <div className="container">
@@ -20,9 +21,11 @@ export default function Navbar() {
             <li>
               <a href="/about">About</a>
             </li>
-            <li className="navright">
+            {token ? <li className="navright">
+              <a href="/myprofile">myprofile</a>
+            </li> : <li className="navright">
               <a href="/login">SignIn</a>
-            </li>
+            </li>}
           </ul>
         </div>
       </div>

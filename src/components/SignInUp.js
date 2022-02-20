@@ -1,30 +1,33 @@
 import React, { useState } from "react";
 import "./css/SignInUp.css";
 import user from "./images/profile.png";
-import axios from "axios"
-import {
-  BsChevronRight,
-} from "react-icons/bs";
-
+import axios from "axios";
+import { BsChevronRight } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 const SignInUp = () => {
-  const [email, setEmail] = useState()
-  const [password, setPassword] = useState()
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const navigate = useNavigate()
+  console.log(process.env.REACT_APP_URL,"process.env.REACT_APP_URLprocess.env.REACT_APP_URL")
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    axios.post('http://localhost:3000/api/auth/login/', {
-      "idToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm92aWRlciI6IkdPT0dMRSIsImlkIjozLCJpYXQiOjE2MDk1NjczODB9.1Pfo2rS15iat0B_A1niv2MKawFw6sgWAmc0qOL73Was",
-      "provider": "GOOGLE",
-      "name": "Brijesh Bumrela 2",
-      "phone": "8668916913",
-      "email": "brijeshbumrela@gmail.com"
-    }).then((data) => {
-      localStorage.setItem('@userData', JSON.stringify(data?.data))
-      console.log(data)
-    }).catch((err) => {
-      console.log(err)
-    })
-  }
+    axios
+      .post(`${process.env.REACT_APP_URL}/auth/login/`, {
+        idToken:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm92aWRlciI6IkdPT0dMRSIsImlkIjozLCJpYXQiOjE2MDk1NjczODB9.1Pfo2rS15iat0B_A1niv2MKawFw6sgWAmc0qOL73Was",
+        provider: "GOOGLE",
+        name: "Brijesh Bumrela 2",
+        phone: "8668916913",
+        email: "brijeshbumrela@gmail.com",
+      })
+      .then((data) => {
+        localStorage.setItem("@userData", JSON.stringify(data?.data));
+        navigate('/events')
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div className="mp-parent" style={{ background: "none", marginTop: "0" }}>
       <div className="mp-left siu-left">
@@ -33,7 +36,7 @@ const SignInUp = () => {
             <p>Become a member now!</p>
             <button>Already a memeber? SIGN IN</button>
           </div>
-          <form >
+          <form>
             {/* <div className="siuinput-parent">
             <p>Full Name</p>
             <input type="text" className="siu-input" placeholder="Full Name" />
@@ -61,7 +64,15 @@ const SignInUp = () => {
             </div>
             <div className="siubtn-parent">
               <div className="eprbtn1 siubtn1">
-                <button type="button" onClick={handleSubmit}>SIGN - UP
+                <button
+                  type="button"
+                  onClick={handleSubmit}
+                  style={{
+                    background: "#ffbf19",
+                    borderStyle: "none",
+                  }}
+                >
+                  SIGN - UP
                 </button>
               </div>
               <h3
@@ -152,10 +163,7 @@ const SignInUp = () => {
               <BsChevronRight />
             </div>
           </span>
-          <div
-            style={{ marginTop: "10px" }}
-            className="eprbtn1"
-          >
+          <div style={{ marginTop: "10px" }} className="eprbtn1">
             Contact Us
           </div>
         </div>

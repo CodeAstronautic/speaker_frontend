@@ -23,12 +23,12 @@ import ModeratorDummy3 from "./components/Moderator/ModeratorDummy3";
 import ModeratorDummy4 from "./components/Moderator/ModeratorDummy4";
 const App = () => {
   return (
-    <>  
+    <>
       <Navbar />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Firstpage />} />
-          <Route path="/about2" element={<About2 />} />
+          <Route path="/about" element={<About2 />} />
           <Route path="/categories" element={<Categories />} />
           {/* <Route path="/event" element={<Event />} /> */}
           <Route path="/addevent" element={<Addeventpage />} />
@@ -37,16 +37,16 @@ const App = () => {
           <Route path="/myprofile" element={<MyProfile />} />
           <Route path="/bill" element={<BillingInformation />} />
           <Route path="/bookmark" element={<BookmarkedEvent />} />
-          <Route path="/basicinfo" element={<BasicInfo />} /> 
-          <Route path="/single-event" element={<SingleEventPage />} /> 
-          <Route path="/single-event-ex" element={<SingleEventPageExclusive />} /> 
-          <Route path="/myprofile-event" element={<MyProfileEvent />} /> 
-          <Route path="/login" element={<SignInUp />} /> 
-          <Route path="/subplan" element={<SubPlan />} /> 
-          <Route path="/mod-dummy1" element={<ModeratorDummy1 />} /> 
-          <Route path="/mod-dummy2" element={<ModeratorDummy2 />} /> 
-          <Route path="/mod-dummy3" element={<ModeratorDummy3 />} /> 
-          <Route path="/mod-dummy4" element={<ModeratorDummy4 />} /> 
+          <Route path="/basicinfo" element={<BasicInfo />} />
+          <Route path="/single-event/:id" element={<SingleEventPage />} />
+          <Route path="/single-event-ex" element={<SingleEventPageExclusive />} />
+          <Route path="/myprofile-event" element={<MyProfileEvent />} />
+          <Route path="/login" element={<SignInUp />} />
+          <Route path="/subplan" element={<SubPlan />} />
+          <Route path="/mod-dummy1" element={<ModeratorDummy1 />} />
+          <Route path="/mod-dummy2" element={<ModeratorDummy2 />} />
+          <Route path="/mod-dummy3" element={<ModeratorDummy3 />} />
+          <Route path="/mod-dummy4" element={<ModeratorDummy4 />} />
         </Routes>
       </BrowserRouter>
       <Footer />
