@@ -142,7 +142,7 @@ const Eventpage = () => {
 
         <div className="view-event">
           <div className="vc-sec">
-            {filteredCountries &&filteredCountries?.map((data) => {
+            {filteredCountries && filteredCountries?.map((data) => {
               return (
                 <div className="event-card">
                   <div className="ec-section1">
@@ -225,7 +225,9 @@ const Eventpage = () => {
           </p>
           <span className="eprtext1">Event Manager</span>
           <div style={{ marginTop: "3rem" }} className="eprbtn2">
-            Create a new event
+            <a href="/addevent">
+
+              Create a new event</a>
           </div>
           <div className="eprbtn2">SpeakerOre exclusive Events</div>
           <div

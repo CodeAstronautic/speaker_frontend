@@ -29,8 +29,13 @@ const SignInUp = () => {
           provider: provide
         })
         .then((data) => {
+          console.log()
           localStorage.setItem("@userData", JSON.stringify(data?.data));
-          navigate('/events')
+          if (data?.data?.isSubscribed) {
+            navigate('/events')
+          } else {
+            navigate("/subplan")
+          }
         })
         .catch((err) => {
           console.log(err);

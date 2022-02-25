@@ -23,7 +23,9 @@ import ModeratorDummy3 from "./components/Moderator/ModeratorDummy3";
 import ModeratorDummy4 from "./components/Moderator/ModeratorDummy4";
 // import PrivateRoute from "./routes/privateRoute";
 const App = () => {
-  console.log(localStorage.getItem('@userData'))
+  const isRole=JSON.parse(localStorage.getItem('@userData'))?.isRole
+  const isSubscribed=JSON.parse(localStorage.getItem('@userData'))?.isSubscribed
+  const token=JSON.parse(localStorage.getItem('@userData'))?.token
   return (
     <>
       <Navbar />

@@ -12,12 +12,7 @@ const SubPlan = () => {
                         <p style={{fontWeight:'bolder'}}>SpeakerOre</p>
                     </div>
                     <div className="plan-container">
-                        <div className="plan-card">
-                            <p>PLAN INCLUDES:</p>
-                            <div style={{height: '15rem'}}></div>
-                            <p>Rs. 2499/-</p>
-                            <div className="eprbtn1">BUY NOW</div>
-                        </div>
+                      
                         <div className="plan-card">
                             <p>PLAN INCLUDES:</p>
                             <div style={{height: '15rem'}}></div>
