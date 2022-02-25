@@ -21,7 +21,9 @@ import ModeratorDummy1 from "./components/Moderator/ModeratorDummy1";
 import ModeratorDummy2 from "./components/Moderator/ModeratorDummy2";
 import ModeratorDummy3 from "./components/Moderator/ModeratorDummy3";
 import ModeratorDummy4 from "./components/Moderator/ModeratorDummy4";
+// import PrivateRoute from "./routes/privateRoute";
 const App = () => {
+  console.log(localStorage.getItem('@userData'))
   return (
     <>
       <Navbar />

@@ -6,10 +6,12 @@ import {
   BsFillCalendarEventFill,
   BsChevronLeft,
 } from "react-icons/bs";
-import userblank from "./images/blank-profile-picture.png";
 import axios from "axios";
-
+import user from "./images/profile.png";
 const Eventpage = () => {
+  const [search, setSearch] = useState(
+    ""
+  )
   const [eventData, setEventData] = useState()
   console.log(eventData, "jhkjh")
   useEffect(() => {
@@ -23,6 +25,9 @@ const Eventpage = () => {
       console.log(err)
     })
   }, [])
+  const filteredCountries = eventData?.filter((country) => {
+    return country.name.toLowerCase().indexOf(search.toLowerCase()) !== -1;
+  });
   return (
     <div className="mp-parent" style={{ background: "none", marginTop: "0" }}>
       <div className="mp-left">
@@ -34,6 +39,8 @@ const Eventpage = () => {
                 type="text"
                 placeholder="Search by event name, location, or category name"
                 name="search"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
               />
               <button type="submit">
                 <i class="fa fa-search"></i>
@@ -135,7 +142,7 @@ const Eventpage = () => {
 
         <div className="view-event">
           <div className="vc-sec">
-            {eventData?.map((data) => {
+            {filteredCountries &&filteredCountries?.map((data) => {
               return (
                 <div className="event-card">
                   <div className="ec-section1">
@@ -211,68 +218,27 @@ const Eventpage = () => {
       <div className="ep-right">
         <div className="eprcard">
           <div className="avatar-parent">
-            <img src={userblank} alt="" />
+            <img src={user} alt="" />
           </div>
           <p>
-            Hi, <b style={{ fontWeight: "500" }}>Stranger!</b>
+            Hi, <b style={{ fontWeight: "500" }}>Mohit Gopal!</b>
           </p>
-          <span className="eprtext1">
-            Are you an event manager or a speaker?
-          </span>
-          <div style={{ marginTop: "3rem" }} className="eprbtn1">
-            Sign In
+          <span className="eprtext1">Event Manager</span>
+          <div style={{ marginTop: "3rem" }} className="eprbtn2">
+            Create a new event
           </div>
-          <div className="eprbtn2">Sign Up</div>
-          <span className="eprtext1" style={{ fontSize: "x-small" }}>
-            Single click Google Sign in.
-          </span>
-
-          <div className="pc-seperator">.</div>
-          <h5>Why Sign In/Up?</h5>
-          <ul className="pc-stranger-perks">
-            <li>Get event details for FREE.</li>
-            <li>Unlimited clicks on events</li>
-            <li>Get hired through speakerOre exclusive events </li>
-          </ul>
+          <div className="eprbtn2">SpeakerOre exclusive Events</div>
+          <div
+            style={{
+              marginTop: "0",
+              background: "rgba(255, 191, 25, 0.4)",
+            }}
+            className="eprbtn1"
+          >
+            Subscribed
+          </div>
         </div>
 
-        <div className="eprcard">
-          <p>
-            <b style={{ fontWeight: "500" }}>My Profile</b>
-          </p>
-          <span
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              marginTop: "1.3rem",
-            }}
-            className="eprtext1"
-          >
-            <div>Basic Information</div>
-            <div>
-              <BsChevronRight />
-            </div>
-          </span>
-          <span
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              marginTop: "1.3rem",
-            }}
-            className="eprtext1"
-          >
-            <div>Account Settings</div>
-            <div>
-              <BsChevronRight />
-            </div>
-          </span>
-          <div style={{ marginTop: "5rem" }} className="eprbtn2">
-            Show Bookmarked Events
-          </div>
-          <div style={{ marginTop: "10px" }} className="eprbtn1">
-            View Profile
-          </div>
-        </div>
         <div className="eprcard">
           <p>
             <b style={{ fontWeight: "500" }}>Reources</b>
@@ -286,9 +252,7 @@ const Eventpage = () => {
             className="eprtext1"
           >
             <div>About Us</div>
-            <div>
-              <BsChevronRight />
-            </div>
+            <div></div>
           </span>
           <span
             style={{
@@ -299,9 +263,7 @@ const Eventpage = () => {
             className="eprtext1"
           >
             <div>How it works</div>
-            <div>
-              <BsChevronRight />
-            </div>
+            <div></div>
           </span>
           <span
             style={{
@@ -312,11 +274,12 @@ const Eventpage = () => {
             className="eprtext1"
           >
             <div>Privacy Policy</div>
-            <div>
-              <BsChevronRight />
-            </div>
+            <div></div>
           </span>
-          <div style={{ marginTop: "10px" }} className="eprbtn1">
+          <div
+            style={{ marginTop: "10px", }}
+            className="eprbtn1"
+          >
             Contact Us
           </div>
         </div>
