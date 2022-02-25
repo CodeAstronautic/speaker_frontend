@@ -8,25 +8,27 @@ const SubPlan = () => {
             <div className="ep-parent">
                 <div className="ep-left">
                     <div className="epl-heading subplan-heading">
-                        <p style={{borderBottom:'1px solid rgba(255, 191, 25, 1)'}}>Plans</p>
-                        <p style={{fontWeight:'bolder'}}>SpeakerOre</p>
+                        <p style={{ borderBottom: '1px solid rgba(255, 191, 25, 1)' }}>Plans</p>
+                        <p style={{ fontWeight: 'bolder' }}>SpeakerOre</p>
                     </div>
                     <div className="plan-container">
-                      
+
                         <div className="plan-card">
                             <p>PLAN INCLUDES:</p>
-                            <div style={{height: '15rem'}}></div>
+                            <div style={{ height: '15rem' }}></div>
                             <p>Rs. 2499/-</p>
-                            <div className="eprbtn1">BUY NOW</div>
+                            <div className="eprbtn1"><a href="/events">
+                                BUY NOW
+                            </a></div>
                         </div>
                         <div className="plan-card">
                             <p>PLAN INCLUDES:</p>
-                            <div style={{height: '15rem'}}></div>
+                            <div style={{ height: '15rem' }}></div>
                             <p>Rs. 2499/-</p>
-                            <div className="eprbtn1">BUY NOW</div>
+                            <div className="eprbtn1"><a href="/events">BUY NOW  </a></div>
                         </div>
                     </div>
-                     
+
                 </div>
                 <div className="ep-right">
                     <div className="eprcard">
