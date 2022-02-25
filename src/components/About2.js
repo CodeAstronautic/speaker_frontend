@@ -10,7 +10,7 @@ const About2 = () => {
             <div className="ep-parent">
                 <div className="ep-left">
                     <div className="epl-heading" style={{
-                        fontWeight:'600'
+                        fontWeight: '600'
                     }}>
                         <p>About Us</p>
                     </div>
