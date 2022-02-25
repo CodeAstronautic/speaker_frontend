@@ -21,6 +21,8 @@ import ModeratorDummy1 from "./components/Moderator/ModeratorDummy1";
 import ModeratorDummy2 from "./components/Moderator/ModeratorDummy2";
 import ModeratorDummy3 from "./components/Moderator/ModeratorDummy3";
 import ModeratorDummy4 from "./components/Moderator/ModeratorDummy4";
+import Terms from "./components/terms";
+import Privacy from "./components/privacy";
 // import PrivateRoute from "./routes/privateRoute";
 const App = () => {
   const isRole=JSON.parse(localStorage.getItem('@userData'))?.isRole
@@ -51,6 +53,8 @@ const App = () => {
           <Route path="/mod-dummy2" element={<ModeratorDummy2 />} />
           <Route path="/mod-dummy3" element={<ModeratorDummy3 />} />
           <Route path="/mod-dummy4" element={<ModeratorDummy4 />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Routes>
       </BrowserRouter>
       <Footer />
