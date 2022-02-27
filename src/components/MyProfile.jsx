@@ -5,26 +5,30 @@ import { BsChevronRight } from "react-icons/bs";
 import { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
-import AccountSide from "./accountSide"
+import AccountSide from "./accountSide";
 export default function MyProfile() {
   const [userData, setUser] = useState("");
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_URL}/auth/get-loogedin/1`)
+      .get(
+        `${process.env.REACT_APP_URL}/auth/get-loogedin/${
+          JSON.parse(localStorage.getItem("@token"))?.userdata?.id
+        }`
+      )
       .then((data) => {
-        console.log(data?.data)
+        console.log(data?.data);
         setUser(data?.data);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
-  console.log(userData,"ldgjdlkfjg")
+  console.log(userData, "ldgjdlkfjg");
   return (
     <>
       <div className="mp-parent">
         <div className="mp-left">
-         <AccountSide userData={userData}/>
+          <AccountSide userData={userData} />
           <div style={{ marginLeft: "2rem", display: "flex" }}>
             <span style={{ fontSize: "2rem" }}>
               <AiOutlineSafetyCertificate />

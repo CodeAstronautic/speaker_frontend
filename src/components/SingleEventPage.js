@@ -14,6 +14,7 @@ import {
 import { BiMap } from "react-icons/bi";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
+import LoggedInSidebar from "./accountSide/LoggedInSidebar";
 export default function SingleEventPage() {
   const navigate = useLocation()
   const [eventData, setEventData] = useState()
@@ -25,7 +26,7 @@ export default function SingleEventPage() {
 
       axios.get(`${process.env.REACT_APP_URL}/events/${navigate?.pathname?.split('/')[2]}`, {
         headers: {
-          Authorization: `Bearer ${JSON.parse(localStorage.getItem('@userData')).token}`
+          Authorization: `Bearer ${JSON.parse(localStorage.getItem('@token')).token}`
         }
       }).then((data) => {
         setSingleEventData(data?.data)
@@ -35,7 +36,7 @@ export default function SingleEventPage() {
     }
   }, [])
   useEffect(() => {
-    const userToken = localStorage.getItem('@userData')
+    const userToken = localStorage.getItem('@token')
     console.log(JSON.parse(userToken).token, "hjkhkjhkh")
     axios.get(`${process.env.REACT_APP_URL}/events`, {
       headers: {
@@ -183,81 +184,7 @@ export default function SingleEventPage() {
           </div>
         </div>
       </div>
-      <div className="ep-right">
-        <div className="eprcard">
-          <div className="avatar-parent">
-            <img src={user} alt="" />
-          </div>
-          <p>
-            Hi, <b style={{ fontWeight: "500" }}>Mohit Gopal!</b>
-          </p>
-          <span className="eprtext1">Event Manager</span>
-          <div style={{ marginTop: "3rem" }} className="eprbtn2">
-            Create a new event
-          </div>
-          <div className="eprbtn2">SpeakerOre exclusive Events</div>
-          <div
-            style={{
-              marginTop: "0",
-              background: "rgba(255, 191, 25, 0.4)",
-            }}
-            className="eprbtn1"
-          >
-            Subscribed
-          </div>
-        </div>
-
-        <div className="eprcard">
-          <p>
-            <b style={{ fontWeight: "500" }}>Reources</b>
-          </p>
-          <span
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              marginTop: "1.3rem",
-            }}
-            className="eprtext1"
-          >
-            <div>About Us</div>
-            <div>
-              <BsChevronRight />
-            </div>
-          </span>
-          <span
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              marginTop: "1.3rem",
-            }}
-            className="eprtext1"
-          >
-            <div>How it works</div>
-            <div>
-              <BsChevronRight />
-            </div>
-          </span>
-          <span
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              marginTop: "1.3rem",
-            }}
-            className="eprtext1"
-          >
-            <div>Privacy Policy</div>
-            <div>
-              <BsChevronRight />
-            </div>
-          </span>
-          <div
-            style={{ marginTop: "10px" }}
-            className="eprbtn1"
-          >
-            Contact Us
-          </div>
-        </div>
-      </div>
+   <LoggedInSidebar />
     </div>
   );
 }

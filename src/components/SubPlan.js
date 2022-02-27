@@ -1,4 +1,5 @@
 import React from "react";
+import LoggedInSidebar from "./accountSide/LoggedInSidebar";
 import "./css/subPlan.css";
 import user from "./images/profile.png";
 
@@ -30,31 +31,7 @@ const SubPlan = () => {
                     </div>
 
                 </div>
-                <div className="ep-right">
-                    <div className="eprcard">
-                        <div className="avatar-parent">
-                            <img src={user} alt="" />
-                        </div>
-                        <p>
-                            Hi, <b style={{ fontWeight: "500" }}>Mohit Gopal!</b>
-                        </p>
-                        <span className="eprtext1">Event Manager</span>
-                        <div style={{ marginTop: "3rem" }} className="eprbtn2">
-                            Create a new event
-                        </div>
-                        <div className="eprbtn2">SpeakerOre exclusive Events</div>
-                        <div
-                            style={{
-                                marginTop: "0",
-                                background: "rgba(255, 191, 25, 0.4)",
-                            }}
-                            className="eprbtn1"
-                        >
-                            Subscribed
-                        </div>
-                    </div>
-
-                </div>
+             <LoggedInSidebar />
             </div>
         </>
     );

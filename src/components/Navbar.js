@@ -3,7 +3,7 @@ import "./css/Navbar.css";
 //import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function Navbar() {
-  const token = JSON.parse(localStorage.getItem('@userData'))?.token
+  const token = JSON.parse(localStorage.getItem('@token'))?.token
   return (
     <>
       <div className="container">

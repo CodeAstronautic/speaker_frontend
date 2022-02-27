@@ -25,9 +25,9 @@ import Terms from "./components/terms";
 import Privacy from "./components/privacy";
 // import PrivateRoute from "./routes/privateRoute";
 const App = () => {
-  const isRole=JSON.parse(localStorage.getItem('@userData'))?.isRole
-  const isSubscribed=JSON.parse(localStorage.getItem('@userData'))?.isSubscribed
-  const token=JSON.parse(localStorage.getItem('@userData'))?.token
+  const isRole=JSON.parse(localStorage.getItem('@token'))?.isRole
+  const isSubscribed=JSON.parse(localStorage.getItem('@token'))?.isSubscribed
+  const token=JSON.parse(localStorage.getItem('@token'))?.token
   return (
     <>
       <Navbar />

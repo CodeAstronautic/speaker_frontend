@@ -4,55 +4,71 @@ import user from "./images/profile.png";
 import { BsChevronRight } from "react-icons/bs";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import LoggedInSidebar from "./accountSide/LoggedInSidebar";
 
 export default function Addeventpage() {
   const [name, setName] = useState("");
   const [start_time, setstart_time] = useState("");
   const [country, setcountry] = useState("");
   const [about, setabout] = useState("");
-  const [website, setwebsite] = useState("");
-  const navigate = useNavigate()
+  const [location, setlocation] = useState("");
+  const [mode, setMode] = useState()
+  const [topic, setTopic] = useState()
+  const [AudienceType, setAudienceType] = useState()
+  const [paymentTerm, setpaymentTerm] = useState()
+  const [eventIncludes, seteventIncludes] = useState()
+  const [contact, setcontact] = useState()
+  const [sessionType, setsessionType] = useState()
+  const [tags, settags] = useState()
+  const [isExclusive, setisExclusive] = useState()
+
+  const navigate = useNavigate();
   const handleEventCreate = (e) => {
     e.preventDefault();
     const data = {
       name: name,
-      "street": "091 Willms Via",
-      "state": "Louisiana",
-      "country": country,
-      "start_time": start_time || "2020-06-07T02:32:39.292Z",
-      "end_time": "2021-09-01T04:49:42.144Z",
-      "email": "Colt36@hotmail.com",
-      "about": about,
-      "city": "Justinetown",
-      "postalCode": "56525",
-      "website": website,
-      "description": "Praesentium omnis et dolore omnis dolores. Tempora non ut rem. Aut et beatae quisquam. Non eius nobis et eum porro qui facilis possimus ab.",
-      "categories": [
+      street: "091 Willms Via",
+      state: "Louisiana",
+      country: location,
+      start_time: start_time || "2020-06-07T02:32:39.292Z",
+      end_time: "2021-09-01T04:49:42.144Z",
+      email: "Colt36@hotmail.com",
+      about: about,
+      city: "Justinetown",
+      postalCode: "56525",
+      website: '',
+      mode: mode,
+      topic: topic,
+      location: location,
+      paymentTerm: paymentTerm,
+      eventIncludes: eventIncludes,
+      contact: contact,
+      sessionType: sessionType,
+      AudienceType: AudienceType,
+      tags: tags,
+      description:
+        "Praesentium omnis et dolore omnis dolores. Tempora non ut rem. Aut et beatae quisquam. Non eius nobis et eum porro qui facilis possimus ab.",
+      categories: [
         "et",
         "minus",
         "dolorum",
         "ipsa",
-        "nesciunt",
-        "sed",
-        "non",
-        "distinctio",
-        "debitis",
-        "aut",
-        "incidunt",
-        "reiciendis",
-        "qui"
-      ]
-    }
-    console.log(JSON.parse(localStorage.getItem('@userData')), "localStorage.getItem('@userData')")
+      ],
+    };
+    console.log(
+      JSON.parse(localStorage.getItem("@token")),
+      "localStorage.getItem('@token')"
+    );
     axios
       .post(`${process.env.REACT_APP_URL}/events`, data, {
         headers: {
-          Authorization: `Bearer ${JSON.parse(localStorage.getItem('@userData')).token}`
-        }
+          Authorization: `Bearer ${JSON.parse(localStorage.getItem("@token")).token
+            }`,
+        },
       })
       .then((data) => {
         if (data?.data) {
-          navigate('/events')
+          navigate("/events");
         }
       })
       .catch((err) => {
@@ -97,6 +113,8 @@ export default function Addeventpage() {
                           paddingBottom: "0",
                           color: "grey",
                         }}
+                        onChange={(e) => setMode(e.target.value)}
+                        value={mode}
                       >
                         <option value="Online" selected>
                           Choose Mode
@@ -109,20 +127,24 @@ export default function Addeventpage() {
                         type="text"
                         className="mpes-input"
                         placeholder="Write Here"
-                        value={country}
-                        onChange={(e) => setcountry(e.target.value)}
+                        value={location}
+                        onChange={(e) => setlocation(e.target.value)}
                       />
                       <p>Topic covered</p>
                       <input
                         type="text"
                         className="mpes-input"
                         placeholder="Write Here"
+                        onChange={(e) => setTopic(e.target.value)}
+                        value={topic}
                       />
                       <p>Audience Size</p>
                       <input
                         type="text"
                         className="mpes-input"
                         placeholder="Write Here"
+                        onChange={(e) => setAudienceType(e.target.value)}
+                        value={AudienceType}
                       />
                       <p>Payment Terms</p>
                       <select
@@ -132,9 +154,11 @@ export default function Addeventpage() {
                           paddingBottom: "0",
                           color: "grey",
                         }}
+                        onChange={(e) => setpaymentTerm(e.target.value)}
+                        value={paymentTerm}
                       >
                         {/* <option value="Online" selected>Choose Mode</option> */}
-                        <option value="Online" selected>
+                        <option value="Paid" selected>
                           Paid
                         </option>
                         <option value="Offline">Offline</option>
@@ -152,6 +176,8 @@ export default function Addeventpage() {
                           padding: "0.5rem",
                           marginBottom: "1rem",
                         }}
+                        value={eventIncludes}
+                        onChange={(e) => seteventIncludes(e.target.value)}
                         res
                       ></textarea>
                       <p>About (elaborate)</p>
@@ -173,8 +199,8 @@ export default function Addeventpage() {
                         type="number"
                         className="mpes-input"
                         placeholder="Write Here"
-                        value={website}
-                        onChange={(e) => setwebsite(e.target.value)}
+                        value={contact}
+                        onChange={(e) => setcontact(e.target.value)}
                       />
                       <p>Session Type</p>
                       <select
@@ -184,11 +210,13 @@ export default function Addeventpage() {
                           paddingBottom: "0",
                           color: "grey",
                         }}
+                        value={sessionType}
+                        onChange={(e) => setsessionType(e.target.value)}
                       >
-                        <option value="Online" selected>
+                        <option value="ChooseMode" >
                           Choose Mode
                         </option>
-                        <option value="Online" selected>
+                        <option value="Conference" >
                           Conference
                         </option>
                         <option value="Offline">Offline</option>
@@ -198,6 +226,8 @@ export default function Addeventpage() {
                         type="text"
                         className="mpes-input"
                         placeholder="Write Here"
+                        value={AudienceType}
+                        onChange={(e) => setAudienceType(e.target.value)}
                       />
                       <p>Tags</p>
                       <div className="tag-div">
@@ -205,6 +235,8 @@ export default function Addeventpage() {
                           type="text"
                           className="mpes-input"
                           placeholder="first"
+                          value={tags}
+                          onChange={(e) => settags(e.target.value)}
                         />
                         <button>ADD</button>
                       </div>
@@ -224,6 +256,8 @@ export default function Addeventpage() {
                         style={{ position: "initial" }}
                         class="apply1"
                         name="apply1"
+                        value={isExclusive}
+                        onChange={(e) => setisExclusive(e.target.value)}
                       />
                       <div className="conu-text">
                         <h4>Apply for SpeakerOre Exclusive</h4>
@@ -260,78 +294,8 @@ export default function Addeventpage() {
             </div>
           </div>
         </form>
-        <div className="ep-right">
-          <div className="eprcard">
-            <div className="avatar-parent">
-              <img src={user} alt="" />
-            </div>
-            <p>
-              Hi, <b style={{ fontWeight: "500" }}>Mohit Gopal!</b>
-            </p>
-            <span className="eprtext1">Event Manager</span>
-            <div style={{ marginTop: "3rem" }} className="eprbtn2">
-              Create a new event
-            </div>
-            <div className="eprbtn2">SpeakerOre exclusive Events</div>
-            <div
-              style={{
-                marginTop: "0",
-                background: "rgba(255, 191, 25, 0.4)",
-              }}
-              className="eprbtn1"
-            >
-              Subscribed
-            </div>
-          </div>
-
-          <div className="eprcard">
-            <p>
-              <b style={{ fontWeight: "500" }}>Reources</b>
-            </p>
-            <span
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                marginTop: "1.3rem",
-              }}
-              className="eprtext1"
-            >
-              <div>About Us</div>
-              <div>
-                <BsChevronRight />
-              </div>
-            </span>
-            <span
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                marginTop: "1.3rem",
-              }}
-              className="eprtext1"
-            >
-              <div>How it works</div>
-              <div>
-                <BsChevronRight />
-              </div>
-            </span>
-            <span
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                marginTop: "1.3rem",
-              }}
-              className="eprtext1"
-            >
-              <div>Privacy Policy</div>
-              <div>
-                <BsChevronRight />
-              </div>
-            </span>
-            <div style={{ marginTop: "10px" }} className="eprbtn1">
-              Contact Us
-            </div>
-          </div>
-        </div>
+        <LoggedInSidebar />
+       
       </div>
     </>
   );

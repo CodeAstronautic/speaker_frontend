@@ -6,7 +6,7 @@ export default function index({userData}) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const navigate = useNavigate();
     const handleLogout = () => {
-        localStorage.clear("@userData");
+        localStorage.clear("@token");
         navigate("/login");
     };
     return (
