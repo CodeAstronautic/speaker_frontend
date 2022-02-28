@@ -1,6 +1,5 @@
 import React from "react";
 import "./css/eventpage.css";
-import user from "./images/profile.png";
 import {
   BsChevronRight,
   BsFillBookmarkFill,

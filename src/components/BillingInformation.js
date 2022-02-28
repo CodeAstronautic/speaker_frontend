@@ -1,14 +1,13 @@
 import React from "react";
-import user from "./images/profile.png";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
-import { BsChevronRight } from "react-icons/bs";
 import AccountSide from "./accountSide"
 import LoggedInSidebar from "./accountSide/LoggedInSidebar";
+
 export default function BillingInformation() {
   return (
     <div className="mp-parent">
       <div className="mp-left">
-      <AccountSide />
+        <AccountSide />
         <div style={{ marginLeft: "2rem", display: "flex" }}>
           <span style={{ fontSize: "2rem" }}>
             <AiOutlineSafetyCertificate />
@@ -24,7 +23,7 @@ export default function BillingInformation() {
           </span>
         </div>
       </div>
-    <LoggedInSidebar />
+      <LoggedInSidebar />
     </div>
   );
 }

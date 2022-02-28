@@ -2,7 +2,6 @@ import React from "react";
 import "./css/ModeratorProfile.css";
 import user from "./images/profile.png";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
-import { BsChevronRight } from "react-icons/bs";
 import LoggedInSidebar from "./accountSide/LoggedInSidebar";
 
 export default function ModeratorProfile() {

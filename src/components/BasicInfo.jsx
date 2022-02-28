@@ -1,7 +1,5 @@
 import React from "react";
-import user from "./images/profile.png";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
-import { BsChevronRight } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import AccountSide from "./accountSide";
 import LoggedInSidebar from "./accountSide/LoggedInSidebar";

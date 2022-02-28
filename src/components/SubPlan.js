@@ -1,7 +1,6 @@
 import React from "react";
 import LoggedInSidebar from "./accountSide/LoggedInSidebar";
 import "./css/subPlan.css";
-import user from "./images/profile.png";
 
 const SubPlan = () => {
     return (

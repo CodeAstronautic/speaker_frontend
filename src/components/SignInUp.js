@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./css/SignInUp.css";
-import user from "./images/profile.png";
 import axios from "axios";
-import { BsChevronRight } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import LoggedInSidebar from "./accountSide/LoggedInSidebar";
 const SignInUp = () => {

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./css/SingleEventPage.css";
-import user from "./images/profile.png";
 import {
-  BsChevronRight,
   BsChevronLeft,
   BsFlag,
   BsBookmark,

@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./css/addeventpage.css";
-import user from "./images/profile.png";
-import { BsChevronRight } from "react-icons/bs";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import LoggedInSidebar from "./accountSide/LoggedInSidebar";
