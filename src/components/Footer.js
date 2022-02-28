@@ -13,8 +13,10 @@ export default function Footer() {
           <li>Plans</li>
         </ul>
         <ul className="secondcolumn">
-          <li>Terms of Use</li>
-          <li>Privacy Policy</li>
+          <li><a href="/terms">
+            Terms of Use</a></li>
+          <li><a href="/privacy">
+            Privacy Policy</a></li>
           <li>FAQ</li>
           <li>Help</li>
         </ul>
@@ -31,14 +33,14 @@ export default function Footer() {
           </li>
 
           <li >
-            
+
             Subscribing to SpeakerOre unlocks unlimited events.{" "}
           </li>
           <li className="fc10">
-            <span><BsFacebook/></span>
-            <span><BsInstagram/></span>
-            <span><BsLinkedin/></span>
-            <span><BsYoutube/></span>
+            <span><BsFacebook /></span>
+            <span><BsInstagram /></span>
+            <span><BsLinkedin /></span>
+            <span><BsYoutube /></span>
           </li>
           <li>Social Handles</li>
         </ul>

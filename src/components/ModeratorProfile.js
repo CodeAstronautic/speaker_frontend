@@ -248,7 +248,7 @@ export default function ModeratorProfile() {
                 </div>
                 <div className="confirmation">
                   <div className="con-upper">
-                  <input type="checkbox" style={{position:'initial'}} class="apply1" name="apply1"/>
+                  <input type="checkbox" style={{position:'initial'}} className="apply1" name="apply1"/>
                   <div className="conu-text">
                   <h4>Apply for SpeakerOre Exclusive</h4>
                   <span>Events only for SpeakerOre subscribers. All the speaker in these events will be selected among speakers or members.</span>

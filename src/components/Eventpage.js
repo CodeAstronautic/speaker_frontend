@@ -46,7 +46,7 @@ const Eventpage = () => {
                 onChange={(e) => setSearch(e.target.value)}
               />
               <button type="submit">
-                <i class="fa fa-search"></i>
+                <i className="fa fa-search"></i>
               </button>
             </div>
             <div className="stu-right">

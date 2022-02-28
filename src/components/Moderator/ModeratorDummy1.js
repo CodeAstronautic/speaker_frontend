@@ -560,7 +560,7 @@ export default function ModeratorDummy1() {
                     <input
                       type="checkbox"
                       style={{ position: "initial" }}
-                      class="apply1"
+                      className="apply1"
                       name="apply1"
                     />
                     <div className="conu-text">

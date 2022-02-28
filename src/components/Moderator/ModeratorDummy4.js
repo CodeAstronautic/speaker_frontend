@@ -83,7 +83,7 @@ export default function ModeratorDummy4() {
                       left: "-0.7rem",
                     }}
                   >
-                    <i class="fa fa-search"></i>
+                    <i className="fa fa-search"></i>
                   </button>
                 </div>
                 <div className="stl-child">
