@@ -31,6 +31,10 @@ const Eventpage = () => {
   var aquaticCreatures = eventData?.filter(function (creature) {
     return creature.isExclusive === isExclusive;
   });
+  const [mode, setMode] = useState()
+  var aquaticCreature1s = eventData?.filter(function (creature) {
+    return creature.mode === mode;
+  });
   return (
     <div className="mp-parent" style={{ background: "none", marginTop: "0" }}>
       <div className="mp-left">
@@ -69,17 +73,16 @@ const Eventpage = () => {
               <p className="stlc-text">Mode: </p>
               <select
                 className="stlc-field "
-              // style={{
-              //   paddingTop: "0",
-              //   paddingBottom: "0",
-              //   color: "grey",
-              // }}
+                // style={{
+                //   paddingTop: "0",
+                //   paddingBottom: "0",
+                //   color: "grey",
+                // }}
+                onChange={(e) => setMode(e.target.value)}
+                value={mode}
               >
-                <option value="Online" selected>
-                  In-person
-                </option>
-                <option value="Online">Virtual</option>
-                <option value="Offline">Hybrid</option>
+                <option value="Online">offline</option>
+                <option value="Offline">online</option>
               </select>
             </div>
             <div className="stl-child">
@@ -145,54 +148,103 @@ const Eventpage = () => {
 
         <div className="view-event">
           <div className="vc-sec">
-            {isExclusive ?
+            {mode?.length > 0 ?
               <>
-                {aquaticCreatures && aquaticCreatures?.map((data) => {
-                  return (
-                    <div className="event-card">
-                      <div className="ec-section1">
-                        <div className="eds1-l">
-                          <p className="e1">{data?.name}</p>
-                          <p className="e2">{data?.state}</p>
-                        </div>
-                        <div className="eds1-r">
-                          <BsFillBookmarkFill />
-                        </div>
-                      </div>
-                      <div className="ec-section2">
-                        <span>
-                          <div style={{ marginRight: "0.5rem", fontSize: "medium" }}>
-                            <BsFillCalendarEventFill />
+                {isExclusive ?
+                  <>
+                    {aquaticCreatures && aquaticCreatures?.map((data) => {
+                      return (
+                        <div className="event-card">
+                          <div className="ec-section1">
+                            <div className="eds1-l">
+                              <p className="e1">{data?.name}</p>
+                              <p className="e2">{data?.state}</p>
+                            </div>
+                            <div className="eds1-r">
+                              <BsFillBookmarkFill />
+                            </div>
                           </div>
-                          <p>{data?.start_time}</p>
-                        </span>
-                        <p className="e8">ONLINE</p>
-                      </div>
-                      <div className="ec-section3">
-                        Tags: <p className="e4">Industry, Film, Acting, Speaking </p>
-                      </div>
-                      <div className="ec-section4">
-                        {data?.description}
-                      </div>
-                      <div className="ec-section5">
-                        <a href={`/single-event/${data?.id}`}>
+                          <div className="ec-section2">
+                            <span>
+                              <div style={{ marginRight: "0.5rem", fontSize: "medium" }}>
+                                <BsFillCalendarEventFill />
+                              </div>
+                              <p>{data?.start_time}</p>
+                            </span>
+                            <p className="e8">ONLINE</p>
+                          </div>
+                          <div className="ec-section3">
+                            Tags: <p className="e4">Industry, Film, Acting, Speaking </p>
+                          </div>
+                          <div className="ec-section4">
+                            {data?.description}
+                          </div>
+                          <div className="ec-section5">
+                            <a href={`/single-event/${data?.id}`}>
 
-                          <button
-                            className="eprbtn2"
-                            style={{
-                              background: "#ffbf19",
-                              padding: "0.5rem 2rem",
-                            }}
-                          >
-                            View Details
-                          </button>
-                        </a>
-                      </div>
-                    </div>
-                  )
-                })}
+                              <button
+                                className="eprbtn2"
+                                style={{
+                                  background: "#ffbf19",
+                                  padding: "0.5rem 2rem",
+                                }}
+                              >
+                                View Details
+                              </button>
+                            </a>
+                          </div>
+                        </div>
+                      )
+                    })}
+                  </> : <>
+                    {filteredCountries && filteredCountries?.map((data) => {
+                      return (
+                        <div className="event-card">
+                          <div className="ec-section1">
+                            <div className="eds1-l">
+                              <p className="e1">{data?.name}</p>
+                              <p className="e2">{data?.state}</p>
+                            </div>
+                            <div className="eds1-r">
+                              <BsFillBookmarkFill />
+                            </div>
+                          </div>
+                          <div className="ec-section2">
+                            <span>
+                              <div style={{ marginRight: "0.5rem", fontSize: "medium" }}>
+                                <BsFillCalendarEventFill />
+                              </div>
+                              <p>{data?.start_time}</p>
+                            </span>
+                            <p className="e8">ONLINE</p>
+                          </div>
+                          <div className="ec-section3">
+                            Tags: <p className="e4">Industry, Film, Acting, Speaking </p>
+                          </div>
+                          <div className="ec-section4">
+                            {data?.description}
+                          </div>
+                          <div className="ec-section5">
+                            <a href={`/single-event/${data?.id}`}>
+
+                              <button
+                                className="eprbtn2"
+                                style={{
+                                  background: "#ffbf19",
+                                  padding: "0.5rem 2rem",
+                                }}
+                              >
+                                View Details
+                              </button>
+                            </a>
+                          </div>
+                        </div>
+                      )
+                    })}
+                  </>
+                }
               </> : <>
-                {filteredCountries && filteredCountries?.map((data) => {
+                {aquaticCreature1s && aquaticCreature1s?.map((data) => {
                   return (
                     <div className="event-card">
                       <div className="ec-section1">
@@ -236,8 +288,8 @@ const Eventpage = () => {
                     </div>
                   )
                 })}
-              </>}
 
+              </>}
 
 
           </div>
@@ -267,7 +319,7 @@ const Eventpage = () => {
             </div>}
         </div>
       </div>
-      <LoggedInSidebar setisExclusive={setisExclusive} isExclusive={isExclusive}/>
+      <LoggedInSidebar setisExclusive={setisExclusive} isExclusive={isExclusive} />
     </div>
   );
 };
