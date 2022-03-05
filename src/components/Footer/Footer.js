@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/footer.css";
+import "../css/footer.css";
 import { BsFacebook, BsInstagram, BsLinkedin, BsYoutube } from "react-icons/bs";
 
 export default function Footer() {

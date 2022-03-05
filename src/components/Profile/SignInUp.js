@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./css/SignInUp.css";
+import "../css/SignInUp.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import LoggedInSidebar from "./accountSide/LoggedInSidebar";
+import LoggedInSidebar from "../accountSide/LoggedInSidebar";
 const SignInUp = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("")

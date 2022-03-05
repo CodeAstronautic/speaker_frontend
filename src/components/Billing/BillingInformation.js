@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
-import AccountSide from "./accountSide"
-import LoggedInSidebar from "./accountSide/LoggedInSidebar";
+import AccountSide from "../accountSide"
+import LoggedInSidebar from "../accountSide/LoggedInSidebar";
 
 export default function BillingInformation() {
   return (

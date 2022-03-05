@@ -1,13 +1,13 @@
 import React from "react";
-import About from "./About";
-import Categories from "./Categories";
-import "./css/Firstpage.css";
+import About from "../About/About";
+import Categories from "../Categories/Categories";
+import "../css/Firstpage.css";
 
 export default function Firstpage() {
   return (
     <>
       <div className="speaker">
-        <img src={require("./images/speaker.jpg")} alt={""} />
+        <img src={require("../images/speaker.jpg")} alt={""} />
         <div className="fp-text">
           <a href="/events">
             <button className="btn">EXPLORE EVENTS</button></a>
@@ -25,7 +25,7 @@ export default function Firstpage() {
         </p>
         <h1 className="fpae-heading">features</h1>
         <div className="speaker">
-          <img src={require("./images/MaskGroup.png")} style={{ height: '100%' }} alt={""} />
+          <img src={require("../images/MaskGroup.png")} style={{ height: '100%' }} alt={""} />
           <div className="fp-text">
 
             <p className="fpae-imgtext">CREATE NOW</p>
@@ -43,7 +43,7 @@ export default function Firstpage() {
         </p>
         <h1 className="fpae-heading">features</h1>
         <div className="speaker">
-          <img src={require("./images/EventsPage2.png")} style={{ height: '100%' }} alt={""} />
+          <img src={require("../images/EventsPage2.png")} style={{ height: '100%' }} alt={""} />
           <div className="fp-text">
 
 

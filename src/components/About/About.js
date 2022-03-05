@@ -1,5 +1,5 @@
 import React from 'react'
-import "./css/About.css";
+import "../css/About.css";
 
 export default function About() {
     return (
@@ -14,7 +14,7 @@ export default function About() {
                         <p className='desc'>Filter out events according to your preference</p> 
                         </div>
                         
-                        <img className='image' src={require("./images/about.jpg")} alt={""} />
+                        <img className='image' src={require("../images/about.jpg")} alt={""} />
                     </div>
                     <div className="card">
                         <div className="fp-cardtext">
@@ -22,7 +22,7 @@ export default function About() {
                         <p className='desc'>Fill the speakerore exclusive events form and increase your probabilty of being selected by the organizer.</p> 
                         </div>
                         
-                        <img className='image' src={require("./images/about.jpg")} alt={""} />
+                        <img className='image' src={require("../images/about.jpg")} alt={""} />
                     </div>
                     
                 </div>
@@ -33,7 +33,7 @@ export default function About() {
                         <p className='desc'>Filter out events according to your preference</p> 
                         </div>
                         
-                        <img className='image' src={require("./images/about.jpg")} alt={""} />
+                        <img className='image' src={require("../images/about.jpg")} alt={""} />
                     </div>
                     <div className="card">
                         <div className="fp-cardtext">
@@ -41,7 +41,7 @@ export default function About() {
                         <p className='desc'>Fill the speakerore exclusive events form and increase your probabilty of being selected by the organizer.</p> 
                         </div>
                         
-                        <img className='image' src={require("./images/about.jpg")} alt={""} />
+                        <img className='image' src={require("../images/about.jpg")} alt={""} />
                     </div>
                     
                 </div>

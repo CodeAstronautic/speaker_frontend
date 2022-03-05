@@ -1,8 +1,8 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import LoggedInSidebar from "./accountSide/LoggedInSidebar";
-import "./css/subPlan.css";
+import LoggedInSidebar from "../accountSide/LoggedInSidebar";
+import "../css/subPlan.css";
 function loadScript(src) {
     return new Promise((resolve) => {
         const script = document.createElement("script");

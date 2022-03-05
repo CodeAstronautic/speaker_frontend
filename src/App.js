@@ -1,33 +1,33 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Addeventpage from "./components/Addeventpage";
-import Navbar from "./components/Navbar";
-import Firstpage from "./components/Firstpage";
-import Categories from "./components/Categories";
+import Addeventpage from "./components/Events/Addeventpage";
+import Navbar from "./components/Header/Navbar";
+import Firstpage from "./components/Home/Firstpage";
+import Categories from "./components/Categories/Categories";
 // import Event from "./components/Event";
-import Footer from "./components/Footer";
-import Eventpage from "./components/Eventpage";
-import About2 from "./components/About2";
-import ModeratorProfile from "./components/ModeratorProfile";
-import MyProfile from "./components/MyProfile";
-import BasicInfo from "./components/BasicInfo";
-import BillingInformation from "./components/BillingInformation";
-import BookmarkedEvent from "./components/BookmarkedEvent";
-import SingleEventPage from "./components/SingleEventPage";
-import MyProfileEvent from "./components/MyProfileEvent";
-import SingleEventPageExclusive from "./components/SingleEventPageExclusive";
-import SignInUp from "./components/SignInUp";
-import SubPlan from "./components/SubPlan";
+import Footer from "./components/Footer/Footer";
+import Eventpage from "./components/Events/Eventpage";
+import About2 from "./components/About/About2";
+import ModeratorProfile from "./components/Moderator/ModeratorProfile";
+import MyProfile from "./components/Profile/MyProfile";
+import BasicInfo from "./components/accountSide/BasicInfo";
+import BillingInformation from "./components/Billing/BillingInformation";
+import BookmarkedEvent from "./components/Bookmark/BookmarkedEvent";
+import SingleEventPage from "./components/Events/SingleEventPage";
+import MyProfileEvent from "./components/Profile/MyProfileEvent";
+import SingleEventPageExclusive from "./components/Events/SingleEventPageExclusive";
+import SignInUp from "./components/Profile/SignInUp";
+import SubPlan from "./components/Plans/SubPlan";
 import ModeratorDummy1 from "./components/Moderator/ModeratorDummy1";
 import ModeratorDummy2 from "./components/Moderator/ModeratorDummy2";
 import ModeratorDummy3 from "./components/Moderator/ModeratorDummy3";
 import ModeratorDummy4 from "./components/Moderator/ModeratorDummy4";
-import Terms from "./components/terms";
-import Privacy from "./components/privacy";
+import Terms from "./components/Team/terms";
+import Privacy from "./components/Terms/privacy";
 // import PrivateRoute from "./routes/privateRoute";
 const App = () => {
-  const isRole=JSON.parse(localStorage.getItem('@token'))?.isRole
-  const isSubscribed=JSON.parse(localStorage.getItem('@token'))?.isSubscribed
-  const token=JSON.parse(localStorage.getItem('@token'))?.token
+  // const isRole=JSON.parse(localStorage.getItem('@token'))?.isRole
+  // const isSubscribed=JSON.parse(localStorage.getItem('@token'))?.isSubscribed
+  // const token=JSON.parse(localStorage.getItem('@token'))?.token
   return (
     <>
       <Navbar />

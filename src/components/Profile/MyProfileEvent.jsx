@@ -1,14 +1,10 @@
+
 import React from "react";
+import "../css/MyProfileEvent.css";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
-import { useNavigate } from "react-router-dom";
-import AccountSide from "./accountSide";
-import LoggedInSidebar from "./accountSide/LoggedInSidebar";
-export default function BasicInfo() {
-  const navigate = useNavigate();
-  const handleLogout = () => {
-    localStorage.clear("@token");
-    navigate("/login");
-  };
+import AccountSide from "../accountSide";
+import LoggedInSidebar from "../accountSide/LoggedInSidebar";
+export default function MyProfileEvent() {
   return (
     <>
       <div className="mp-parent">

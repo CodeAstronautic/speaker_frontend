@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./css/Navbar.css";
+import "../css/Navbar.css";
 //import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function Navbar() {
@@ -8,7 +8,7 @@ export default function Navbar() {
     <>
       <div className="container">
         <div className="logo">
-          <img src={require("./images/logo.jpg")} alt={""} />
+          <img src={require("../images/logo.jpg")} alt={""} />
         </div>
         <div>
           <ul className="nav-ul">

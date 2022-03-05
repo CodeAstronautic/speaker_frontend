@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./css/eventpage.css";
+import "../css/eventpage.css";
 import {
   BsChevronRight,
   BsFillBookmarkFill,
@@ -7,7 +7,7 @@ import {
   BsChevronLeft,
 } from "react-icons/bs";
 import axios from "axios";
-import LoggedInSidebar from "./accountSide/LoggedInSidebar";
+import LoggedInSidebar from "../accountSide/LoggedInSidebar";
 
 
 const Eventpage = () => {

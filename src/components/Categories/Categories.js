@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import "./css/category.css";
+import "../css/category.css";
 export default function Categories() {
   const [categoryData, setCategoryData] = useState('')
   console.log(categoryData, "categoryDatacategoryData")
@@ -22,7 +22,7 @@ export default function Categories() {
                 <div className="catcard">
                   <img
                     className="catimgs"
-                    src={require("./images/category.jpg")}
+                    src={require("../images/category.jpg")}
                     alt={""}
                   />
                   <p className="catsub">{data?.name}</p>
@@ -41,7 +41,7 @@ export default function Categories() {
               <p className="fpoc-subhead">Get nearby event detail by SpeakerOre</p>
               <img
                 className="fpoc-img"
-                src={require("./images/category.jpg")}
+                src={require("../images/category.jpg")}
                 alt={""}
               />
               <p className="fpoc-text">
@@ -56,7 +56,7 @@ export default function Categories() {
               <p className="fpoc-subhead">Get nearby event detail by SpeakerOre</p>
               <img
                 className="fpoc-img"
-                src={require("./images/category.jpg")}
+                src={require("../images/category.jpg")}
                 alt={""}
               />
               <p className="fpoc-text">

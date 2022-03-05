@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./css/SingleEventPage.css";
+import "../css/SingleEventPage.css";
 import {
   BsChevronLeft,
   BsFlag,
@@ -12,7 +12,7 @@ import {
 import { BiMap } from "react-icons/bi";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
-import LoggedInSidebar from "./accountSide/LoggedInSidebar";
+import LoggedInSidebar from "../accountSide/LoggedInSidebar";
 export default function SingleEventPage() {
   const navigate = useLocation()
   const [eventData, setEventData] = useState()

@@ -1,11 +1,11 @@
 import React from "react";
-import user from "./images/profile.png";
+import user from "../images/profile.png";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { BsChevronRight } from "react-icons/bs";
 import { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
-import AccountSide from "./accountSide";
+import AccountSide from "../accountSide";
 export default function MyProfile() {
   const [userData, setUser] = useState("");
   useEffect(() => {

@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import "./css/addeventpage.css";
+import "../css/addeventpage.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import LoggedInSidebar from "./accountSide/LoggedInSidebar";
+import LoggedInSidebar from "../accountSide/LoggedInSidebar";
 
 export default function Addeventpage() {
   const [name, setName] = useState("");
   const [start_time, setstart_time] = useState("");
-  const [country, setcountry] = useState("");
   const [about, setabout] = useState("");
   const [location, setlocation] = useState("");
   const [mode, setMode] = useState()
