@@ -50,15 +50,16 @@ const About2 = () => {
                         opportunities to grow. Are you?
                     </p>
                     <div className="btn-container">
-                        <button className="create-event-btn eprbtn2" style={{
-                            margin: '1rem'
-                        }}>Create an Event</button>
+                        <a href="/addevent">
+                            <button className="create-event-btn eprbtn2" style={{
+                                margin: '1rem'
+                            }}>Create an Event</button></a>
                         <button className="create-event-btn eprbtn1" style={{
                             margin: '1rem'
                         }}>Search events</button>
                     </div>
                 </div>
-             <LoggedInSidebar />
+                <LoggedInSidebar />
             </div>
             <TeamMembers />
         </>

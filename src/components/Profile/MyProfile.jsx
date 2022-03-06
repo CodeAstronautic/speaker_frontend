@@ -56,7 +56,9 @@ export default function MyProfile() {
             <div style={{ marginTop: "3rem" }} className="eprbtn2">
               Create a new event
             </div>
-            <div className="eprbtn2">SpeakerOre exclusive Events</div>
+            <div className="eprbtn2">
+              <a href="/events">SpeakerOre exclusive Events</a>
+            </div>
             <div
               style={{
                 marginTop: "0",

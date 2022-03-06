@@ -2,7 +2,11 @@ import React from 'react'
 
 export default function Terms() {
     return (
-        <div>This website www.Speakerore.com is owned and operated by Speakerore.com Partnerships Enterprise, henceforth referred to as “SpeakerOre” which includes its affiliates, successors and permitted assigns.
+        <div style={{
+            paddingRight: "100px",
+            paddingLeft: "100px",
+            width: "100%"
+        }}>This website www.Speakerore.com is owned and operated by Speakerore.com Partnerships Enterprise, henceforth referred to as “SpeakerOre” which includes its affiliates, successors and permitted assigns.
             Our privacy policy has been designed and created to ensure those affiliated with SpeakerOre of our commitment and realization of our obligation not only to meet but to exceed most existing privacy standards.
             In the course of using this website or availing the services via the online application/subscription forms and questionnaires, SpeakerOre and its affiliates may become privy to the personal information of its users/subscribers and subsribers, including information that is of a confidential nature. SpeakerOre provides services to the users/subscribers through the website and is committed to protecting and respecting the privacy of the users/subscribers and has taken all necessary and reasonable measures to protect the confidentiality of the user information and its transmission through the World Wide Web. SpeakerOre shall not be held liable for disclosure of the confidential information if such disclosure is in accordance with this Privacy Policy (“Policy”) or in accordance with the terms of any agreements entered into with the users/subscribers. SpeakerOre also assures not to disclose all information that it learns during the transactions and payments made to the user’s account(s). “user(s)” shall mean and include all Speakers, event managers, otherindividuals, companies and private organisations that visit the website and/or register as subscribers and provide information to SpeakerOre through any of the modes referred to in the clause on “Collection of Information” below.
             Collection of information

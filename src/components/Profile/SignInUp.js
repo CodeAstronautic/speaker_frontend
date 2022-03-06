@@ -24,7 +24,8 @@ const SignInUp = () => {
           name: name,
           phone: phone,
           email: email,
-          provider: provide
+          provider: provide,
+          isSubscribed: false
         })
         .then((data) => {
           console.log()

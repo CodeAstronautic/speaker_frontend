@@ -18,26 +18,43 @@ function loadScript(src) {
 }
 
 const SubPlan = () => {
-    const navigate = useNavigate()
-    const [datas, setDatas] = useState('')
-    // const handlePayment = () => {
-    //     axios
-    //         .post(`${process.env.REACT_APP_URL}/payment`, {
-    //             currency: "IN",
-    //             amount: "12000",
-    //         }, {
-    //             headers: {
-    //                 Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm92aWRlciI6IkdPT0dMRSIsImlkIjoxNiwiaWF0IjoxNjQ2MDY1MzQ4fQ.xC1nUV5374lg8onfUMevuCb-w4262LhWXPRI8zPwwlo'
-    //             }
-    //         }).then((Data) => {
-    //             // loadScript("https://checkout.razorpay.com/v1/checkout.js");
-    //             console.log(Data);
-    //         })
-    //         .catch((err) => {
-    //             console.log(err);
-    //         });
-    // };
+    console.log(
+        JSON.parse(localStorage.getItem("@token"))?.userdata?.id,
+        "jgjgh"
+    );
+    const user_id = JSON.parse(localStorage.getItem("@token"))?.userdata?.id;
+    const user_token = JSON.parse(localStorage.getItem("@token"))?.token;
+    const userData = JSON.parse(localStorage.getItem("@token"))?.userdata;
+    console.log(userData, "userData");
+    const navigate = useNavigate();
+    const [datas, setDatas] = useState("");
+    const handleUpdate = () => {
+        axios
+            .put(
+                `${process.env.REACT_APP_URL}/auth/update/${user_id}`,
+                {
+                    provider: "GOOGLE",
+                    name: userData?.name,
+                    email: userData?.email,
+                    role: userData?.role,
+                    isSubscribed: userData?.subscribed ? userData?.subscribed : true,
+                },
+                {
+                    headers: {
+                        Authorization: `Bearer ${user_token}`,
+                    },
+                }
+            )
+            .then((Data) => {
+                // loadScript("https://checkout.razorpay.com/v1/checkout.js");
+                console.log(Data);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    };
     async function showRazorpay() {
+
         const res = await loadScript(
             "https://checkout.razorpay.com/v1/checkout.js"
         );
@@ -47,22 +64,29 @@ const SubPlan = () => {
             return;
         }
 
-        const data = await axios.post(`${process.env.REACT_APP_URL}/payment`, {
-            currency: "IN",
-            amount: "12000",
-        }, {
-            headers: {
-                Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm92aWRlciI6IkdPT0dMRSIsImlkIjoxNiwiaWF0IjoxNjQ2MDY1MzQ4fQ.xC1nUV5374lg8onfUMevuCb-w4262LhWXPRI8zPwwlo'
-            }
-        }).then((t) => setDatas(t?.data?.order_id));
+        await axios
+            .post(
+                `${process.env.REACT_APP_URL}/payment`,
+                {
+                    currency: "IN",
+                    amount: "12000",
+                },
+                {
+                    headers: {
+                        Authorization:`Bearer ${user_token}`,
+                    },
+                }
+            )
+            .then((t) => setDatas(t?.data?.order_id));
         const options = {
             key: "rzp_test_JKlI55UIjlPhVg",
-            currency: 'INR',
+            currency: "INR",
             amount: 2499 * 100,
             order_id: datas,
             handler: function (response) {
                 alert("Transaction successful", response);
-                navigate("/events")
+                handleUpdate()
+                navigate("/events");
             },
         };
         const paymentObject = new window.Razorpay(options);

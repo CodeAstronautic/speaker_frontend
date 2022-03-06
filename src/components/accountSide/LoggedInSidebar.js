@@ -15,7 +15,6 @@ export default function LoggedInSidebar({ setisExclusive }) {
                 console.log(err);
             });
     }, []);
-    console.log(userData, "userData")
     return (
         <div className="ep-right">
             <div className="eprcard">
@@ -26,10 +25,10 @@ export default function LoggedInSidebar({ setisExclusive }) {
                     Hi, <b style={{ fontWeight: "500" }}>{userData?.name}!</b>
                 </p>
                 <span className="eprtext1">{userData?.role}</span>
-                <div style={{ marginTop: "3rem" }} className="eprbtn2">
+                {JSON.parse(localStorage.getItem("@token"))?.userdata?.role !== "USER" && <div style={{ marginTop: "3rem" }} className="eprbtn2">
                     <a href="/addevent">Create a new event
                     </a>
-                </div>
+                </div>}
                 <div className="eprbtn2" onClick={() => setisExclusive(true)}>SpeakerOre exclusive Events</div>
                 <div
                     style={{

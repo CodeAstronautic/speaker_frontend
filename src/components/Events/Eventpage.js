@@ -14,16 +14,32 @@ const Eventpage = () => {
   const [search, setSearch] = useState("")
   const [isExclusive, setisExclusive] = useState(false)
   const [eventData, setEventData] = useState()
+  const userToken = JSON.parse(localStorage.getItem('@token'))
+  console.log(userToken?.userdata?.role, "userToken")
+  const userEvents = () => {
+    axios.get(`${process.env.REACT_APP_URL}/events/all`, {
+      headers: {
+        Authorization: `Bearer ${userToken?.token}`
+      }
+    }).then((d) => setEventData(d?.data)).catch((err) => {
+      console.log(err)
+    })
+  }
   useEffect(() => {
-    const userToken = localStorage.getItem('@token')
     axios.get(`${process.env.REACT_APP_URL}/events`, {
       headers: {
-        Authorization: `Bearer ${JSON.parse(userToken).token}`
+        Authorization: `Bearer ${userToken?.token}`
       }
     }).then((d) => setEventData(d?.data)).catch((err) => {
       console.log(err)
     })
   }, [])
+  // useEffect(() => {
+  //   if (userToken?.userdata?.role === "USER") {
+  //     userEvents()
+  //   }
+  // }, [ userToken?.userdata?.role === "USER"
+  // ])
   const filteredCountries = eventData?.filter((country) => {
     return country.name.toLowerCase().indexOf(search.toLowerCase()) !== -1;
   });
@@ -35,6 +51,7 @@ const Eventpage = () => {
   var aquaticCreature1s = eventData?.filter(function (creature) {
     return creature.mode === mode;
   });
+
   return (
     <div className="mp-parent" style={{ background: "none", marginTop: "0" }}>
       <div className="mp-left">
@@ -148,103 +165,11 @@ const Eventpage = () => {
 
         <div className="view-event">
           <div className="vc-sec">
-            {mode?.length > 0 ?
+            {/* {mode?.length > 0 ? */}
+            {/* <> */}
+            {isExclusive ?
               <>
-                {isExclusive ?
-                  <>
-                    {aquaticCreatures && aquaticCreatures?.map((data) => {
-                      return (
-                        <div className="event-card">
-                          <div className="ec-section1">
-                            <div className="eds1-l">
-                              <p className="e1">{data?.name}</p>
-                              <p className="e2">{data?.state}</p>
-                            </div>
-                            <div className="eds1-r">
-                              <BsFillBookmarkFill />
-                            </div>
-                          </div>
-                          <div className="ec-section2">
-                            <span>
-                              <div style={{ marginRight: "0.5rem", fontSize: "medium" }}>
-                                <BsFillCalendarEventFill />
-                              </div>
-                              <p>{data?.start_time}</p>
-                            </span>
-                            <p className="e8">ONLINE</p>
-                          </div>
-                          <div className="ec-section3">
-                            Tags: <p className="e4">Industry, Film, Acting, Speaking </p>
-                          </div>
-                          <div className="ec-section4">
-                            {data?.description}
-                          </div>
-                          <div className="ec-section5">
-                            <a href={`/single-event/${data?.id}`}>
-
-                              <button
-                                className="eprbtn2"
-                                style={{
-                                  background: "#ffbf19",
-                                  padding: "0.5rem 2rem",
-                                }}
-                              >
-                                View Details
-                              </button>
-                            </a>
-                          </div>
-                        </div>
-                      )
-                    })}
-                  </> : <>
-                    {filteredCountries && filteredCountries?.map((data) => {
-                      return (
-                        <div className="event-card">
-                          <div className="ec-section1">
-                            <div className="eds1-l">
-                              <p className="e1">{data?.name}</p>
-                              <p className="e2">{data?.state}</p>
-                            </div>
-                            <div className="eds1-r">
-                              <BsFillBookmarkFill />
-                            </div>
-                          </div>
-                          <div className="ec-section2">
-                            <span>
-                              <div style={{ marginRight: "0.5rem", fontSize: "medium" }}>
-                                <BsFillCalendarEventFill />
-                              </div>
-                              <p>{data?.start_time}</p>
-                            </span>
-                            <p className="e8">ONLINE</p>
-                          </div>
-                          <div className="ec-section3">
-                            Tags: <p className="e4">Industry, Film, Acting, Speaking </p>
-                          </div>
-                          <div className="ec-section4">
-                            {data?.description}
-                          </div>
-                          <div className="ec-section5">
-                            <a href={`/single-event/${data?.id}`}>
-
-                              <button
-                                className="eprbtn2"
-                                style={{
-                                  background: "#ffbf19",
-                                  padding: "0.5rem 2rem",
-                                }}
-                              >
-                                View Details
-                              </button>
-                            </a>
-                          </div>
-                        </div>
-                      )
-                    })}
-                  </>
-                }
-              </> : <>
-                {aquaticCreature1s && aquaticCreature1s?.map((data) => {
+                {aquaticCreatures && aquaticCreatures?.map((data) => {
                   return (
                     <div className="event-card">
                       <div className="ec-section1">
@@ -288,8 +213,53 @@ const Eventpage = () => {
                     </div>
                   )
                 })}
+              </> : <>
+                {filteredCountries && filteredCountries?.map((data) => {
+                  return (
+                    <div className="event-card">
+                      <div className="ec-section1">
+                        <div className="eds1-l">
+                          <p className="e1">{data?.name}</p>
+                          <p className="e2">{data?.state}</p>
+                        </div>
+                        <div className="eds1-r">
+                          <BsFillBookmarkFill />
+                        </div>
+                      </div>
+                      <div className="ec-section2">
+                        <span>
+                          <div style={{ marginRight: "0.5rem", fontSize: "medium" }}>
+                            <BsFillCalendarEventFill />
+                          </div>
+                          <p>{data?.start_time}</p>
+                        </span>
+                        <p className="e8">ONLINE</p>
+                      </div>
+                      <div className="ec-section3">
+                        Tags: <p className="e4">Industry, Film, Acting, Speaking </p>
+                      </div>
+                      <div className="ec-section4">
+                        {data?.description}
+                      </div>
+                      <div className="ec-section5">
+                        <a href={`/single-event/${data?.id}`}>
 
-              </>}
+                          <button
+                            className="eprbtn2"
+                            style={{
+                              background: "#ffbf19",
+                              padding: "0.5rem 2rem",
+                            }}
+                          >
+                            View Details
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  )
+                })}
+              </>
+            }
 
 
           </div>
