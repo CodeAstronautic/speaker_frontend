@@ -1,8 +1,7 @@
 import React from "react";
 import "./ModeratorDummy.css";
-import user from "../images/profile.png";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
-import { BsChevronRight, BsCalendar3 } from "react-icons/bs";
+import {  BsCalendar3 } from "react-icons/bs";
 import LoggedInSidebar from "../accountSide/LoggedInSidebar";
 
 export default function ModeratorDummy4() {

@@ -14,7 +14,7 @@ const SignInUp = () => {
   console.log(process.env.REACT_APP_URL, "process.env.REACT_APP_URLprocess.env.REACT_APP_URL")
   const handleSubmit = (e, provide) => {
 
-    if (email == "") {
+    if (email === "") {
       return setMessage("Please enter the details")
     }
     e.preventDefault();
