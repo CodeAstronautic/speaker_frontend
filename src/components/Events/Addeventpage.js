@@ -27,7 +27,7 @@ export default function Addeventpage() {
       street: "091 Willms Via",
       state: "Louisiana",
       country: location,
-      start_time: start_time || "2020-06-07T02:32:39.292Z",
+      start_time: start_time || "",
       end_time: "2021-09-01T04:49:42.144Z",
       email: "Colt36@hotmail.com",
       about: about,
@@ -52,10 +52,6 @@ export default function Addeventpage() {
         "ipsa",
       ],
     };
-    console.log(
-      JSON.parse(localStorage.getItem("@token")),
-      "localStorage.getItem('@token')"
-    );
     axios
       .post(`${process.env.REACT_APP_URL}/events`, data, {
         headers: {

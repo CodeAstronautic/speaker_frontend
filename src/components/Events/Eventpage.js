@@ -39,7 +39,7 @@ const Eventpage = () => {
       userEvents()
     }
   }, [ userToken?.userdata?.role === "USER"])
-  
+
   const filteredCountries = eventData?.filter((country) => {
     return country.name.toLowerCase().indexOf(search.toLowerCase()) !== -1;
   });
@@ -215,6 +215,8 @@ const Eventpage = () => {
                 })}
               </> : <>
                 {filteredCountries && filteredCountries?.map((data) => {
+                  console.log(data,"datatta")
+
                   return (
                     <div className="event-card">
                       <div className="ec-section1">
@@ -233,10 +235,10 @@ const Eventpage = () => {
                           </div>
                           <p>{data?.start_time}</p>
                         </span>
-                        <p className="e8">ONLINE</p>
+                        <p className="e8">{data?.mode}</p>
                       </div>
                       <div className="ec-section3">
-                        Tags: <p className="e4">Industry, Film, Acting, Speaking </p>
+                        Tags: <p className="e4">{data?.tags}</p>
                       </div>
                       <div className="ec-section4">
                         {data?.description}
