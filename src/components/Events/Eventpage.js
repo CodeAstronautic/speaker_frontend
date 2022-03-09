@@ -34,12 +34,12 @@ const Eventpage = () => {
       console.log(err)
     })
   }, [])
-  // useEffect(() => {
-  //   if (userToken?.userdata?.role === "USER") {
-  //     userEvents()
-  //   }
-  // }, [ userToken?.userdata?.role === "USER"
-  // ])
+  useEffect(() => {
+    if (userToken?.userdata?.role === "USER") {
+      userEvents()
+    }
+  }, [ userToken?.userdata?.role === "USER"])
+  
   const filteredCountries = eventData?.filter((country) => {
     return country.name.toLowerCase().indexOf(search.toLowerCase()) !== -1;
   });
