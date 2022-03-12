@@ -8,38 +8,65 @@ import {
 } from "react-icons/bs";
 import axios from "axios";
 import LoggedInSidebar from "../accountSide/LoggedInSidebar";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Eventpage = () => {
-  const [search, setSearch] = useState("")
-  const [isExclusive, setisExclusive] = useState(false)
-  const [eventData, setEventData] = useState()
-  const userToken = JSON.parse(localStorage.getItem('@token'))
-  console.log(userToken?.userdata?.role, "userToken")
+  const [search, setSearch] = useState("");
+  const [isExclusive, setisExclusive] = useState(false);
+  const [eventData, setEventData] = useState();
+  const userToken = JSON.parse(localStorage.getItem("@token"));
+  console.log(userToken?.userdata?.role, "userToken");
   const userEvents = () => {
-    axios.get(`${process.env.REACT_APP_URL}/events/all`, {
-      headers: {
-        Authorization: `Bearer ${userToken?.token}`
-      }
-    }).then((d) => setEventData(d?.data)).catch((err) => {
-      console.log(err)
-    })
-  }
+    axios
+      .get(`${process.env.REACT_APP_URL}/events/all`, {
+        headers: {
+          Authorization: `Bearer ${userToken?.token}`,
+        },
+      })
+      .then((d) => setEventData(d?.data))
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_URL}/events`, {
-      headers: {
-        Authorization: `Bearer ${userToken?.token}`
-      }
-    }).then((d) => setEventData(d?.data)).catch((err) => {
-      console.log(err)
-    })
-  }, [])
+    axios
+      .get(`${process.env.REACT_APP_URL}/events`, {
+        headers: {
+          Authorization: `Bearer ${userToken?.token}`,
+        },
+      })
+      .then((d) => setEventData(d?.data))
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   useEffect(() => {
     if (userToken?.userdata?.role === "USER") {
-      userEvents()
+      userEvents();
     }
-  }, [ userToken?.userdata?.role === "USER"])
-
+  }, [userToken?.userdata?.role === "USER"]);
+  const handleBookmark = (id) => {
+    const data = {};
+    console.log(id);
+    axios
+      .post(`${process.env.REACT_APP_URL}/events/bookmark/${id}`, data, {
+        headers: {
+          Authorization: `Bearer ${userToken?.token}`,
+        },
+      })
+      .then((d) =>  toast.success("Wow so easy!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      }))
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   const filteredCountries = eventData?.filter((country) => {
     return country.name.toLowerCase().indexOf(search.toLowerCase()) !== -1;
   });
@@ -47,12 +74,13 @@ const Eventpage = () => {
   var aquaticCreatures = eventData?.filter(function (creature) {
     return creature.isExclusive === isExclusive;
   });
-  const [mode, setMode] = useState()
+  const [mode, setMode] = useState();
   var aquaticCreature1s = eventData?.filter(function (creature) {
     return creature.mode === mode;
   });
 
   return (
+    <>
     <div className="mp-parent" style={{ background: "none", marginTop: "0" }}>
       <div className="mp-left">
         <div className="search-ticket">
@@ -71,7 +99,13 @@ const Eventpage = () => {
               </button>
             </div>
             <div className="stu-right">
-              <input type="checkbox" className="apply1" name="apply1" value={isExclusive} onChange={(e) => setisExclusive(true)} />
+              <input
+                type="checkbox"
+                className="apply1"
+                name="apply1"
+                value={isExclusive}
+                onChange={(e) => setisExclusive(true)}
+              />
               <div className="stur-text">
                 <b className="s1">SpeakerOre Exclusive</b>
                 <p
@@ -167,106 +201,118 @@ const Eventpage = () => {
           <div className="vc-sec">
             {/* {mode?.length > 0 ? */}
             {/* <> */}
-            {isExclusive ?
+            {isExclusive ? (
               <>
-                {aquaticCreatures && aquaticCreatures?.map((data) => {
-                  return (
-                    <div className="event-card">
-                      <div className="ec-section1">
-                        <div className="eds1-l">
-                          <p className="e1">{data?.name}</p>
-                          <p className="e2">{data?.state}</p>
-                        </div>
-                        <div className="eds1-r">
-                          <BsFillBookmarkFill />
-                        </div>
-                      </div>
-                      <div className="ec-section2">
-                        <span>
-                          <div style={{ marginRight: "0.5rem", fontSize: "medium" }}>
-                            <BsFillCalendarEventFill />
+                {aquaticCreatures &&
+                  aquaticCreatures?.map((data) => {
+                    return (
+                      <div className="event-card">
+                        <div className="ec-section1">
+                          <div className="eds1-l">
+                            <p className="e1">{data?.name}</p>
+                            <p className="e2">{data?.state}</p>
                           </div>
-                          <p>{data?.start_time}</p>
-                        </span>
-                        <p className="e8">ONLINE</p>
-                      </div>
-                      <div className="ec-section3">
-                        Tags: <p className="e4">Industry, Film, Acting, Speaking </p>
-                      </div>
-                      <div className="ec-section4">
-                        {data?.description}
-                      </div>
-                      <div className="ec-section5">
-                        <a href={`/single-event/${data?.id}`}>
-
-                          <button
-                            className="eprbtn2"
-                            style={{
-                              background: "#ffbf19",
-                              padding: "0.5rem 2rem",
-                            }}
-                          >
-                            View Details
-                          </button>
-                        </a>
-                      </div>
-                    </div>
-                  )
-                })}
-              </> : <>
-                {filteredCountries && filteredCountries?.map((data) => {
-                  console.log(data,"datatta")
-
-                  return (
-                    <div className="event-card">
-                      <div className="ec-section1">
-                        <div className="eds1-l">
-                          <p className="e1">{data?.name}</p>
-                          <p className="e2">{data?.state}</p>
-                        </div>
-                        <div className="eds1-r">
-                          <BsFillBookmarkFill />
-                        </div>
-                      </div>
-                      <div className="ec-section2">
-                        <span>
-                          <div style={{ marginRight: "0.5rem", fontSize: "medium" }}>
-                            <BsFillCalendarEventFill />
+                          <div className="eds1-r">
+                            <BsFillBookmarkFill />
                           </div>
-                          <p>{data?.start_time}</p>
-                        </span>
-                        <p className="e8">{data?.mode}</p>
+                        </div>
+                        <div className="ec-section2">
+                          <span>
+                            <div
+                              style={{
+                                marginRight: "0.5rem",
+                                fontSize: "medium",
+                              }}
+                            >
+                              <BsFillCalendarEventFill />
+                            </div>
+                            <p>{data?.start_time}</p>
+                          </span>
+                          <p className="e8">ONLINE</p>
+                        </div>
+                        <div className="ec-section3">
+                          Tags:{" "}
+                          <p className="e4">
+                            Industry, Film, Acting, Speaking{" "}
+                          </p>
+                        </div>
+                        <div className="ec-section4">{data?.description}</div>
+                        <div className="ec-section5">
+                          <a href={`/single-event/${data?.id}`}>
+                            <button
+                              className="eprbtn2"
+                              style={{
+                                background: "#ffbf19",
+                                padding: "0.5rem 2rem",
+                              }}
+                            >
+                              View Details
+                            </button>
+                          </a>
+                        </div>
                       </div>
-                      <div className="ec-section3">
-                        Tags: <p className="e4">{data?.tags}</p>
-                      </div>
-                      <div className="ec-section4">
-                        {data?.description}
-                      </div>
-                      <div className="ec-section5">
-                        <a href={`/single-event/${data?.id}`}>
-
-                          <button
-                            className="eprbtn2"
-                            style={{
-                              background: "#ffbf19",
-                              padding: "0.5rem 2rem",
-                            }}
-                          >
-                            View Details
-                          </button>
-                        </a>
-                      </div>
-                    </div>
-                  )
-                })}
+                    );
+                  })}
               </>
-            }
+            ) : (
+              <>
+                {filteredCountries &&
+                  filteredCountries?.map((data) => {
+                    console.log(data, "datatta");
 
-
+                    return (
+                      <div className="event-card">
+                        <div className="ec-section1">
+                          <div className="eds1-l">
+                            <p className="e1">{data?.name}</p>
+                            <p className="e2">{data?.state}</p>
+                          </div>
+                          <div
+                            className="eds1-r"
+                            onClick={() => handleBookmark(data?.id)}
+                          >
+                            <BsFillBookmarkFill />
+                          </div>
+                        </div>
+                        <div className="ec-section2">
+                          <span>
+                            <div
+                              style={{
+                                marginRight: "0.5rem",
+                                fontSize: "medium",
+                              }}
+                            >
+                              <BsFillCalendarEventFill />
+                            </div>
+                            <p>{data?.start_time}</p>
+                          </span>
+                          <p className="e8">{data?.mode}</p>
+                        </div>
+                        <div className="ec-section3">
+                          Tags: <p className="e4">{data?.tags}</p>
+                        </div>
+                        <div className="ec-section4">{data?.description}</div>
+                        <div className="ec-section5">
+                          <a href={`/single-event/${data?.id}`}>
+                            <button
+                              className="eprbtn2"
+                              style={{
+                                background: "#ffbf19",
+                                padding: "0.5rem 2rem",
+                              }}
+                            >
+                              View Details
+                            </button>
+                          </a>
+                        </div>
+                      </div>
+                    );
+                  })}
+              </>
+            )}
           </div>
 
-          {eventData?.length > 9 &&
+          {eventData?.length > 9 && (
             <div className="event-nav-bottom">
               <div className="enav-prev">
                 <span className="enb-icon">
@@ -288,11 +334,16 @@ const Eventpage = () => {
                   <BsChevronRight />
                 </span>
               </div>
-            </div>}
+            </div>
+          )}
         </div>
       </div>
-      <LoggedInSidebar setisExclusive={setisExclusive} isExclusive={isExclusive} />
+      <LoggedInSidebar
+        setisExclusive={setisExclusive}
+        isExclusive={isExclusive}
+      />
     </div>
+    </>
   );
 };
 export default Eventpage;

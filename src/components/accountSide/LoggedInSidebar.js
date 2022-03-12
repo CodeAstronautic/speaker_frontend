@@ -50,9 +50,13 @@ export default function LoggedInSidebar({ setisExclusive }) {
           </div>
         )}
         {JSON.parse(localStorage.getItem("@token"))?.userdata && (
-          <div className="eprbtn2" onClick={() => setisExclusive(true)}>
+          <a href="/single-event-ex">
+
+          <div className="eprbtn2" >
             SpeakerOre exclusive Events
           </div>
+          </a>
+
         )}
         {JSON.parse(localStorage.getItem("@token"))?.userdata && (
           <div
