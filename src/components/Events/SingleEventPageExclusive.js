@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useState}from "react";
 // import "./css/SingleEventPageExclusive.css";
 import {
   BsChevronLeft,
@@ -11,12 +11,76 @@ import {
 } from "react-icons/bs";
 import { BiMap } from "react-icons/bi";
 import LoggedInSidebar from "../accountSide/LoggedInSidebar";
-
+import { useNavigate } from "react-router";
+import axios from "axios";
 export default function SingleEventPageExclusive() {
+  const [name, setName] = useState("");
+  const [start_time, setstart_time] = useState("");
+  const [about, setabout] = useState("");
+  const [location, setlocation] = useState("");
+  const [mode, setMode] = useState()
+  const [topic, setTopic] = useState()
+  const [AudienceType, setAudienceType] = useState()
+  const [paymentTerm, setpaymentTerm] = useState()
+  const [eventIncludes, seteventIncludes] = useState()
+  const [contact, setcontact] = useState()
+  const [sessionType, setsessionType] = useState()
+  const [tags, settags] = useState()
+  const [isExclusive, setisExclusive] = useState()
+
+  const navigate = useNavigate();
+  const handleEventCreate = (e) => {
+    e.preventDefault();
+    const data = {
+      name: name,
+      street: "091 Willms Via",
+      state: "Louisiana",
+      country: location,
+      start_time: start_time || "",
+      end_time: "2021-09-01T04:49:42.144Z",
+      email: "Colt36@hotmail.com",
+      about: about,
+      city: "Justinetown",
+      postalCode: "56525",
+      website: '',
+      mode: mode,
+      topic: topic,
+      location: location,
+      paymentTerm: paymentTerm,
+      eventIncludes: eventIncludes,
+      contact: contact,
+      sessionType: sessionType,
+      AudienceType: AudienceType,
+      tags: tags,
+      description:
+        "Praesentium omnis et dolore omnis dolores. Tempora non ut rem. Aut et beatae quisquam. Non eius nobis et eum porro qui facilis possimus ab.",
+      categories: [
+        "et",
+        "minus",
+        "dolorum",
+        "ipsa",
+      ],
+    };
+    axios
+      .post(`${process.env.REACT_APP_URL}/events`, data, {
+        headers: {
+          Authorization: `Bearer ${JSON.parse(localStorage.getItem("@token")).token
+            }`,
+        },
+      })
+      .then((data) => {
+        if (data?.data) {
+          navigate("/events");
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div className="mp-parent">
       <div className="mp-left">
-        <div className="sep-eventinfo">
+        {/* <div className="sep-eventinfo">
           <div className="sep-einfo-head">
             <button>
               <span style={{ position: "relative", top: "3px" }}>
@@ -99,7 +163,7 @@ export default function SingleEventPageExclusive() {
           <div className="sep-einfo-foot" style={{color:'rgba(40, 166, 20, 1)'}}>
           This is speakerore exclusive event. You can apply via mailing to the organizer.
           </div>
-        </div>
+        </div> */}
 
         <div className="mp-lower" style={{ marginTop: "1rem" }}>
           <div className="mpl-right">
@@ -115,6 +179,7 @@ export default function SingleEventPageExclusive() {
               </button>
             </div>
             <div className="mplower-body">
+             <form onSubmit={handleEventCreate}>
               <div className="mpedit-section" style={{ columnGap: "0" }}>
                 <div className="mpes-form">
                   <p>Full Name</p>
@@ -252,6 +317,7 @@ export default function SingleEventPageExclusive() {
                   </button>
                 </div>
               </div>
+            </form>
             </div>
           </div>
         </div>
