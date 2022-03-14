@@ -7,7 +7,6 @@ export default function LoggedInSidebar({ setisExclusive }) {
   console.log(userData, "userDatauserData");
   useEffect(() => {
       if(userData){
-
     axios
       .get(
         `${process.env.REACT_APP_URL}/auth/get-loogedin/${
@@ -46,7 +45,7 @@ export default function LoggedInSidebar({ setisExclusive }) {
           </div>
         ) : (
           <div style={{ marginTop: "3rem" }} className="eprbtn2">
-            <a href="/addevent">Sign Up</a>
+            <a href="/login">Sign Up</a>
           </div>
         )}
         {JSON.parse(localStorage.getItem("@token"))?.userdata && (

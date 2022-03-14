@@ -10,6 +10,8 @@ import axios from "axios";
 import LoggedInSidebar from "../accountSide/LoggedInSidebar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "../Footer/Footer";
+import Navbar from "../Header/Navbar";
 
 const Eventpage = () => {
   const [search, setSearch] = useState("");
@@ -55,14 +57,10 @@ const Eventpage = () => {
           Authorization: `Bearer ${userToken?.token}`,
         },
       })
-      .then((d) =>  toast.success("Wow so easy!", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-      }))
+      .then((d) =>  {
+        console.log("heyey")
+        toast.dark("Event bookmarked successfully")
+      })
       .catch((err) => {
         console.log(err);
       });
@@ -81,6 +79,8 @@ const Eventpage = () => {
 
   return (
     <>
+    <Navbar />
+     <ToastContainer />
     <div className="mp-parent" style={{ background: "none", marginTop: "0" }}>
       <div className="mp-left">
         <div className="search-ticket">
@@ -258,8 +258,6 @@ const Eventpage = () => {
               <>
                 {filteredCountries &&
                   filteredCountries?.map((data) => {
-                    console.log(data, "datatta");
-
                     return (
                       <div className="event-card">
                         <div className="ec-section1">
@@ -343,6 +341,7 @@ const Eventpage = () => {
         isExclusive={isExclusive}
       />
     </div>
+    <Footer />
     </>
   );
 };
