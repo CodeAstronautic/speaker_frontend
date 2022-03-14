@@ -18,7 +18,6 @@ const Eventpage = () => {
   const [isExclusive, setisExclusive] = useState(false);
   const [eventData, setEventData] = useState();
   const userToken = JSON.parse(localStorage.getItem("@token"));
-  console.log(userToken?.userdata?.role, "userToken");
   const userEvents = () => {
     axios
       .get(`${process.env.REACT_APP_URL}/events/all`, {

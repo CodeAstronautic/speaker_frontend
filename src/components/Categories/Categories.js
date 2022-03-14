@@ -3,9 +3,8 @@ import React, { useEffect, useState } from "react";
 import "../css/category.css";
 export default function Categories() {
   const [categoryData, setCategoryData] = useState('')
-  console.log(categoryData, "categoryDatacategoryData")
   useEffect(() => {
-    axios.get(`https://speaker-backend.herokuapp.com/api/events/category`).then((data) => {
+    axios.get(`${process.env.REACT_APP_URL}/api/events/category`).then((data) => {
       setCategoryData(data?.data)
     }).catch(err => console.log(err))
   }, [])

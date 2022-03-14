@@ -4,23 +4,27 @@ import "../css/About2.css";
 import user from "../images/profile.png";
 export default function LoggedInSidebar({ setisExclusive }) {
   const [userData, setUser] = useState("");
-  console.log(userData, "userDatauserData");
+  const isLoggedin = JSON.parse(localStorage.getItem("@token"))?.userdata;
+  console.log(
+    userData,
+    JSON.parse(localStorage.getItem("@token"))?.userdata?.id,
+    "userDatauserData"
+  );
   useEffect(() => {
-      if(userData){
-    axios
-      .get(
-        `${process.env.REACT_APP_URL}/auth/get-loogedin/${
-          JSON.parse(localStorage.getItem("@token"))?.userdata?.id
-        }`
-      )
-      .then((data) => {
-        setUser(data?.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    if (userData) {
+      axios
+        .get(
+          `${process.env.REACT_APP_URL}/auth/get-loogedin/${
+            JSON.parse(localStorage.getItem("@token"))?.userdata?.id
+          }`
+        )
+        .then((data) => {
+          setUser(data?.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
-
   }, []);
   return (
     <div className="ep-right">
@@ -30,11 +34,12 @@ export default function LoggedInSidebar({ setisExclusive }) {
         </div>
         <p>
           Hi,{" "}
-          {userData?.name ? (
-            <b style={{ fontWeight: "500" }}>{userData?.name}!</b>
+          {isLoggedin ? (
+            <b style={{ fontWeight: "500" }}>{isLoggedin?.name}!</b>
           ) : (
-            <b style={{ fontWeight: "500" }}>Stranger</b>
+            ""
           )}
+          {!isLoggedin && <b style={{ fontWeight: "500" }}>Stranger</b>}
         </p>
         <span className="eprtext1">{userData?.role ? userData?.role : ""}</span>
         {JSON.parse(localStorage.getItem("@token"))?.userdata &&
@@ -44,18 +49,17 @@ export default function LoggedInSidebar({ setisExclusive }) {
             <a href="/addevent">Create a new event</a>
           </div>
         ) : (
+          ""
+        )}
+        {!JSON.parse(localStorage.getItem("@token"))?.userdata && (
           <div style={{ marginTop: "3rem" }} className="eprbtn2">
             <a href="/login">Sign Up</a>
           </div>
         )}
         {JSON.parse(localStorage.getItem("@token"))?.userdata && (
           <a href="/single-event-ex">
-
-          <div className="eprbtn2" >
-            SpeakerOre exclusive Events
-          </div>
+            <div className="eprbtn2">SpeakerOre exclusive Events</div>
           </a>
-
         )}
         {JSON.parse(localStorage.getItem("@token"))?.userdata && (
           <div

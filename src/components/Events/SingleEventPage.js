@@ -74,7 +74,7 @@ export default function SingleEventPage() {
               </div>
               <div className="eibl-mode" style={{ marginBottom: "0.4rem" }}>
                 <span>Event Mode: </span>
-                <span>ONLINE</span>
+                <span>{singleEventData?.mode}</span>
               </div>
               <div className="eibl-date" style={{ marginBottom: "0.4rem" }}>
                 <span
@@ -92,7 +92,7 @@ export default function SingleEventPage() {
                   <BiMap />
                 </span>
                 <span>Location:</span>
-                <span>**Not required</span>
+                <span>**{singleEventData?.country}</span>
               </div>
               <div className="eibl-link" style={{ marginBottom: "0.4rem" }}>
                 <span
@@ -104,11 +104,12 @@ export default function SingleEventPage() {
                 <span> {singleEventData?.website}</span>
               </div>
             </div>
+            {console.log(singleEventData,"singleEventDatasingleEventData")}
             <div className="eib-right">
               <div className="eibr-header">About this event:</div>
               <div className="eibr-body">
                 <span>
-                  Tags: Film Industry, Actors, Hotel, Speaking, Guests
+                  Tags:{singleEventData?.tags}
                 </span>
                 <p>
                   {singleEventData?.description}
