@@ -78,7 +78,6 @@ const Eventpage = () => {
 
   return (
     <>
-    <Navbar />
      <ToastContainer />
     <div className="mp-parent" style={{ background: "none", marginTop: "0" }}>
       <div className="mp-left">
@@ -340,7 +339,6 @@ const Eventpage = () => {
         isExclusive={isExclusive}
       />
     </div>
-    <Footer />
     </>
   );
 };

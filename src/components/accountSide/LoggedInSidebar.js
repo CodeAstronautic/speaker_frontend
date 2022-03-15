@@ -30,7 +30,7 @@ export default function LoggedInSidebar({ setisExclusive }) {
     <div className="ep-right">
       <div className="eprcard">
         <div className="avatar-parent">
-          <img src={user} alt="" />
+          <img src="" alt="" />
         </div>
         <p>
           Hi,{" "}
