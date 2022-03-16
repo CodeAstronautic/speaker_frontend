@@ -14,6 +14,43 @@ import Footer from "../Footer/Footer";
 import Navbar from "../Header/Navbar";
 
 const Eventpage = () => {
+//   let data =[
+//     {
+//         "id": 1,
+//         "start_time": "2020-06-07T02:32:39.292Z",
+//         "end_time": "2021-09-01T04:49:42.144Z",
+//         "isLiked": false
+//     },
+//     {
+//         "id": 2,
+//         "start_time": "2020-06-08T02:32:39.292Z",
+//         "end_time": "2021-09-01T04:49:42.144Z",
+//         "isLiked": false
+//     },
+//     {
+//         "id": 3,
+//         "longitude": null,
+//         "start_time": "2020-06-09T02:32:39.292Z",
+//         "end_time": "2021-09-01T04:49:42.144Z",
+        
+//     },
+//      {
+//         "id": 4,
+//         "longitude": null,
+//         "start_time": "2020-06-06T02:32:39.292Z",
+//         "end_time": "2021-09-01T04:49:42.144Z",
+        
+//     },
+//   ]
+    
+// var startDate = new Date("2020-06-07T02:32:39.292Z");
+// var endDate = new Date("2020-06-08T02:32:39.292Z");
+// console.log(startDate , endDate)
+// var resultProductData = data.filter(a => {
+//   var date = new Date(a.start_time);
+//   return (date >= startDate && date <= endDate);
+// });
+// console.log(resultProductData)
   const [search, setSearch] = useState("");
   const [isExclusive, setisExclusive] = useState(false);
   const [eventData, setEventData] = useState();
