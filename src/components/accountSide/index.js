@@ -84,7 +84,8 @@ export default function Index({userData}) {
                     <div className="mpes-profilepic">
                         <img src={user} alt="" />
                         <div className="mpesdp-change">
-                            <span style={{ marginTop: "12rem" }}>Change</span>
+                            <input type="file" className="mpes-input" placeholder="" />
+                            {/* <span style={{ marginTop: "12rem" }}>Change</span> */}
                         </div>
                     </div>
                 </div>
@@ -128,7 +129,8 @@ export default function Index({userData}) {
                     <div className="mpes-profilepic">
                         <img src={user} alt="" />
                         <div className="mpesdp-change">
-                            <span style={{ marginTop: "12rem" }}>Change</span>
+                        <input type="file" className="mpes-input" placeholder="" />
+                            {/* <span style={{ marginTop: "12rem" }}>Change</span> */}
                         </div>
                     </div>
                 </div>
@@ -172,7 +174,8 @@ export default function Index({userData}) {
                     <div className="mpes-profilepic">
                         <img src={user} alt="" />
                         <div className="mpesdp-change">
-                            <span style={{ marginTop: "12rem" }}>Change</span>
+                        <input type="file" className="mpes-input" placeholder="" />
+                            {/* <span style={{ marginTop: "12rem" }}>Change</span> */}
                         </div>
                     </div>
                 </div>
@@ -216,7 +219,10 @@ export default function Index({userData}) {
                     <div className="mpes-profilepic">
                         <img src={user} alt="" />
                         <div className="mpesdp-change">
-                            <span style={{ marginTop: "12rem" }}>Change</span>
+                        <input type="file" className="mpes-input" placeholder="" style={{    height: "100%",
+    width: "100%",
+    opacity: "0"}}/>
+                            {/* <span style={{ marginTop: "12rem" }}>Change</span> */}
                         </div>
                     </div>
                 </div>
