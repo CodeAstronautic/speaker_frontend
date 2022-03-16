@@ -1,232 +1,1528 @@
-import React , {useState} from 'react'
+import React, { useState } from "react";
 import user from "../images/profile.png";
 import { useNavigate } from "react-router-dom";
+import { AiOutlineSafetyCertificate } from "react-icons/ai";
+import {  BsChevronDown, BsCalendar3 } from "react-icons/bs";
+import { BiMap } from "react-icons/bi";
+export default function Index({}) {
+  const [tabs, setTabs] = useState(0);
+  //   console.log(userdata, "userDatauserDatauserData");
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.clear("@token");
+    navigate("/login");
+  };
+  const { userdata } = JSON.parse(localStorage.getItem("@token"));
+  console.log(userdata, "hffhhf");
+  return (
+    <div className="mp-upper">
+      <div className="mpl-left">
+        <h5
+          style={{
+            margin: "0 auto 1rem auto",
+            borderBottom: "2px solid #ffbf19",
+            width: "fit-content",
+            paddingBottom: "0.5rem",
+          }}
+        >
+          PROFILE DETAILS
+        </h5>
 
-export default function Index({userData}) {
-    const [tabs , setTabs]=useState(0)
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const navigate = useNavigate();
-    const handleLogout = () => {
-        localStorage.clear("@token");
-        navigate("/login");
-    };
-    return (
-        <div className="mp-upper">
-            <div className="mpl-left">
-                <h5
-                    style={{
-                        margin: "0 auto 1rem auto",
-                        borderBottom: "2px solid #ffbf19",
-                        width: "fit-content",
-                        paddingBottom: "0.5rem",
-                    }}
-                >
-                    PROFILE DETAILS
-                </h5>
-
-                <div className={tabs==0?"cdrow active-tab":"cdrow"}>
-                    <div className="cdr-box"></div>
-                    <span onClick={()=>setTabs(0)}>BASIC INFORMATION</span>
-                </div>
-                <div className={tabs==1?"cdrow active-tab":"cdrow"}>
-                    <div className="cdr-box"></div>
-                    <span onClick={()=>setTabs(1)}>ACCOUNT</span>
-                </div>
-                <div className={tabs==2?"cdrow active-tab":"cdrow"}>
-                    <div className="cdr-box"></div>
-                    <span onClick={()=>setTabs(2)}>EVENTS</span>
-                </div>
-                <div className={tabs==3?"cdrow active-tab":"cdrow"}>
-                    <div className="cdr-box"></div>
-                    <span onClick={()=>setTabs(3)}>BILLING INFORMATION</span>
-                </div>
-                <div onClick={handleLogout} className="cdrow">
-                    <div className="cdr-box"></div>
-                    <span>LOGOUT</span>
-                </div>
-            </div>
-            {tabs==0&&
-            <div className="mpl-right">
-                <div className="mpl-heading">
-                    <p>BASIC INFORMATION</p>
-                    <button>Edit</button>
-                </div>
-                <div className="mpedit-section">
-                    <div className="mpes-form">
-                        <p>Full Name</p>
-                        <input
-                            type="text"
-                            className="mpes-input"
-                            placeholder="Write Here"
-                            value={userData?.name}
-                        />
-                        <p>Age</p>
-                        <input
-                            type="text"
-                            className="mpes-input"
-                            placeholder="Write Here"
-                        />
-                        <p>Phone Number</p>
-                        <input
-                            type="text"
-                            className="mpes-input"
-                            placeholder="Write Here"
-                            value={userData?.phone}
-
-                        />
-                        <p>Occupation</p>
-                        <input
-                            type="text"
-                            className="mpes-input"
-                            placeholder="Write Here"
-                        />
-                    </div>
-                    <div className="mpes-profilepic">
-                        <img src={user} alt="" />
-                        <div className="mpesdp-change">
-                            <input type="file" className="mpes-input" placeholder="" />
-                            {/* <span style={{ marginTop: "12rem" }}>Change</span> */}
-                        </div>
-                    </div>
-                </div>
-            </div>}
-            {tabs==1&&
-            <div className="mpl-right">
-                <div className="mpl-heading">
-                    <p>ACCOUNT</p>
-                    <button>Edit</button>
-                </div>
-                <div className="mpedit-section">
-                    <div className="mpes-form">
-                        <p>Full Name</p>
-                        <input
-                            type="text"
-                            className="mpes-input"
-                            placeholder="Write Here"
-                            value={userData?.name}
-                        />
-                        <p>Age</p>
-                        <input
-                            type="text"
-                            className="mpes-input"
-                            placeholder="Write Here"
-                        />
-                        <p>Phone Number</p>
-                        <input
-                            type="text"
-                            className="mpes-input"
-                            placeholder="Write Here"
-                            value={userData?.phone}
-
-                        />
-                        <p>Occupation</p>
-                        <input
-                            type="text"
-                            className="mpes-input"
-                            placeholder="Write Here"
-                        />
-                    </div>
-                    <div className="mpes-profilepic">
-                        <img src={user} alt="" />
-                        <div className="mpesdp-change">
-                        <input type="file" className="mpes-input" placeholder="" />
-                            {/* <span style={{ marginTop: "12rem" }}>Change</span> */}
-                        </div>
-                    </div>
-                </div>
-            </div>}
-            {tabs==2&&
-            <div className="mpl-right">
-                <div className="mpl-heading">
-                    <p>Event</p>
-                    <button>Edit</button>
-                </div>
-                <div className="mpedit-section">
-                    <div className="mpes-form">
-                        <p>Full Name</p>
-                        <input
-                            type="text"
-                            className="mpes-input"
-                            placeholder="Write Here"
-                            value={userData?.name}
-                        />
-                        <p>Age</p>
-                        <input
-                            type="text"
-                            className="mpes-input"
-                            placeholder="Write Here"
-                        />
-                        <p>Phone Number</p>
-                        <input
-                            type="text"
-                            className="mpes-input"
-                            placeholder="Write Here"
-                            value={userData?.phone}
-
-                        />
-                        <p>Occupation</p>
-                        <input
-                            type="text"
-                            className="mpes-input"
-                            placeholder="Write Here"
-                        />
-                    </div>
-                    <div className="mpes-profilepic">
-                        <img src={user} alt="" />
-                        <div className="mpesdp-change">
-                        <input type="file" className="mpes-input" placeholder="" />
-                            {/* <span style={{ marginTop: "12rem" }}>Change</span> */}
-                        </div>
-                    </div>
-                </div>
-            </div>}
-            {tabs==3&&
-            <div className="mpl-right">
-                <div className="mpl-heading">
-                    <p>BILLING</p>
-                    <button>Edit</button>
-                </div>
-                <div className="mpedit-section">
-                    <div className="mpes-form">
-                        <p>Full Name</p>
-                        <input
-                            type="text"
-                            className="mpes-input"
-                            placeholder="Write Here"
-                            value={userData?.name}
-                        />
-                        <p>Age</p>
-                        <input
-                            type="text"
-                            className="mpes-input"
-                            placeholder="Write Here"
-                        />
-                        <p>Phone Number</p>
-                        <input
-                            type="text"
-                            className="mpes-input"
-                            placeholder="Write Here"
-                            value={userData?.phone}
-
-                        />
-                        <p>Occupation</p>
-                        <input
-                            type="text"
-                            className="mpes-input"
-                            placeholder="Write Here"
-                        />
-                    </div>
-                    <div className="mpes-profilepic">
-                        <img src={user} alt="" />
-                        <div className="mpesdp-change">
-                        <input type="file" className="mpes-input" placeholder="" style={{    height: "100%",
-    width: "100%",
-    opacity: "0"}}/>
-                            {/* <span style={{ marginTop: "12rem" }}>Change</span> */}
-                        </div>
-                    </div>
-                </div>
-            </div>}
+        <div className={tabs == 0 ? "cdrow active-tab" : "cdrow"}>
+          <div className="cdr-box"></div>
+          <span onClick={() => setTabs(0)}>BASIC INFORMATION</span>
         </div>
-    )
+        <div className={tabs == 1 ? "cdrow active-tab" : "cdrow"}>
+          <div className="cdr-box"></div>
+          <span onClick={() => setTabs(1)}>ACCOUNT</span>
+        </div>
+        <div className={tabs == 2 ? "cdrow active-tab" : "cdrow"}>
+          <div className="cdr-box"></div>
+          <span onClick={() => setTabs(2)}>EVENTS</span>
+        </div>
+        {userdata?.role == "MODERATOR" && (
+          <div className={tabs == 4 ? "cdrow active-tab" : "cdrow"}>
+            <div className="cdr-box"></div>
+            <span onClick={() => setTabs(4)}>EVENT REQUESTS</span>
+          </div>
+        )}
+        {userdata?.role == "MODERATOR" && (
+          <div className={tabs == 5 ? "cdrow active-tab" : "cdrow"}>
+            <div className="cdr-box"></div>
+            <span onClick={() => setTabs(5)}>ARCHIVED PLANS</span>
+          </div>
+        )}
+        {userdata?.role == "MODERATOR" && (
+          <div className={tabs == 6 ? "cdrow active-tab" : "cdrow"}>
+            <div className="cdr-box"></div>
+            <span onClick={() => setTabs(6)}>SUBSCRIPTION PLANS</span>
+          </div>
+        )}
+
+        {userdata?.role == "MODERATOR" && (
+          <div className={tabs == 7 ? "cdrow active-tab" : "cdrow"}>
+            <div className="cdr-box"></div>
+            <span onClick={() => setTabs(7)}>FLAGGED SECTION</span>
+          </div>
+        )}
+        {userdata?.role == "USER" && (<div className={tabs == 3 ? "cdrow active-tab" : "cdrow"}>
+          <div className="cdr-box"></div>
+          <span onClick={() => setTabs(3)}>BILLING INFORMATION</span>
+        </div>)}
+        <div onClick={handleLogout} className="cdrow">
+          <div className="cdr-box"></div>
+          <span>LOGOUT</span>
+        </div>
+      </div>
+      {tabs == 0 && (
+        <div className="mpl-right">
+          <div className="mpl-heading">
+            <p>BASIC INFORMATION</p>
+            <button>Edit</button>
+          </div>
+          <div className="mpedit-section">
+            <div className="mpes-form">
+              <p>Full Name</p>
+              <input
+                type="text"
+                className="mpes-input"
+                placeholder="Write Here"
+                value={userdata?.name}
+              />
+              <p>Age</p>
+              <input
+                type="text"
+                className="mpes-input"
+                placeholder="Write Here"
+              />
+              <p>Phone Number</p>
+              <input
+                type="text"
+                className="mpes-input"
+                placeholder="Write Here"
+                value={userdata?.phone}
+              />
+              <p>Occupation</p>
+              <input
+                type="text"
+                className="mpes-input"
+                placeholder="Write Here"
+              />
+            </div>
+            <div className="mpes-profilepic">
+              <img src={user} alt="" />
+              <div className="mpesdp-change">
+                <input
+                  type="file"
+                  className="mpes-input"
+                  placeholder=""
+                  style={{ height: "100%", width: "100%", opacity: "0" }}
+                />
+                {/* <span style={{ marginTop: "12rem" }}>Change</span> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      {tabs == 1 && (
+        <div className="mpl-right">
+          <div className="mpl-heading">
+            <p>ACCOUNT</p>
+            <button>Edit</button>
+          </div>
+          <div className="mpedit-section">
+            <div className="mpes-form">
+              <p>Full Name</p>
+              <input
+                type="text"
+                className="mpes-input"
+                placeholder="Write Here"
+                value={userdata?.name}
+              />
+              <p>Age</p>
+              <input
+                type="text"
+                className="mpes-input"
+                placeholder="Write Here"
+              />
+              <p>Phone Number</p>
+              <input
+                type="text"
+                className="mpes-input"
+                placeholder="Write Here"
+                value={userdata?.phone}
+              />
+              <p>Occupation</p>
+              <input
+                type="text"
+                className="mpes-input"
+                placeholder="Write Here"
+              />
+            </div>
+            <div className="mpes-profilepic">
+              <img src={user} alt="" />
+              <div className="mpesdp-change">
+                <input
+                  type="file"
+                  className="mpes-input"
+                  placeholder=""
+                  style={{ height: "100%", width: "100%", opacity: "0" }}
+                />
+                {/* <span style={{ marginTop: "12rem" }}>Change</span> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      {tabs == 2 && (
+        <div className="mpl-right">
+          <div className="mpl-heading">
+            <p>Event</p>
+            <button>Edit</button>
+          </div>
+          <div className="mpedit-section">
+            <div className="mpes-form">
+              <p>Full Name</p>
+              <input
+                type="text"
+                className="mpes-input"
+                placeholder="Write Here"
+                value={userdata?.name}
+              />
+              <p>Age</p>
+              <input
+                type="text"
+                className="mpes-input"
+                placeholder="Write Here"
+              />
+              <p>Phone Number</p>
+              <input
+                type="text"
+                className="mpes-input"
+                placeholder="Write Here"
+                value={userdata?.phone}
+              />
+              <p>Occupation</p>
+              <input
+                type="text"
+                className="mpes-input"
+                placeholder="Write Here"
+              />
+            </div>
+            <div className="mpes-profilepic">
+              <img src={user} alt="" />
+              <div className="mpesdp-change">
+                <input
+                  type="file"
+                  className="mpes-input"
+                  placeholder=""
+                  style={{ height: "100%", width: "100%", opacity: "0" }}
+                />
+                {/* <span style={{ marginTop: "12rem" }}>Change</span> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      {tabs == 3 && (
+        <div className="mpl-right">
+          <div className="mpl-heading">
+            <p>BILLING INFORMATION</p>
+            <button>Edit</button>
+          </div>
+          <div className="mpedit-section">
+            <div className="mpes-form">
+                <h1>Bank Account</h1>
+              <p>IFSC Code</p>
+              <input
+                type="text"
+                className="mpes-input"
+                placeholder="Write Here"
+                value={userdata?.name}
+              />
+              <p>Account Number</p>
+              <input
+                type="text"
+                className="mpes-input"
+                placeholder="Write Here"
+              />
+              <p>Beneficiary</p>
+              <input
+                type="text"
+                className="mpes-input"
+                placeholder="Write Here"
+                value={userdata?.phone}
+              />
+             
+            </div>
+           
+          </div>
+        </div>
+      )}
+      {tabs==4&&<div className="mpl-right">
+              <div className="md-header mpl-heading">
+                <p>EVENT REQUESTS</p>
+                <button>Total Request Pending: 30</button>
+              </div>
+              <div
+                className="st-lower"
+                style={{
+                  marginLeft: "1.5rem",
+                }}
+              >
+                <div className="stl-child">
+                  <p className="stlc-text">Location: </p>
+                  <select
+                    className="stlc-field "
+                    style={{
+                      background: "#e4e4e4",
+                      color: "#000",
+                    }}
+                  >
+                    <option value="Online" selected>
+                      Choose Mode
+                    </option>
+                    <option value="Online" selected>
+                      Conference
+                    </option>
+                    <option value="Offline">Offline</option>
+                  </select>
+                </div>
+                <div className="stl-child">
+                  <p className="stlc-text">Sort: </p>
+                  <select
+                    className="stlc-field "
+                    style={{
+                      background: "#e4e4e4",
+                      color: "#000",
+                    }}
+                  >
+                    <option value="Online" selected>
+                      Choose Mode
+                    </option>
+                    <option value="Online" selected>
+                      Conference
+                    </option>
+                    <option value="Offline">Offline</option>
+                  </select>
+                </div>
+                <div className="stl-child">
+                  <p className="stlc-text">from: </p>
+
+                  <input
+                    type="date"
+                    className=" stlc-field"
+                    style={{
+                      background: "#e4e4e4",
+                      color: "#000",
+                    }}
+                    placeholder="dd/mm/yyyy"
+                  />
+                </div>
+                <div className="stl-child">
+                  <p className="stlc-text">to: </p>
+
+                  <input
+                    type="date"
+                    className=" stlc-field"
+                    style={{
+                      background: "#e4e4e4",
+                      color: "#000",
+                    }}
+                    placeholder="dd/mm/yyyy"
+                  />
+                </div>
+              </div>
+              <div className="mpedit-section">
+                  <div className="md-card-parent">
+                    <div className="mdcp-header">
+                      <h4>EVENT NAME HERE TILL HERE...</h4>
+                      <div>
+                        <BsChevronDown />
+                      </div>
+                    </div>
+                    <div className="mdcp-body">
+                      <div>
+                        <div
+                          className="eibl-date"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BsCalendar3 />
+                          </span>
+                          <span>29th Dec’2021</span>
+                        </div>
+                        <div
+                          className="eibl-location"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BiMap />
+                          </span>
+                          <span>New Delhi</span>
+                        </div>
+                      </div>
+                      <div style={{}}>
+                        ONLINE
+                      </div>
+                    </div>
+                  </div>
+                  <div className="md-card-parent">
+                    <div className="mdcp-header">
+                      <h4>EVENT NAME HERE TILL HERE...</h4>
+                      <div>
+                        <BsChevronDown />
+                      </div>
+                    </div>
+                    <div className="mdcp-body">
+                      <div>
+                        <div
+                          className="eibl-date"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BsCalendar3 />
+                          </span>
+                          <span>29th Dec’2021</span>
+                        </div>
+                        <div
+                          className="eibl-location"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BiMap />
+                          </span>
+                          <span>New Delhi</span>
+                        </div>
+                      </div>
+                      <div style={{}}>
+                        ONLINE
+                      </div>
+                    </div>
+                  </div>
+                  <div className="md-card-parent">
+                    <div className="mdcp-header">
+                      <h4>EVENT NAME HERE TILL HERE...</h4>
+                      <div>
+                        <BsChevronDown />
+                      </div>
+                    </div>
+                    <div className="mdcp-body">
+                      <div>
+                        <div
+                          className="eibl-date"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BsCalendar3 />
+                          </span>
+                          <span>29th Dec’2021</span>
+                        </div>
+                        <div
+                          className="eibl-location"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BiMap />
+                          </span>
+                          <span>New Delhi</span>
+                        </div>
+                      </div>
+                      <div style={{}}>
+                        ONLINE
+                      </div>
+                    </div>
+                  </div>
+                  <div className="md-card-parent">
+                    <div className="mdcp-header">
+                      <h4>EVENT NAME HERE TILL HERE...</h4>
+                      <div>
+                        <BsChevronDown />
+                      </div>
+                    </div>
+                    <div className="mdcp-body">
+                      <div>
+                        <div
+                          className="eibl-date"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BsCalendar3 />
+                          </span>
+                          <span>29th Dec’2021</span>
+                        </div>
+                        <div
+                          className="eibl-location"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BiMap />
+                          </span>
+                          <span>New Delhi</span>
+                        </div>
+                      </div>
+                      <div style={{}}>
+                        ONLINE
+                      </div>
+                    </div>
+                  </div>
+                  <div className="md-card-parent">
+                    <div className="mdcp-header">
+                      <h4>EVENT NAME HERE TILL HERE...</h4>
+                      <div>
+                        <BsChevronDown />
+                      </div>
+                    </div>
+                    <div className="mdcp-body">
+                      <div>
+                        <div
+                          className="eibl-date"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BsCalendar3 />
+                          </span>
+                          <span>29th Dec’2021</span>
+                        </div>
+                        <div
+                          className="eibl-location"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BiMap />
+                          </span>
+                          <span>New Delhi</span>
+                        </div>
+                      </div>
+                      <div style={{}}>
+                        ONLINE
+                      </div>
+                    </div>
+                  </div>
+                  <div className="md-card-parent">
+                    <div className="mdcp-header">
+                      <h4>EVENT NAME HERE TILL HERE...</h4>
+                      <div>
+                        <BsChevronDown />
+                      </div>
+                    </div>
+                    <div className="mdcp-body">
+                      <div>
+                        <div
+                          className="eibl-date"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BsCalendar3 />
+                          </span>
+                          <span>29th Dec’2021</span>
+                        </div>
+                        <div
+                          className="eibl-location"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BiMap />
+                          </span>
+                          <span>New Delhi</span>
+                        </div>
+                      </div>
+                      <div style={{}}>
+                        ONLINE
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>}
+            {tabs==5&&<div className="mpl-right">
+              <div className="md-header mpl-heading">
+                <p>ARCHIEVE PLANS</p>
+                <button>Total Request Pending: 30</button>
+              </div>
+              <div
+                className="st-lower"
+                style={{
+                  marginLeft: "1.5rem",
+                }}
+              >
+                <div className="stl-child">
+                  <p className="stlc-text">Location: </p>
+                  <select
+                    className="stlc-field "
+                    style={{
+                      background: "#e4e4e4",
+                      color: "#000",
+                    }}
+                  >
+                    <option value="Online" selected>
+                      Choose Mode
+                    </option>
+                    <option value="Online" selected>
+                      Conference
+                    </option>
+                    <option value="Offline">Offline</option>
+                  </select>
+                </div>
+                <div className="stl-child">
+                  <p className="stlc-text">Sort: </p>
+                  <select
+                    className="stlc-field "
+                    style={{
+                      background: "#e4e4e4",
+                      color: "#000",
+                    }}
+                  >
+                    <option value="Online" selected>
+                      Choose Mode
+                    </option>
+                    <option value="Online" selected>
+                      Conference
+                    </option>
+                    <option value="Offline">Offline</option>
+                  </select>
+                </div>
+                <div className="stl-child">
+                  <p className="stlc-text">from: </p>
+
+                  <input
+                    type="date"
+                    className=" stlc-field"
+                    style={{
+                      background: "#e4e4e4",
+                      color: "#000",
+                    }}
+                    placeholder="dd/mm/yyyy"
+                  />
+                </div>
+                <div className="stl-child">
+                  <p className="stlc-text">to: </p>
+
+                  <input
+                    type="date"
+                    className=" stlc-field"
+                    style={{
+                      background: "#e4e4e4",
+                      color: "#000",
+                    }}
+                    placeholder="dd/mm/yyyy"
+                  />
+                </div>
+              </div>
+              <div className="mpedit-section">
+                  <div className="md-card-parent">
+                    <div className="mdcp-header">
+                      <h4>EVENT NAME HERE TILL HERE...</h4>
+                      <div>
+                        <BsChevronDown />
+                      </div>
+                    </div>
+                    <div className="mdcp-body">
+                      <div>
+                        <div
+                          className="eibl-date"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BsCalendar3 />
+                          </span>
+                          <span>29th Dec’2021</span>
+                        </div>
+                        <div
+                          className="eibl-location"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BiMap />
+                          </span>
+                          <span>New Delhi</span>
+                        </div>
+                      </div>
+                      <div style={{}}>
+                        ONLINE
+                      </div>
+                    </div>
+                  </div>
+                  <div className="md-card-parent">
+                    <div className="mdcp-header">
+                      <h4>EVENT NAME HERE TILL HERE...</h4>
+                      <div>
+                        <BsChevronDown />
+                      </div>
+                    </div>
+                    <div className="mdcp-body">
+                      <div>
+                        <div
+                          className="eibl-date"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BsCalendar3 />
+                          </span>
+                          <span>29th Dec’2021</span>
+                        </div>
+                        <div
+                          className="eibl-location"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BiMap />
+                          </span>
+                          <span>New Delhi</span>
+                        </div>
+                      </div>
+                      <div style={{}}>
+                        ONLINE
+                      </div>
+                    </div>
+                  </div>
+                  <div className="md-card-parent">
+                    <div className="mdcp-header">
+                      <h4>EVENT NAME HERE TILL HERE...</h4>
+                      <div>
+                        <BsChevronDown />
+                      </div>
+                    </div>
+                    <div className="mdcp-body">
+                      <div>
+                        <div
+                          className="eibl-date"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BsCalendar3 />
+                          </span>
+                          <span>29th Dec’2021</span>
+                        </div>
+                        <div
+                          className="eibl-location"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BiMap />
+                          </span>
+                          <span>New Delhi</span>
+                        </div>
+                      </div>
+                      <div style={{}}>
+                        ONLINE
+                      </div>
+                    </div>
+                  </div>
+                  <div className="md-card-parent">
+                    <div className="mdcp-header">
+                      <h4>EVENT NAME HERE TILL HERE...</h4>
+                      <div>
+                        <BsChevronDown />
+                      </div>
+                    </div>
+                    <div className="mdcp-body">
+                      <div>
+                        <div
+                          className="eibl-date"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BsCalendar3 />
+                          </span>
+                          <span>29th Dec’2021</span>
+                        </div>
+                        <div
+                          className="eibl-location"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BiMap />
+                          </span>
+                          <span>New Delhi</span>
+                        </div>
+                      </div>
+                      <div style={{}}>
+                        ONLINE
+                      </div>
+                    </div>
+                  </div>
+                  <div className="md-card-parent">
+                    <div className="mdcp-header">
+                      <h4>EVENT NAME HERE TILL HERE...</h4>
+                      <div>
+                        <BsChevronDown />
+                      </div>
+                    </div>
+                    <div className="mdcp-body">
+                      <div>
+                        <div
+                          className="eibl-date"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BsCalendar3 />
+                          </span>
+                          <span>29th Dec’2021</span>
+                        </div>
+                        <div
+                          className="eibl-location"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BiMap />
+                          </span>
+                          <span>New Delhi</span>
+                        </div>
+                      </div>
+                      <div style={{}}>
+                        ONLINE
+                      </div>
+                    </div>
+                  </div>
+                  <div className="md-card-parent">
+                    <div className="mdcp-header">
+                      <h4>EVENT NAME HERE TILL HERE...</h4>
+                      <div>
+                        <BsChevronDown />
+                      </div>
+                    </div>
+                    <div className="mdcp-body">
+                      <div>
+                        <div
+                          className="eibl-date"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BsCalendar3 />
+                          </span>
+                          <span>29th Dec’2021</span>
+                        </div>
+                        <div
+                          className="eibl-location"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BiMap />
+                          </span>
+                          <span>New Delhi</span>
+                        </div>
+                      </div>
+                      <div style={{}}>
+                        ONLINE
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>}
+            {tabs==7&&<div className="mpl-right">
+              <div className="md-header mpl-heading">
+                <p>ARCHIEVE PLANS</p>
+                <button>Total Request Pending: 30</button>
+              </div>
+              <div
+                className="st-lower"
+                style={{
+                  marginLeft: "1.5rem",
+                }}
+              >
+                <div className="stl-child">
+                  <p className="stlc-text">Location: </p>
+                  <select
+                    className="stlc-field "
+                    style={{
+                      background: "#e4e4e4",
+                      color: "#000",
+                    }}
+                  >
+                    <option value="Online" selected>
+                      Choose Mode
+                    </option>
+                    <option value="Online" selected>
+                      Conference
+                    </option>
+                    <option value="Offline">Offline</option>
+                  </select>
+                </div>
+                <div className="stl-child">
+                  <p className="stlc-text">Sort: </p>
+                  <select
+                    className="stlc-field "
+                    style={{
+                      background: "#e4e4e4",
+                      color: "#000",
+                    }}
+                  >
+                    <option value="Online" selected>
+                      Choose Mode
+                    </option>
+                    <option value="Online" selected>
+                      Conference
+                    </option>
+                    <option value="Offline">Offline</option>
+                  </select>
+                </div>
+                <div className="stl-child">
+                  <p className="stlc-text">from: </p>
+
+                  <input
+                    type="date"
+                    className=" stlc-field"
+                    style={{
+                      background: "#e4e4e4",
+                      color: "#000",
+                    }}
+                    placeholder="dd/mm/yyyy"
+                  />
+                </div>
+                <div className="stl-child">
+                  <p className="stlc-text">to: </p>
+
+                  <input
+                    type="date"
+                    className=" stlc-field"
+                    style={{
+                      background: "#e4e4e4",
+                      color: "#000",
+                    }}
+                    placeholder="dd/mm/yyyy"
+                  />
+                </div>
+              </div>
+              <div className="mpedit-section">
+                  <div className="md-card-parent">
+                    <div className="mdcp-header">
+                      <h4>EVENT NAME HERE TILL HERE...</h4>
+                      <div>
+                        <BsChevronDown />
+                      </div>
+                    </div>
+                    <div className="mdcp-body">
+                      <div>
+                        <div
+                          className="eibl-date"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BsCalendar3 />
+                          </span>
+                          <span>29th Dec’2021</span>
+                        </div>
+                        <div
+                          className="eibl-location"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BiMap />
+                          </span>
+                          <span>New Delhi</span>
+                        </div>
+                      </div>
+                      <div style={{}}>
+                        ONLINE
+                      </div>
+                    </div>
+                  </div>
+                  <div className="md-card-parent">
+                    <div className="mdcp-header">
+                      <h4>EVENT NAME HERE TILL HERE...</h4>
+                      <div>
+                        <BsChevronDown />
+                      </div>
+                    </div>
+                    <div className="mdcp-body">
+                      <div>
+                        <div
+                          className="eibl-date"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BsCalendar3 />
+                          </span>
+                          <span>29th Dec’2021</span>
+                        </div>
+                        <div
+                          className="eibl-location"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BiMap />
+                          </span>
+                          <span>New Delhi</span>
+                        </div>
+                      </div>
+                      <div style={{}}>
+                        ONLINE
+                      </div>
+                    </div>
+                  </div>
+                  <div className="md-card-parent">
+                    <div className="mdcp-header">
+                      <h4>EVENT NAME HERE TILL HERE...</h4>
+                      <div>
+                        <BsChevronDown />
+                      </div>
+                    </div>
+                    <div className="mdcp-body">
+                      <div>
+                        <div
+                          className="eibl-date"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BsCalendar3 />
+                          </span>
+                          <span>29th Dec’2021</span>
+                        </div>
+                        <div
+                          className="eibl-location"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BiMap />
+                          </span>
+                          <span>New Delhi</span>
+                        </div>
+                      </div>
+                      <div style={{}}>
+                        ONLINE
+                      </div>
+                    </div>
+                  </div>
+                  <div className="md-card-parent">
+                    <div className="mdcp-header">
+                      <h4>EVENT NAME HERE TILL HERE...</h4>
+                      <div>
+                        <BsChevronDown />
+                      </div>
+                    </div>
+                    <div className="mdcp-body">
+                      <div>
+                        <div
+                          className="eibl-date"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BsCalendar3 />
+                          </span>
+                          <span>29th Dec’2021</span>
+                        </div>
+                        <div
+                          className="eibl-location"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BiMap />
+                          </span>
+                          <span>New Delhi</span>
+                        </div>
+                      </div>
+                      <div style={{}}>
+                        ONLINE
+                      </div>
+                    </div>
+                  </div>
+                  <div className="md-card-parent">
+                    <div className="mdcp-header">
+                      <h4>EVENT NAME HERE TILL HERE...</h4>
+                      <div>
+                        <BsChevronDown />
+                      </div>
+                    </div>
+                    <div className="mdcp-body">
+                      <div>
+                        <div
+                          className="eibl-date"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BsCalendar3 />
+                          </span>
+                          <span>29th Dec’2021</span>
+                        </div>
+                        <div
+                          className="eibl-location"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BiMap />
+                          </span>
+                          <span>New Delhi</span>
+                        </div>
+                      </div>
+                      <div style={{}}>
+                        ONLINE
+                      </div>
+                    </div>
+                  </div>
+                  <div className="md-card-parent">
+                    <div className="mdcp-header">
+                      <h4>EVENT NAME HERE TILL HERE...</h4>
+                      <div>
+                        <BsChevronDown />
+                      </div>
+                    </div>
+                    <div className="mdcp-body">
+                      <div>
+                        <div
+                          className="eibl-date"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BsCalendar3 />
+                          </span>
+                          <span>29th Dec’2021</span>
+                        </div>
+                        <div
+                          className="eibl-location"
+                          style={{ marginBottom: "0.4rem" }}
+                        >
+                          <span
+                            style={{
+                              position: "relative",
+                              top: "3px",
+                              marginLeft: "0",
+                            }}
+                          >
+                            <BiMap />
+                          </span>
+                          <span>New Delhi</span>
+                        </div>
+                      </div>
+                      <div style={{}}>
+                        ONLINE
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>}
+            {tabs==6&& <div className="mpl-right">
+              <div className=" mpl-heading">
+                <p>SUBSCRIPTION PLANS</p>
+              </div>
+              <div
+                className="st-lower"
+                style={{
+                  marginLeft: "1.5rem",
+                }}
+              >
+                <div
+                  className="stu-left"
+                  style={{
+                    width: "50%",
+                  }}
+                >
+                  <input
+                    className="searchbar"
+                    type="text"
+                    placeholder="Name of the customer here..."
+                    name="search"
+                  />
+                  <button
+                    type="submit"
+                    style={{
+                      border: " none",
+                      color: " white",
+                      background: "#ffbf19",
+                      borderRadius: " 10px",
+                      padding: " 1rem",
+                      position: " relative",
+                      left: "-0.7rem",
+                    }}
+                  >
+                    <i className="fa fa-search"></i>
+                  </button>
+                </div>
+                <div className="stl-child">
+                  <p className="stlc-text">Location: </p>
+                  <select
+                    className="stlc-field "
+                    style={{
+                      background: "#e4e4e4",
+                      color: "#000",
+                    }}
+                  >
+                    <option value="Online" selected>
+                      Choose Mode
+                    </option>
+                    <option value="Online" selected>
+                      Conference
+                    </option>
+                    <option value="Offline">Offline</option>
+                  </select>
+                </div>
+                <div className="stl-child">
+                  <p className="stlc-text">Sort: </p>
+                  <select
+                    className="stlc-field "
+                    style={{
+                      background: "#e4e4e4",
+                      color: "#000",
+                    }}
+                  >
+                    <option value="Online" selected>
+                      Choose Mode
+                    </option>
+                    <option value="Online" selected>
+                      Conference
+                    </option>
+                    <option value="Offline">Offline</option>
+                  </select>
+                </div>
+              </div>
+              <div className="subplan-sec1">
+                <div className="sps1-row">
+                  <h5>S. No.</h5>
+                  <h5>Name </h5>
+                  <h5>Subscription Plan</h5>
+                  <h5>Starting Date</h5>
+                  <h5>Ending Date</h5>
+                  <h5>Location</h5>
+                </div>
+                <div className="sps1-row">
+                  <p>1.</p>
+                  <p>Mohit Gopal </p>
+                  <p>Monthly</p>
+                  <p>31.01.2022</p>
+                  <p>28.02.2022</p>
+                  <p>New Delhi</p>
+                  <button>Edit Details</button>
+                </div>
+                <div className="sps1-row">
+                  <p>1.</p>
+                  <p>Mohit Gopal </p>
+                  <p>Monthly</p>
+                  <p>31.01.2022</p>
+                  <p>28.02.2022</p>
+                  <p>New Delhi</p>
+                  <button>Edit Details</button>
+                </div>
+                <div className="sps1-row">
+                  <p>1.</p>
+                  <p>Mohit Gopal </p>
+                  <p>Monthly</p>
+                  <p>31.01.2022</p>
+                  <p>28.02.2022</p>
+                  <p>New Delhi</p>
+                  <button>Edit Details</button>
+                </div>
+                <div className="sps1-row">
+                  <p>1.</p>
+                  <p>Mohit Gopal </p>
+                  <p>Monthly</p>
+                  <p>31.01.2022</p>
+                  <p>28.02.2022</p>
+                  <p>New Delhi</p>
+                  <button>Edit Details</button>
+                </div>
+              </div>
+              <div className="subplan-sec2">
+                <h3
+                  style={{
+                    textAlign: "center",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Suscription Plan Details
+                </h3>
+                <p
+                  style={{
+                    textAlign: "center",
+                    marginBottom: "1.5rem",
+                  }}
+                >
+                  Editing as Mohit Gopal
+                </p>
+                <div className="sps1-row">
+                  <p>Name</p>
+                  <p>Subscription Plan</p>
+                  <p>Started on</p>
+                  <p>Ends on</p>
+                  <p>Email address</p>
+                  <p>Paid</p>
+                </div>
+                <div className="sps1-row">
+                  <h5>Mohit Gopal</h5>
+                  <h5>Monthly</h5>
+                  <h5 style={{ display: "flex" }}>
+                    31.01.2022
+                    <div style={{ marginLeft: "0.5rem", textAlign: "center" }}>
+                      <BsCalendar3 />
+                      <button
+                        style={{
+                          outline: "none",
+                          background: "none",
+                          border: "none",
+                          textDecoration: "underline",
+                          fontSize: "small",
+                        }}
+                      >
+                        Change
+                      </button>
+                    </div>
+                  </h5>
+                  <h5 style={{ display: "flex" }}>
+                    28.02.2022
+                    <div style={{ marginLeft: "0.5rem", textAlign: "center" }}>
+                      <BsCalendar3 />
+                      <button
+                        style={{
+                          outline: "none",
+                          background: "none",
+                          border: "none",
+                          textDecoration: "underline",
+                          fontSize: "small",
+                        }}
+                      >
+                        Change
+                      </button>
+                    </div>
+                  </h5>
+                  <h5>mohit.gopal18@gmail.com</h5>
+                  <h5>Rs.599/-</h5>
+                </div>
+                <div className="mdlheader mpl-heading">
+                  <p>Update Details</p>
+                </div>
+                <p>
+                  <b>Mohit Gopal</b> changed the suscription ending date from{" "}
+                  <b>28.02.2022</b> to <b>30.03.2022</b>
+                </p>
+                <p>
+                  <b>Mohit Gopal</b> changed the suscription ending date from{" "}
+                  <b>28.02.2022</b> to <b>30.03.2022</b>
+                </p>
+                <p>
+                  <b>Mohit Gopal</b> changed the suscription ending date from{" "}
+                  <b>28.02.2022</b> to <b>30.03.2022</b>
+                </p>
+                <div className="con-lower">
+                  <button
+                    className="con-lower-btn eprbtn2"
+                    style={{
+                      margin: "1rem",
+                      border: "1px solid #ffbf19",
+                      background: "none",
+                    }}
+                  >
+                    Cancel Subscription
+                  </button>
+                  <button
+                    className="con-lower-btn eprbtn1"
+                    style={{
+                      margin: "1rem",
+                    }}
+                  >
+                    Update Subscription
+                  </button>
+                </div>
+              </div>
+            </div>}
+    </div>
+  );
 }

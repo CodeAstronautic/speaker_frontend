@@ -35,10 +35,7 @@ export default function ModeratorProfile() {
                 <div className="cdr-box"></div>
                 <span>SUBSCRIPTION PLANS</span>
               </div>
-              <div className="cdrow">
-                <div className="cdr-box"></div>
-                <span>EVENTS REQUESTS</span>
-              </div>
+            
               <div className="cdrow">
                 <div className="cdr-box"></div>
                 <span>FLAGGED SECTION</span>

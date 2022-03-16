@@ -50,7 +50,7 @@ const BookmarkedEvent = () => {
                         >
                           <BsFillCalendarEventFill />
                         </div>
-                        <p>Date: {data?.start_time}</p>
+                        <p>Date: {new Date(data?.start_time)}</p>
                       </span>
                       <p className="e8">{data?.mode}</p>
                     </div>
