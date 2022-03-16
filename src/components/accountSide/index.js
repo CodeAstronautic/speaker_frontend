@@ -37,10 +37,10 @@ export default function Index({}) {
           <div className="cdr-box"></div>
           <span onClick={() => setTabs(1)}>ACCOUNT</span>
         </div>
-        <div className={tabs == 2 ? "cdrow active-tab" : "cdrow"}>
+        {userdata?.role == "USER" && <div className={tabs == 2 ? "cdrow active-tab" : "cdrow"}>
           <div className="cdr-box"></div>
           <span onClick={() => setTabs(2)}>EVENTS</span>
-        </div>
+        </div>}
         {userdata?.role == "MODERATOR" && (
           <div className={tabs == 4 ? "cdrow active-tab" : "cdrow"}>
             <div className="cdr-box"></div>
