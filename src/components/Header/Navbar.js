@@ -41,7 +41,7 @@ export default function Navbar() {
             </li>
             {token ? (
               <li className="" onClick={handleOpen}>
-                <a style={{ float: "right" }}>myprofile</a>
+                <a href="/myprofile" style={{ float: "right" }}>My Profile</a>
               </li>
             ) : (
               <li className="navright">
