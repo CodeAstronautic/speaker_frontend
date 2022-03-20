@@ -8,6 +8,8 @@ import { useState } from "react";
 import AccountSide from "../accountSide";
 export default function MyProfile() {
   const [userData, setUser] = useState("");
+  const planId=localStorage.getItem("@planId")
+  console.log(planId,"planId")
   useEffect(() => {
     axios
       .get(

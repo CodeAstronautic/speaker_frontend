@@ -1,15 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "../css/About2.css";
-import user from "../images/profile.png";
 export default function LoggedInSidebar({ setisExclusive }) {
   const [userData, setUser] = useState("");
   const isLoggedin = JSON.parse(localStorage.getItem("@token"))?.userdata;
-  console.log(
-    userData,
-    JSON.parse(localStorage.getItem("@token"))?.userdata?.id,
-    "userDatauserData"
-  );
   useEffect(() => {
     if (userData) {
       axios

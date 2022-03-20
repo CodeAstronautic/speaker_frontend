@@ -14,36 +14,48 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import LoggedInSidebar from "../accountSide/LoggedInSidebar";
 export default function SingleEventPage() {
-  const navigate = useLocation()
-  const [eventData, setEventData] = useState()
+  const navigate = useLocation();
+  const [eventData, setEventData] = useState();
 
-  const [singleEventData, setSingleEventData] = useState()
-  console.log(singleEventData, "singleEventDatasingleEventData")
+  const [singleEventData, setSingleEventData] = useState();
+  console.log(singleEventData, "singleEventDatasingleEventData");
   useEffect(() => {
-    if (navigate?.pathname?.split('/')[2]) {
-
-      axios.get(`${process.env.REACT_APP_URL}/events/${navigate?.pathname?.split('/')[2]}`, {
-        headers: {
-          Authorization: `Bearer ${JSON.parse(localStorage.getItem('@token')).token}`
-        }
-      }).then((data) => {
-        setSingleEventData(data?.data)
-      }).catch((err) => {
-        console.log(err)
-      })
+    if (navigate?.pathname?.split("/")[2]) {
+      axios
+        .get(
+          `${process.env.REACT_APP_URL}/events/${
+            navigate?.pathname?.split("/")[2]
+          }`,
+          {
+            headers: {
+              Authorization: `Bearer ${
+                JSON.parse(localStorage.getItem("@token")).token
+              }`,
+            },
+          }
+        )
+        .then((data) => {
+          setSingleEventData(data?.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
-  }, [])
+  }, []);
   useEffect(() => {
-    const userToken = localStorage.getItem('@token')
-    console.log(JSON.parse(userToken).token, "hjkhkjhkh")
-    axios.get(`${process.env.REACT_APP_URL}/events`, {
-      headers: {
-        Authorization: `Bearer ${JSON.parse(userToken).token}`
-      }
-    }).then((d) => setEventData(d?.data)).catch((err) => {
-      console.log(err)
-    })
-  }, [])
+    const userToken = localStorage.getItem("@token");
+    console.log(JSON.parse(userToken).token, "hjkhkjhkh");
+    axios
+      .get(`${process.env.REACT_APP_URL}/events`, {
+        headers: {
+          Authorization: `Bearer ${JSON.parse(userToken).token}`,
+        },
+      })
+      .then((d) => setEventData(d?.data))
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <div className="mp-parent">
       <div className="mp-left">
@@ -64,10 +76,15 @@ export default function SingleEventPage() {
               </div>
             </div>
           </div>
-          <div className="sep-einfo-body" style={{ paddingBottom: '0', paddingRight: '0' }}>
+          <div
+            className="sep-einfo-body"
+            style={{ paddingBottom: "0", paddingRight: "0" }}
+          >
             <div className="eib-left">
               <div className="eibl-ename">{singleEventData?.name}</div>
-              <div className="eibl-eplace">{singleEventData?.city}, {singleEventData?.country}</div>
+              <div className="eibl-eplace">
+                {singleEventData?.city}, {singleEventData?.country}
+              </div>
               <div className="eibl-oname" style={{ marginBottom: "0.4rem" }}>
                 <span>Organiser Name: </span>
                 <span>Mohit Gopal</span>
@@ -104,21 +121,18 @@ export default function SingleEventPage() {
                 <span> {singleEventData?.website}</span>
               </div>
             </div>
-            {console.log(singleEventData,"singleEventDatasingleEventData")}
+            {console.log(singleEventData, "singleEventDatasingleEventData")}
             <div className="eib-right">
               <div className="eibr-header">About this event:</div>
               <div className="eibr-body">
-                <span>
-                  Tags:{singleEventData?.tags}
-                </span>
-                <p>
-                  {singleEventData?.description}
-                </p>
+                <span>Tags:{singleEventData?.tags}</span>
+                <p>{singleEventData?.description}</p>
               </div>
             </div>
           </div>
           <div className="sep-einfo-foot">
-            This is an event hosted by one of the event managers. Click on the link above to apply as a speaker.
+            This is an event hosted by one of the event managers. Click on the
+            link above to apply as a speaker.
           </div>
         </div>
         <div style={{ margin: "1rem" }}>
@@ -148,7 +162,9 @@ export default function SingleEventPage() {
                   </div>
                   <div className="ec-section2">
                     <span>
-                      <div style={{ marginRight: "0.5rem", fontSize: "medium" }}>
+                      <div
+                        style={{ marginRight: "0.5rem", fontSize: "medium" }}
+                      >
                         <BsFillCalendarEventFill />
                       </div>
                       <p>{data?.start_time}</p>
@@ -156,14 +172,12 @@ export default function SingleEventPage() {
                     <p className="e8">ONLINE</p>
                   </div>
                   <div className="ec-section3">
-                    Tags: <p className="e4">Industry, Film, Acting, Speaking </p>
+                    Tags:{" "}
+                    <p className="e4">Industry, Film, Acting, Speaking </p>
                   </div>
-                  <div className="ec-section4">
-                    {data?.description}
-                  </div>
+                  <div className="ec-section4">{data?.description}</div>
                   <div className="ec-section5">
                     <a href={`/single-event/${data?.id}`}>
-
                       <button
                         className="eprbtn2"
                         style={{
@@ -176,14 +190,12 @@ export default function SingleEventPage() {
                     </a>
                   </div>
                 </div>
-              )
+              );
             })}
-
-
           </div>
         </div>
       </div>
-   <LoggedInSidebar />
+      <LoggedInSidebar />
     </div>
   );
 }
