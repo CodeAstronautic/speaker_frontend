@@ -48,14 +48,17 @@ const SignInUp = () => {
     <div className="mp-parent" style={{ background: "none", marginTop: "0" }}>
       <div className="mp-left siu-left">
         <div className="siul-child">
-          <div className={tabs == 1 ? "mpl-heading " : ""}>
-            <p onClick={() => setTabs(1)}>Become a member now!</p>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <div className={tabs == 1 ? "mpl-heading " : ""}>
+              <p onClick={() => setTabs(1)}>Become a member now!</p>
+            </div>
+            <div className={tabs == 0 ? "mpl-heading " : ""}>
+              <p onClick={() => setTabs(0)}>
+                Already a memeber? SIGN IN
+              </p>
+            </div>
           </div>
-          <div className={tabs == 0 ? "mpl-heading " : ""}>
-            <button onClick={() => setTabs(0)}>
-              Already a memeber? SIGN IN
-            </button>
-          </div>
+
           {message && (
             <p
               style={{
