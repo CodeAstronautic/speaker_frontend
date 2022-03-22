@@ -34,7 +34,7 @@ function PrivateRoute({ component: Component, ...rest }) {
 const App = () => {
   return (
     <>
-    {/* <Navbar /> */}
+    <Navbar />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Firstpage />} />
@@ -85,7 +85,7 @@ const App = () => {
           <Route path="/privacy" element={<Privacy />} />
         </Routes>
       </BrowserRouter>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
