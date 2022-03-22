@@ -14,25 +14,28 @@ export default function Index() {
   const userToken = JSON.parse(localStorage.getItem("@token"));
   console.log(userToken, "userToken");
   const { userdata } = JSON.parse(localStorage.getItem("@token"));
-  const [filterData , setFilterData]=useState("")
-  console.log(filterData, "hffhhf");
-
+  const [filterData, setFilterData] = useState("");
+  const [images, setImages] = useState();
+  const handleImage = (event) => {
+    localStorage.setItem("@image", URL.createObjectURL(event.target.files[0]));
+    setImages(URL.createObjectURL(event.target.files[0]));
+  };
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/events/all",{
+      .get("http://localhost:3000/api/events/all", {
         headers: {
           Authorization: `Bearer ${userToken?.token}`,
         },
       })
       .then((data) => {
         console.log(data?.data);
-         const dd =data?.data?.filter(data=>data?.isExclusive==true)
-         setFilterData(dd)
+        const dd = data?.data?.filter((data) => data?.isExclusive == true);
+        setFilterData(dd);
       })
       .catch((err) => {
         console.log(err);
       });
-  },[]);
+  }, []);
   const [plandta, setplandata] = useState("");
   const handleEdit = () => {
     const data = {
@@ -186,12 +189,14 @@ export default function Index() {
                 </button>
               </div>
               <div className="mpes-profilepic">
-                <img src={user} alt="" />
-                <div className="mpesdp-change">
+                {console.log(localStorage.getItem("@image"),"kgdfg")}
+                {images&&<img src={localStorage.getItem("@image")} alt="" />}
+                <div className={images ? " images-new " : "mpesdp-change"}>
                   <input
                     type="file"
                     className="mpes-input"
                     placeholder=""
+                    onChange={handleImage}
                     style={{ height: "100%", width: "100%", opacity: "0" }}
                   />
                   {/* <span style={{ marginTop: "12rem" }}>Change</span> */}
@@ -409,55 +414,54 @@ export default function Index() {
               </div>
             </div> */}
             <div className="mpedit-section">
-              {filterData?.length>0&& filterData?.map((data)=>{
-                return(
-                  <div className="md-card-parent">
-                  <div className="mdcp-header">
-                    <h4>{data?.name}</h4>
-                    <div>
-                      <BsChevronDown />
-                    </div>
-                  </div>
-                  <div className="mdcp-body">
-                    <div>
-                      <div
-                        className="eibl-date"
-                        style={{ marginBottom: "0.4rem" }}
-                      >
-                        <span
-                          style={{
-                            position: "relative",
-                            top: "3px",
-                            marginLeft: "0",
-                          }}
-                        >
-                          <BsCalendar3 />
-                        </span>
-                        <span>{data?.start_time}</span>
+              {filterData?.length > 0 &&
+                filterData?.map((data) => {
+                  return (
+                    <div className="md-card-parent">
+                      <div className="mdcp-header">
+                        <h4>{data?.name}</h4>
+                        <div>
+                          <BsChevronDown />
+                        </div>
                       </div>
-                      <div
-                        className="eibl-location"
-                        style={{ marginBottom: "0.4rem" }}
-                      >
-                        <span
-                          style={{
-                            position: "relative",
-                            top: "3px",
-                            marginLeft: "0",
-                          }}
-                        >
-                          <BiMap />
-                        </span>
-                        <span>{data?.state}</span>
+                      <div className="mdcp-body">
+                        <div>
+                          <div
+                            className="eibl-date"
+                            style={{ marginBottom: "0.4rem" }}
+                          >
+                            <span
+                              style={{
+                                position: "relative",
+                                top: "3px",
+                                marginLeft: "0",
+                              }}
+                            >
+                              <BsCalendar3 />
+                            </span>
+                            <span>{data?.start_time}</span>
+                          </div>
+                          <div
+                            className="eibl-location"
+                            style={{ marginBottom: "0.4rem" }}
+                          >
+                            <span
+                              style={{
+                                position: "relative",
+                                top: "3px",
+                                marginLeft: "0",
+                              }}
+                            >
+                              <BiMap />
+                            </span>
+                            <span>{data?.state}</span>
+                          </div>
+                        </div>
+                        <div style={{}}>{data?.mode}</div>
                       </div>
                     </div>
-                    <div style={{}}>{data?.mode}</div>
-                  </div>
-                </div>
-                )
-              })}
-             
-              
+                  );
+                })}
             </div>
           </div>
         )}
@@ -1228,7 +1232,6 @@ export default function Index() {
                 <p>New Delhi</p>
                 <button>Edit Details</button>
               </div>
-            
             </div>
             <div className="subplan-sec2">
               <h3

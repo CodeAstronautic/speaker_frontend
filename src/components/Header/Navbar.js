@@ -40,7 +40,7 @@ export default function Navbar() {
               <a href="/about">About</a>
             </li>
             {token ? (
-              <li className="" onClick={handleOpen}>
+              <li className="" >
                 <a href="/myprofile" style={{ float: "right" }}>My Profile</a>
               </li>
             ) : (

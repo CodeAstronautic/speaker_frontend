@@ -81,6 +81,19 @@
 .mpes-profilepic img {
   width: 15rem;
   border-radius: 50%;
+  height: 174px;
+  width: 191px;
+  border-radius: 50%;
+}
+.images-new{
+  width: 15rem;
+  height: 15rem;
+  position: absolute;
+  top: 0;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+ 
 }
 .mpesdp-change {
   width: 15rem;
