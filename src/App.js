@@ -23,6 +23,7 @@ import ModeratorDummy3 from "./components/Moderator/ModeratorDummy3";
 import ModeratorDummy4 from "./components/Moderator/ModeratorDummy4";
 import Terms from "./components/Team/terms";
 import Privacy from "./components/Terms/privacy";
+import PurchaseError from "./ErrorPages/purchaseError";
 function PrivateRoute({ component: Component, ...rest }) {
   let auth = JSON.parse(localStorage.getItem("@token"))?.token;
   if (auth) {
@@ -33,7 +34,7 @@ function PrivateRoute({ component: Component, ...rest }) {
 const App = () => {
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Firstpage />} />
@@ -47,6 +48,7 @@ const App = () => {
             path="/events"
             element={<PrivateRoute component={Eventpage} />}
           />
+          <Route path="/404" element={<PurchaseError />}/>
           <Route
             path="/moderator"
             element={<PrivateRoute component={ModeratorProfile} />}
@@ -83,7 +85,7 @@ const App = () => {
           <Route path="/privacy" element={<Privacy />} />
         </Routes>
       </BrowserRouter>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

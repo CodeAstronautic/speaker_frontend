@@ -1,0 +1,34 @@
+.card-new {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 45px;
+}
+.card-new .div-1 {
+  width: 123px;
+  height: 99.47px;
+  background: rgba(255, 191, 25, 0.4);
+  border-radius: 5px;
+  padding: 14px;
+}
+.card-new .div-2 {
+  width: 123px;
+  height: 99.47px;
+  background: rgba(255, 191, 25, 0.4);
+  border-radius: 5px;
+  padding: 14px;
+}
+.back-btn {
+  float: left;
+  margin-left: 13px;
+}
+.card-new .div-3 {
+  width: 123px;
+  height: 99.47px;
+  background: rgba(255, 191, 25, 0.4);
+  border-radius: 5px;
+  padding: 14px;
+}
+.main-purchase {
+  text-align: center;
+  margin-top: 45px;
+}
