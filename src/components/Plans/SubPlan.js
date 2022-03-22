@@ -28,7 +28,7 @@ const SubPlan = () => {
   console.log(getData);
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_URL}/api/subscriptio`)
+      .get(`${process.env.REACT_APP_URL}/api/subscription`)
       .then((data) => {
         setGetData(data?.data);
       })
