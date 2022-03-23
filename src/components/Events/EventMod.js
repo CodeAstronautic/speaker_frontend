@@ -15,7 +15,7 @@ import Footer from "../Footer/Footer";
 import Navbar from "../Header/Navbar";
 import PurchaseError from "../../ErrorPages/purchaseError";
 
-const Eventpage = () => {
+const EventMod = () => {
   console.log(JSON.parse(localStorage.getItem("@token")));
   const { userdata } = JSON.parse(localStorage.getItem("@token"));
   //   let data =[
@@ -131,8 +131,7 @@ const Eventpage = () => {
     <>
       <ToastContainer />
       <div className="mp-parent" style={{ background: "none", marginTop: "0" }}>
-        {console.log(userdata?.role,userdata?.subscribed) }
-        {userdata?.subscribed && userdata?.role !== "MODERATOR" ? (
+        {userdata?.role == "MODERATOR" ? (
           <div className="mp-left">
             <div className="search-ticket">
               <div className="st-upper">
@@ -244,7 +243,7 @@ const Eventpage = () => {
             </div>
 
             <div className="view-event">
-              <div className="vc-sec">             
+              <div className="vc-sec">
                 {eventData &&
                   eventData?.map((data) => {
                     return (
@@ -349,7 +348,6 @@ const Eventpage = () => {
               </a>
             </div>
           </div>
-         
         )}
         <LoggedInSidebar
           setisExclusive={setisExclusive}
@@ -359,4 +357,4 @@ const Eventpage = () => {
     </>
   );
 };
-export default Eventpage;
+export default EventMod;

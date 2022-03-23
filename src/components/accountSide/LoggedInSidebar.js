@@ -20,6 +20,7 @@ export default function LoggedInSidebar({ setisExclusive }) {
         });
     }
   }, []);
+  console.log(isLoggedin,"isLoggedinisLoggedin")
   return (
     <div className="ep-right">
       <div className="eprcard">
@@ -70,7 +71,7 @@ export default function LoggedInSidebar({ setisExclusive }) {
 
       <div className="eprcard">
         <p>
-          <b style={{ fontWeight: "500" }}>Reources</b>
+          <b style={{ fontWeight: "500" }}>Resources</b>
         </p>
         <span
           style={{

@@ -111,12 +111,7 @@ export default function Index() {
             <div className="cdr-box"></div>
             <span onClick={() => setTabs(1)}>ACCOUNT</span>
           </div>
-          {userdata?.role === "USER" && (
-            <div className={tabs === 2 ? "cdrow active-tab" : "cdrow"}>
-              <div className="cdr-box"></div>
-              <span onClick={() => setTabs(2)}>EVENTS</span>
-            </div>
-          )}
+         
           {userdata?.role === "MODERATOR" && (
             <div className={tabs === 4 ? "cdrow active-tab" : "cdrow"}>
               <div className="cdr-box"></div>
@@ -241,8 +236,8 @@ export default function Index() {
                 />
               </div>
               <div className="mpes-profilepic">
-                <img src={user} alt="" />
-                <div className="mpesdp-change">
+                {/* <img src={user} alt="" /> */}
+                {/* <div className="mpesdp-change">
                   <input
                     type="file"
                     className="mpes-input"
@@ -250,7 +245,7 @@ export default function Index() {
                     style={{ height: "100%", width: "100%", opacity: "0" }}
                   />
                   {/* <span style={{ marginTop: "12rem" }}>Change</span> */}
-                </div>
+                {/* </div>  */}
               </div>
             </div>
           </div>

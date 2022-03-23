@@ -24,6 +24,8 @@ import ModeratorDummy4 from "./components/Moderator/ModeratorDummy4";
 import Terms from "./components/Team/terms";
 import Privacy from "./components/Terms/privacy";
 import PurchaseError from "./ErrorPages/purchaseError";
+import SigneEeror from "./ErrorPages/SignIn";
+import EventMod from "./components/Events/EventMod";
 function PrivateRoute({ component: Component, ...rest }) {
   let auth = JSON.parse(localStorage.getItem("@token"))?.token;
   if (auth) {
@@ -48,7 +50,12 @@ const App = () => {
             path="/events"
             element={<PrivateRoute component={Eventpage} />}
           />
+           <Route
+            path="/mod-event"
+            element={<PrivateRoute component={EventMod} />}
+          />
           <Route path="/404" element={<PurchaseError />}/>
+          <Route path="/500" element={<SigneEeror />}/>
           <Route
             path="/moderator"
             element={<PrivateRoute component={ModeratorProfile} />}

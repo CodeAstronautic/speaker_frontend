@@ -43,7 +43,7 @@ export default function Firstpage() {
         </p>
         <h1 className="fpae-heading">features</h1>
         <div className="speaker">
-          <img src={require("../images/EventsPage2.png")} style={{ height: '100%' }} alt={""} />
+          {/* <img src={require("../images/EventsPage2.png")} style={{ height: '100%' }} alt={""} /> */}
           <div className="fp-text">
 
 

@@ -30,13 +30,14 @@ const SignInUp = () => {
           isSubscribed: false,
         })
         .then((data) => {
-          console.log();
+          console.log(data?.data?.userdata?.role,"dsfskdjflksjdf");
           localStorage.setItem("@token", JSON.stringify(data?.data));
+          if(data?.data?.userdata?.role=="MODERATOR"){
+            navigate("/myprofile");
+          }
           if (data?.data?.isSubscribed) {
             navigate("/events");
-          } else {
-            navigate("/subplan");
-          }
+          } 
         })
         .catch((err) => {
           console.log(err);

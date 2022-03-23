@@ -3,6 +3,15 @@
   justify-content: space-around;
   margin-top: 45px;
 }
+button {
+  width: 184.35px;
+  height: 35.06px;
+  background: #ffbf19;
+  border: 1px solid #ffbf19;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-top: 80px;
+}
 .card-new .div-1 {
   width: 123px;
   height: 99.47px;
@@ -30,5 +39,8 @@
 }
 .main-purchase {
   text-align: center;
-  margin-top: 45px;
+  margin-top: 3px;
+  box-shadow:0px 4px 8px rgb(171 171 171);
+  border-radius: 15px;
+  padding: 27px;
 }

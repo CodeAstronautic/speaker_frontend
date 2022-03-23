@@ -1,6 +1,6 @@
 import React from "react";
 import "./purchase.css";
-export default function PurchaseError() {
+export default function SigneEeror() {
   return (
     <div className="main-purchase">
         <p className="back-btn">Back</p>
@@ -11,7 +11,11 @@ export default function PurchaseError() {
         <div className="div-2">Unlimited Click on Events</div>
         <div className="div-3">Get hired through SpeakerOre Exclusive</div>
       </div>
-      <a href="/subplan"> <button >Purchase plan</button></a>
+      <div>
+      <a href="/login"> <button >Sign Up</button></a>
+      <a href="/login"> <button >Sing In</button></a>
+
+      </div>
      
     </div>
   );
