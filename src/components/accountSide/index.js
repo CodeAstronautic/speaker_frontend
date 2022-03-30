@@ -464,7 +464,10 @@ export default function Index() {
           <div className="mpl-right">
             <div className="md-header mpl-heading">
               <p>ARCHIEVE PLANS</p>
-              <button>Total Request Pending: 30</button>
+              <button style={{
+    height: "35.06px",
+    boxSizing: "border-box",
+   }}>Total Request Pending: 30</button>
             </div>
             <div
               className="st-lower"
@@ -1316,6 +1319,7 @@ export default function Index() {
                     margin: "1rem",
                     border: "1px solid #ffbf19",
                     background: "none",
+                    width: "223px"
                   }}
                 >
                   Cancel Subscription
@@ -1325,6 +1329,7 @@ export default function Index() {
                     className="con-lower-btn eprbtn1"
                     style={{
                       margin: "1rem",
+                      width: "223px"
                     }}
                   >
                     Update Subscription

@@ -4,13 +4,17 @@
   margin-top: 45px;
 }
 button {
-  width: 184.35px;
   height: 35.06px;
+  border: 1px solid #ffbf19;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 48.06px;
   background: #ffbf19;
   border: 1px solid #ffbf19;
   box-sizing: border-box;
   border-radius: 5px;
-  margin-top: 80px;
+  /* margin-top: 80px; */
+  margin-left: 4px;
 }
 .card-new .div-1 {
   width: 123px;

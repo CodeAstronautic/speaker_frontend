@@ -44,6 +44,10 @@
   margin-right: 20px;
  border-bottom: 2px solid #ffbf19;
   padding-bottom: 0.5rem;
+  margin-right: 20px;
+  border-bottom: 2px solid #ffbf19;
+  padding-bottom: 0.5rem;
+  width: 200px;
 }
 .mpl-heading button {
   background: none;
@@ -99,15 +103,12 @@
   width: 15rem;
   height: 15rem;
   position: absolute;
-  top: 0;
+  top: -127px;
   display: flex;
   border-radius: 50%;
   justify-content: center;
-  background: linear-gradient(
-    360deg,
-    rgba(219, 219, 219, 0.89) 27.57%,
-    rgba(219, 219, 219, 0) 50%
-  );
+  background: linear-gradient( 360deg, rgba(219, 219, 219, 0.89) 27.57%, rgba(219, 219, 219, 0) 50% );
+  margin-left: -41px;
 }
 .mp-lower {
   padding:0 1rem;

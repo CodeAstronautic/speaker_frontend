@@ -263,6 +263,7 @@ export default function ModeratorDummy4() {
                     className="con-lower-btn eprbtn1"
                     style={{
                       margin: "1rem",
+                      
                     }}
                   >
                     Update Subscription

@@ -49,7 +49,7 @@ export default function MyProfile() {
         <div className="ep-right">
           <div className="eprcard">
             <div className="avatar-parent">
-              <img src={user} alt="" />
+              <img src="" alt="" />
             </div>
             <p>
               Hi, <b style={{ fontWeight: "500" }}>{userData?.name}!</b>
